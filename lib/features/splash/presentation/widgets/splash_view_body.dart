@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:syria_glow/core/routes/app_routes.dart';
 import 'package:syria_glow/core/theme/app_colors.dart';
-import 'package:syria_glow/core/utils/app_iamges.dart';
+import 'package:syria_glow/core/utils/app_images.dart';
 
 class SplashViewBody extends StatefulWidget {
   const SplashViewBody({super.key});
@@ -61,7 +61,7 @@ class _SplashViewBodyState extends State<SplashViewBody> {
 
   navigatorToNextPage(BuildContext context) {
     Future.delayed(Duration(seconds: 3), () {
-      Navigator.of(context).pushNamed(AppRoutes.onboardingView);
+      Navigator.of(context).pushReplacementNamed(AppRoutes.onboardingView);
     });
   }
 }
