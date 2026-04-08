@@ -1,0 +1,17 @@
+import 'package:flutter/material.dart';
+import 'package:syria_glow/core/theme/app_colors.dart';
+import 'package:syria_glow/core/theme/app_typography.dart';
+
+class AppTheme {
+  static ThemeData mainTheme = ThemeData(
+    scaffoldBackgroundColor: AppColors.backgroundLight,
+    textTheme: TextTheme(
+      displayLarge: AppTypography.headline1,
+      displayMedium: AppTypography.headline2,
+      bodyLarge: AppTypography.bodyText1,
+      bodyMedium: AppTypography.bodyText2,
+      labelSmall: AppTypography.caption,
+    ),
+
+  );
+}
