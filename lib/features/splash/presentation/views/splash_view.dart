@@ -1,10 +1,11 @@
 import 'package:flutter/material.dart';
+import 'package:syria_glow/features/splash/presentation/widgets/splash_view_body.dart';
 
 class SplashView extends StatelessWidget {
   const SplashView({super.key});
 
   @override
   Widget build(BuildContext context) {
-    return const Placeholder();
+    return Scaffold(body: SafeArea(child: SplashViewBody()));
   }
 }
