@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:syria_glow/core/routes/app_routes.dart';
+import 'package:syria_glow/features/auth/presentation/views/login_view.dart';
 import 'package:syria_glow/features/onboarding/presentation/views/onboarding_view.dart';
 import 'package:syria_glow/features/splash/presentation/views/splash_view.dart';
 
@@ -10,6 +11,8 @@ class RouteGenerator {
         return MaterialPageRoute(builder: (context) =>const SplashView());
       case AppRoutes.onboardingView:
         return MaterialPageRoute(builder: (context) =>const OnboardingView());
+      case AppRoutes.loginView:
+        return MaterialPageRoute(builder: (context) =>const LoginView());
 
       default:
         return MaterialPageRoute(

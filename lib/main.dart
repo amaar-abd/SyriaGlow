@@ -15,7 +15,7 @@ class SyriaGlow extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Syria Glow',
+      title: 'Syria Glow',     
       theme: AppTheme.mainTheme,
       onGenerateRoute: RouteGenerator.onGenerateRoute,
       initialRoute: AppRoutes.splashView,
