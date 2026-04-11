@@ -50,7 +50,7 @@ class FirstPageView extends StatelessWidget {
                 SizedBox(width: 5),
                 Text(
                   'التراث الحضاري',
-                  style: Theme.of(context).textTheme.bodyMedium?.copyWith(
+                  style: Theme.of(context).textTheme.labelSmall?.copyWith(
                     color: AppColors.primaryGreen,
                   ),
                 ),
@@ -73,7 +73,7 @@ class FirstPageView extends StatelessWidget {
             textAlign: TextAlign.center,
             style: Theme.of(
               context,
-            ).textTheme.bodyLarge?.copyWith(color: AppColors.primaryGreen),
+            ).textTheme.bodyMedium?.copyWith(color: AppColors.primaryGreen),
           ),
         ),
         SizedBox(height: 22),

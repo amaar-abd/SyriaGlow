@@ -26,7 +26,7 @@ class SkipButton extends StatelessWidget {
                 'تخطي',
                 style: TextTheme.of(
                   context,
-                ).bodyMedium?.copyWith(color: AppColors.surfaceWhite),
+                ).bodySmall?.copyWith(color: AppColors.surfaceWhite),
               ),
             ),
           ),

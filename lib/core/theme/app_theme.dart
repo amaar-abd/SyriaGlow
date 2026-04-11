@@ -10,8 +10,8 @@ class AppTheme {
       displayMedium: AppTypography.headline2,
       bodyLarge: AppTypography.bodyText1,
       bodyMedium: AppTypography.bodyText2,
+      bodySmall: AppTypography.bodyText3,
       labelSmall: AppTypography.caption,
     ),
-
   );
 }

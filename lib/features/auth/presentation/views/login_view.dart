@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:syria_glow/features/auth/presentation/widgets/auth_appbar.dart';
 import 'package:syria_glow/features/auth/presentation/widgets/login_view_body.dart';
 
 class LoginView extends StatelessWidget {
@@ -6,6 +7,9 @@ class LoginView extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(body: SafeArea(child: LoginViewBody()));
+    return Scaffold(
+      body: SafeArea(child: LoginViewBody()),
+      appBar: authAppBar(context),
+    );
   }
 }

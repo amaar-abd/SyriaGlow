@@ -53,7 +53,7 @@ class SecondPageView extends StatelessWidget {
                   child: Text(
                     'استكشف أزقة دمشق القديمة، حيث تروي\nالجدران حكايا آلاف السنين وتفوح رائحة الياسمين\nمن البيوت الدمشقية العتيقة والأسواق النابضة\nبالحياة.',
                     textAlign: TextAlign.center,
-                    style: Theme.of(context).textTheme.bodyLarge?.copyWith(
+                    style: Theme.of(context).textTheme.bodyMedium?.copyWith(
                       color: AppColors.surfaceWhite,
                     ),
                   ),

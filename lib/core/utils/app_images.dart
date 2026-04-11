@@ -18,6 +18,10 @@ class Assets {
   /// assets/images/first_page_shape.png
   static const String assetsImagesFirstPageShape = "assets/images/first_page_shape.png";
 
+  /// Assets for assetsImagesGoogleIcon
+  /// assets/images/google_icon.svg
+  static const String assetsImagesGoogleIcon = "assets/images/google_icon.svg";
+
   /// Assets for assetsImagesLogoApp
   /// assets/images/logo_app.png
   static const String assetsImagesLogoApp = "assets/images/logo_app.png";

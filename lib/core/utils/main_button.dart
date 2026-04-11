@@ -5,11 +5,12 @@ class MainButton extends StatelessWidget {
   const MainButton({
     super.key,
     required this.onPressed,
-     this.text,
-   
-    this.isVisible = true, 
-    this.fontWeight, 
-    this.widget, this.color,
+    this.text,
+
+    this.isVisible = true,
+    this.fontWeight,
+    this.widget,
+    this.color,
   });
   final VoidCallback? onPressed;
   final String? text;
@@ -30,20 +31,23 @@ class MainButton extends StatelessWidget {
           child: TextButton(
             onPressed: onPressed,
             style: TextButton.styleFrom(
-              backgroundColor: color?? AppColors.primaryGreenLight,
+              backgroundColor: color ?? AppColors.primaryGreen,
               shape: RoundedRectangleBorder(
                 borderRadius: BorderRadius.circular(16),
               ),
             ),
-            child: widget ?? Text(
-              text??'',
-              style: TextTheme.of(context).bodyLarge
-              ),
-           
-            ),
+            child:
+                widget ??
+                Text(
+                  text ?? '',
+                  style: TextTheme.of(context).bodyLarge?.copyWith(
+                    color: AppColors.surfaceWhite,
+                    fontWeight: FontWeight.bold,
+                  ),
+                ),
           ),
         ),
-     
+      ),
     );
   }
 }

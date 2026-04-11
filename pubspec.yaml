@@ -17,6 +17,7 @@ dependencies:
   font_awesome_flutter: ^11.0.0
   google_fonts: ^8.0.2
   intl: ^0.20.2
+  svg_flutter: ^0.0.1
 
 dev_dependencies:
   flutter_lints: ^5.0.0

@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 
 class AppColors {
   // Primary Brand Colors
-  static const Color primaryGreen = Color(0xFF012623);    
+  static const Color primaryGreen = Color(0xFF033D37); 
   static const Color primaryGreenLight = Color(0xFF005C29);
   static const Color elegantGold = Color(0xFFD4AF37);     
   static const Color goldSoft = Color(0xFFF3E5AB);       
