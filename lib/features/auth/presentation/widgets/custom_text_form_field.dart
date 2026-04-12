@@ -40,7 +40,7 @@ class CustomTextFormField extends StatelessWidget {
             controller: controller,
             style: TextTheme.of(context).bodyMedium,
             validator: (value) =>
-                value == null || value.isEmpty ? 'cant be empty' : null,
+                value == null || value.isEmpty ? 'هذا الحقل مطلوب' : null,
             decoration: InputDecoration(
               filled: true,
               fillColor: Colors.white,

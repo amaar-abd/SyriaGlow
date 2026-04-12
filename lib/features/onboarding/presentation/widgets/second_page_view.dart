@@ -12,106 +12,90 @@ class SecondPageView extends StatelessWidget {
   final int pageIndex;
   @override
   Widget build(BuildContext context) {
-    return Stack(
+    return Column(
       children: [
-        SizedBox.expand(
-          child: Image.asset(
-            Assets.assetsImagesDamascusBackground,
-            fit: BoxFit.cover,
+        Stack(
+          children: [
+            ClipRRect(
+              borderRadius: const BorderRadius.only(
+                bottomLeft: Radius.circular(25),
+                bottomRight: Radius.circular(25),
+              ),
+              child: Image.asset(
+                Assets.assetsImagesAlHisnCastel,
+                width: double.infinity,
+                height: 390,
+                fit: BoxFit.cover,
+              ),
+            ),
+            SkipButton(),
+          ],
+        ),
+        SizedBox(height: 80),
+
+        Text(
+          '  اكتشف كنوز التاريخ',
+          style: Theme.of(
+            context,
+          ).textTheme.displayLarge?.copyWith(color: AppColors.primaryGreen),
+        ),
+        SizedBox(height: 22),
+        SizedBox(
+          width: MediaQuery.of(context).size.width * .90,
+          child: Text(
+            'انطلق في رحلة عبر الزمن لاستكشاف أعرق المدن و الآثار , تجربة سياحية فريدة تدمج عظمة الماضي بحداثة المستقبل.',
+            textAlign: TextAlign.center,
+            style: Theme.of(
+              context,
+            ).textTheme.bodyMedium?.copyWith(color: AppColors.primaryGreen),
           ),
         ),
-        SkipButton(),
-        Positioned(
-          top: MediaQuery.of(context).size.height * .50,
-          bottom: 0,
-          left: 0,
-          right: 0,
-          child: Padding(
-            padding: const EdgeInsets.symmetric(horizontal: 16),
-            child: Column(
+        SizedBox(height: 22),
+        DotsIndicator(
+          dotsCount: 2,
+          position: pageIndex.toDouble(),
+          decorator: DotsDecorator(
+            color: AppColors.elegantGold,
+            activeColor: AppColors.elegantGold,
+            size: const Size(25.0, 8.0),
+            activeSize: const Size(25.0, 8.0),
+            shape: RoundedRectangleBorder(
+              borderRadius: BorderRadius.circular(5.0),
+            ),
+            activeShape: RoundedRectangleBorder(
+              borderRadius: BorderRadius.circular(5.0),
+            ),
+          ),
+        ),
+        Spacer(),
+
+        Padding(
+          padding: const EdgeInsets.symmetric(horizontal: 14),
+          child: MainButton(
+            onPressed: () {
+              Navigator.of(context).pushNamed(AppRoutes.loginView);
+            },
+            widget: Row(
               mainAxisAlignment: MainAxisAlignment.center,
-              crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 Text(
-                  'عبق التاريخ',
-
-                  style: Theme.of(context).textTheme.displayLarge?.copyWith(
+                  'ابدأ الرحلة',
+                  style: TextTheme.of(context).bodyLarge?.copyWith(
                     color: AppColors.surfaceWhite,
+                    fontSize: 18,
                   ),
                 ),
-                SizedBox(height: 5),
-                Text(
-                  'في كل زاوية',
-                  style: Theme.of(context).textTheme.displayLarge?.copyWith(
-                    color: AppColors.elegantGold,
-                  ),
+                SizedBox(width: 10),
+                FaIcon(
+                  FontAwesomeIcons.arrowLeft,
+                  color: AppColors.surfaceWhite,
                 ),
-
-                SizedBox(height: 22),
-                SizedBox(
-                  width: MediaQuery.of(context).size.width * .90,
-                  child: Text(
-                    'استكشف أزقة دمشق القديمة، حيث تروي\nالجدران حكايا آلاف السنين وتفوح رائحة الياسمين\nمن البيوت الدمشقية العتيقة والأسواق النابضة\nبالحياة.',
-                    textAlign: TextAlign.center,
-                    style: Theme.of(context).textTheme.bodyMedium?.copyWith(
-                      color: AppColors.surfaceWhite,
-                    ),
-                  ),
-                ),
-                SizedBox(height: 22),
-                Center(
-                  child: DotsIndicator(
-                    dotsCount: 2,
-                    position: pageIndex.toDouble(),
-                    decorator: DotsDecorator(
-                      color: AppColors.elegantGold,
-                      activeColor: AppColors.elegantGold,
-                      size: const Size(25.0, 8.0),
-                      activeSize: const Size(25.0, 8.0),
-                      shape: RoundedRectangleBorder(
-                        borderRadius: BorderRadius.circular(5.0),
-                      ),
-                      activeShape: RoundedRectangleBorder(
-                        borderRadius: BorderRadius.circular(5.0),
-                      ),
-                    ),
-                  ),
-                ),
-                Spacer(),
-                Padding(
-                  padding: const EdgeInsets.symmetric(horizontal: 14),
-                  child: MainButton(
-                    onPressed: () {
-                      Navigator.of(
-                        context,
-                      ).pushReplacementNamed(AppRoutes.loginView);
-                    },
-
-                    widget: Row(
-                      mainAxisAlignment: MainAxisAlignment.center,
-                      children: [
-                        Text(
-                          'ابدأ الرحلة',
-                          style: TextTheme.of(context).bodyLarge?.copyWith(
-                            color: AppColors.surfaceWhite,
-                            fontSize: 18,
-                          ),
-                        ),
-                        SizedBox(width: 10),
-                        FaIcon(
-                          FontAwesomeIcons.arrowLeft,
-                          color: AppColors.surfaceWhite,
-                        ),
-                      ],
-                    ),
-                  ),
-                ),
-
-                SizedBox(height: 60),
               ],
             ),
           ),
         ),
+
+        SizedBox(height: 60),
       ],
     );
   }

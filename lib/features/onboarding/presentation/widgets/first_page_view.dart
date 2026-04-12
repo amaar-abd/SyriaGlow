@@ -101,7 +101,7 @@ class FirstPageView extends StatelessWidget {
               pageController.animateToPage(
                 1,
                 duration: Duration(milliseconds: 300),
-                curve: Curves.easeInCirc,
+                curve: Curves.bounceInOut,
               );
             },
             widget: Row(

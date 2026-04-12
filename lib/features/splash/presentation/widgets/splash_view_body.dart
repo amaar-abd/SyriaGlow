@@ -17,6 +17,7 @@ class _SplashViewBodyState extends State<SplashViewBody> {
     super.initState();
     navigatorToNextPage(context);
   }
+
   @override
   Widget build(BuildContext context) {
     return Stack(

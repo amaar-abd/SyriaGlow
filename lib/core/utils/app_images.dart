@@ -2,21 +2,21 @@
 class Assets {
   Assets._();
   
+  /// Assets for assetsImagesAlHisnCastel
+  /// assets/images/al_hisn_castel.png
+  static const String assetsImagesAlHisnCastel = "assets/images/al_hisn_castel.png";
+
   /// Assets for assetsImagesAleppoAtNight
   /// assets/images/aleppo_at_night.jpg
   static const String assetsImagesAleppoAtNight = "assets/images/aleppo_at_night.jpg";
 
+  /// Assets for assetsImagesAleppoAtNight2
+  /// assets/images/aleppo_at_night_2.jpg
+  static const String assetsImagesAleppoAtNight2 = "assets/images/aleppo_at_night_2.jpg";
+
   /// Assets for assetsImagesContainer
   /// assets/images/Container.png
   static const String assetsImagesContainer = "assets/images/Container.png";
-
-  /// Assets for assetsImagesDamascusBackground
-  /// assets/images/Damascus_Background.png
-  static const String assetsImagesDamascusBackground = "assets/images/Damascus_Background.png";
-
-  /// Assets for assetsImagesFirstPageShape
-  /// assets/images/first_page_shape.png
-  static const String assetsImagesFirstPageShape = "assets/images/first_page_shape.png";
 
   /// Assets for assetsImagesGoogleIcon
   /// assets/images/google_icon.svg
