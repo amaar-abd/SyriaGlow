@@ -1,12 +1,14 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:syria_glow/core/routes/app_routes.dart';
 import 'package:syria_glow/core/routes/route_generator.dart';
 import 'package:syria_glow/core/theme/app_theme.dart';
 import 'package:syria_glow/generated/l10n.dart';
 
-void main() {
+void main() async {
   runApp(const SyriaGlow());
+  await ScreenUtil.ensureScreenSize();
 }
 
 class SyriaGlow extends StatelessWidget {
@@ -14,20 +16,27 @@ class SyriaGlow extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      title: 'Syria Glow',     
-      theme: AppTheme.mainTheme,
-      onGenerateRoute: RouteGenerator.onGenerateRoute,
-      initialRoute: AppRoutes.splashView,
-      debugShowCheckedModeBanner: false,
-      localizationsDelegates:const [
-                S.delegate,
-                GlobalMaterialLocalizations.delegate,
-                GlobalWidgetsLocalizations.delegate,
-                GlobalCupertinoLocalizations.delegate,
-            ],
-            supportedLocales: S.delegate.supportedLocales,
-            locale:const Locale('ar'),
+    return ScreenUtilInit(
+      designSize: const Size(360, 690),
+      minTextAdapt: true,
+      splitScreenMode: true,
+      builder: (context, child) {
+        return MaterialApp(
+          title: 'Syria Glow',
+          theme: AppTheme.mainTheme,
+          onGenerateRoute: RouteGenerator.onGenerateRoute,
+          initialRoute: AppRoutes.splashView,
+          debugShowCheckedModeBanner: false,
+          localizationsDelegates: const [
+            S.delegate,
+            GlobalMaterialLocalizations.delegate,
+            GlobalWidgetsLocalizations.delegate,
+            GlobalCupertinoLocalizations.delegate,
+          ],
+          supportedLocales: S.delegate.supportedLocales,
+          locale: const Locale('ar'),
+        );
+      },
     );
   }
 }
