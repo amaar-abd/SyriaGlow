@@ -21,5 +21,42 @@ class MessageLookup extends MessageLookupByLibrary {
   String get localeName => 'ar';
 
   final messages = _notInlinedMessages(_notInlinedMessages);
-  static Map<String, Function> _notInlinedMessages(_) => <String, Function>{};
+  static Map<String, Function> _notInlinedMessages(_) => <String, Function>{
+    "alreadyHaveAccount": MessageLookupByLibrary.simpleMessage(
+      "لديك حساب بالفعل ؟ ",
+    ),
+    "continueAsGuest": MessageLookupByLibrary.simpleMessage("المتابعة كضيف"),
+    "culturalHeritage": MessageLookupByLibrary.simpleMessage("التراث الحضاري"),
+    "dontHaveAccount": MessageLookupByLibrary.simpleMessage("لا تمتلك حساب ؟ "),
+    "emailHint": MessageLookupByLibrary.simpleMessage("abdamaar64@gmail.com"),
+    "emailTitle": MessageLookupByLibrary.simpleMessage("البريد الإلكتروني"),
+    "forgotPassword": MessageLookupByLibrary.simpleMessage(
+      "هل نسيت كلمة المرور ؟",
+    ),
+    "fullNameHint": MessageLookupByLibrary.simpleMessage("أدخل اسمك الثلاثي"),
+    "fullNameTitle": MessageLookupByLibrary.simpleMessage("الاسم الكامل"),
+    "loginButton": MessageLookupByLibrary.simpleMessage("تسجيل الدخول"),
+    "loginSubtitle": MessageLookupByLibrary.simpleMessage(
+      "استكشف عبق التاريخ بلمسة عصرية",
+    ),
+    "loginText": MessageLookupByLibrary.simpleMessage("تسجيل الدخول"),
+    "nextButton": MessageLookupByLibrary.simpleMessage("التالي"),
+    "onboardingDesc1": MessageLookupByLibrary.simpleMessage(
+      "اكتشف أسرار الماضي في كل زاوية، من الأسواق القديمة إلى القلاع الحصينة، حيث يروي كل حجر قصة حضارة عظيمة.",
+    ),
+    "onboardingDesc2": MessageLookupByLibrary.simpleMessage(
+      "انطلق في رحلة عبر الزمن لاستكشاف أعرق المدن و الآثار , تجربة سياحية فريدة تدمج عظمة الماضي بحداثة المستقبل.",
+    ),
+    "onboardingTitle1": MessageLookupByLibrary.simpleMessage(
+      "تراث يمتد لآلاف السنين",
+    ),
+    "onboardingTitle2": MessageLookupByLibrary.simpleMessage(
+      "اكتشف كنوز التاريخ",
+    ),
+    "passwordHint": MessageLookupByLibrary.simpleMessage("********"),
+    "passwordTitle": MessageLookupByLibrary.simpleMessage("كلمة المرور"),
+    "signUpButton": MessageLookupByLibrary.simpleMessage("إنشاء حساب"),
+    "signUpNow": MessageLookupByLibrary.simpleMessage("قم بإنشاء حساب"),
+    "startJourneyButton": MessageLookupByLibrary.simpleMessage("ابدأ الرحلة"),
+  };
 }

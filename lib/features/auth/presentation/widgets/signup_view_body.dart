@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:syria_glow/core/extensions/context_extensions.dart';
+import 'package:syria_glow/core/theme/app_colors.dart';
 import 'package:syria_glow/core/utils/main_button.dart';
 import 'package:syria_glow/features/auth/presentation/widgets/custom_checkbox_list_tile.dart';
 import 'package:syria_glow/features/auth/presentation/widgets/custom_text_form_field.dart';
@@ -22,10 +24,10 @@ class _SignupViewBodyState extends State<SignupViewBody> {
 
   @override
   void dispose() {
-    super.dispose();
     nameController.dispose();
     emailController.dispose();
     passwordController.dispose();
+    super.dispose();
   }
 
   @override
@@ -37,29 +39,23 @@ class _SignupViewBodyState extends State<SignupViewBody> {
           padding: const EdgeInsets.symmetric(horizontal: 16),
           child: Column(
             children: [
-              // Text(
-              //   'استكشف عبق التاريخ بلمسة عصرية',
-              //   style: TextTheme.of(
-              //     context,
-              //   ).bodyMedium?.copyWith(fontWeight: FontWeight.bold),
-              // ),
               SizedBox(height: 40),
               CustomTextFormField(
-                title: 'الاسم الكامل',
-                hintText: 'ahmad khaled',
+                title: context.l10n.fullNameTitle,
+                hintText: context.l10n.fullNameHint,
                 controller: nameController,
                 obscureText: false,
-                suffixIcon: Icon(Icons.person),
+                suffixIcon: Icon(Icons.person, color: AppColors.primaryGreen),
               ),
               CustomTextFormField(
-                title: 'البريد الإلكتروني',
-                hintText: 'abdamaar64@gmail.com',
+                title: context.l10n.emailTitle,
+                hintText: context.l10n.emailHint,
                 controller: emailController,
                 obscureText: false,
-                suffixIcon: Icon(Icons.email),
+                suffixIcon: Icon(Icons.email, color: AppColors.primaryGreen),
               ),
               CustomTextFormField(
-                title: 'كلمةالمرور',
+                title: context.l10n.passwordTitle,
                 hintText: '********',
                 controller: passwordController,
                 obscureText: isObscure,
@@ -71,6 +67,7 @@ class _SignupViewBodyState extends State<SignupViewBody> {
                   },
                   child: Icon(
                     isObscure ? Icons.visibility_off : Icons.remove_red_eye,
+                    color: AppColors.primaryGreen,
                   ),
                 ),
               ),
@@ -84,15 +81,15 @@ class _SignupViewBodyState extends State<SignupViewBody> {
                 },
               ),
               SizedBox(height: 20),
-              MainButton(onPressed: () {}, text: ' إنشاء حساب'),
+              MainButton(onPressed: () {}, text: context.l10n.signUpButton),
               SizedBox(height: MediaQuery.of(context).size.height * .26),
               UserQuestionRow(
                 onTap: () {
                   Navigator.of(context).pop();
                 },
                 mainAxisAlignment: MainAxisAlignment.center,
-                ask: '  لديك حساب بالفعل ؟ ',
-                answer: 'تسجيل الدخول',
+                ask: context.l10n.alreadyHaveAccount,
+                answer: context.l10n.loginText,
               ),
               SizedBox(height: 10),
             ],

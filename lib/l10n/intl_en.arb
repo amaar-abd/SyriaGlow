@@ -1,1 +1,24 @@
-{}
+{
+    "loginSubtitle": "Explore the fragrance of history with a modern touch",
+  "emailTitle": "Email Address",
+  "emailHint": "abdamaar64@gmail.com",
+  "passwordTitle": "Password",
+  "passwordHint": "********",
+  "forgotPassword": "Forgot your password?",
+  "loginButton": "Login",
+  "continueAsGuest": "Continue as a guest",
+  "dontHaveAccount": "Don't have an account? ",
+  "signUpNow": "Create an account",
+  "fullNameTitle": "Full Name",
+  "fullNameHint": "Enter your triple name",
+  "signUpButton": "Sign Up",
+  "alreadyHaveAccount": "Already have an account? ",
+  "loginText": "Login",
+  "culturalHeritage": "Cultural Heritage",
+  "onboardingTitle1": "Heritage extending for thousands of years",
+  "onboardingDesc1": "Discover the secrets of the past in every corner, from ancient markets to fortified castles, where every stone tells the story of a great civilization.",
+  "nextButton": "Next",
+  "onboardingTitle2": "Discover history treasures",
+  "onboardingDesc2": "Embark on a journey through time to explore the most ancient cities and monuments, a unique tourist experience blending the greatness of the past with the innovation of the future.",
+  "startJourneyButton": "Start Journey"
+}

@@ -1,6 +1,7 @@
 import 'package:dots_indicator/dots_indicator.dart';
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+import 'package:syria_glow/core/extensions/context_extensions.dart';
 import 'package:syria_glow/core/routes/app_routes.dart';
 import 'package:syria_glow/core/theme/app_colors.dart';
 import 'package:syria_glow/core/utils/app_images.dart';
@@ -34,7 +35,7 @@ class SecondPageView extends StatelessWidget {
         SizedBox(height: 80),
 
         Text(
-          '  اكتشف كنوز التاريخ',
+          context.l10n.onboardingTitle2,
           style: Theme.of(
             context,
           ).textTheme.displayLarge?.copyWith(color: AppColors.primaryGreen),
@@ -43,7 +44,7 @@ class SecondPageView extends StatelessWidget {
         SizedBox(
           width: MediaQuery.of(context).size.width * .90,
           child: Text(
-            'انطلق في رحلة عبر الزمن لاستكشاف أعرق المدن و الآثار , تجربة سياحية فريدة تدمج عظمة الماضي بحداثة المستقبل.',
+            context.l10n.onboardingDesc2,
             textAlign: TextAlign.center,
             style: Theme.of(
               context,
@@ -79,7 +80,7 @@ class SecondPageView extends StatelessWidget {
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
                 Text(
-                  'ابدأ الرحلة',
+                  context.l10n.startJourneyButton,
                   style: TextTheme.of(context).bodyLarge?.copyWith(
                     color: AppColors.surfaceWhite,
                     fontSize: 18,

@@ -53,6 +53,191 @@ class S {
   static S? maybeOf(BuildContext context) {
     return Localizations.of<S>(context, S);
   }
+
+  /// `Explore the fragrance of history with a modern touch`
+  String get loginSubtitle {
+    return Intl.message(
+      'Explore the fragrance of history with a modern touch',
+      name: 'loginSubtitle',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Email Address`
+  String get emailTitle {
+    return Intl.message(
+      'Email Address',
+      name: 'emailTitle',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `abdamaar64@gmail.com`
+  String get emailHint {
+    return Intl.message(
+      'abdamaar64@gmail.com',
+      name: 'emailHint',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Password`
+  String get passwordTitle {
+    return Intl.message('Password', name: 'passwordTitle', desc: '', args: []);
+  }
+
+  /// `********`
+  String get passwordHint {
+    return Intl.message('********', name: 'passwordHint', desc: '', args: []);
+  }
+
+  /// `Forgot your password?`
+  String get forgotPassword {
+    return Intl.message(
+      'Forgot your password?',
+      name: 'forgotPassword',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Login`
+  String get loginButton {
+    return Intl.message('Login', name: 'loginButton', desc: '', args: []);
+  }
+
+  /// `Continue as a guest`
+  String get continueAsGuest {
+    return Intl.message(
+      'Continue as a guest',
+      name: 'continueAsGuest',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Don't have an account? `
+  String get dontHaveAccount {
+    return Intl.message(
+      'Don\'t have an account? ',
+      name: 'dontHaveAccount',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Create an account`
+  String get signUpNow {
+    return Intl.message(
+      'Create an account',
+      name: 'signUpNow',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Full Name`
+  String get fullNameTitle {
+    return Intl.message('Full Name', name: 'fullNameTitle', desc: '', args: []);
+  }
+
+  /// `Enter your triple name`
+  String get fullNameHint {
+    return Intl.message(
+      'Enter your triple name',
+      name: 'fullNameHint',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Sign Up`
+  String get signUpButton {
+    return Intl.message('Sign Up', name: 'signUpButton', desc: '', args: []);
+  }
+
+  /// `Already have an account? `
+  String get alreadyHaveAccount {
+    return Intl.message(
+      'Already have an account? ',
+      name: 'alreadyHaveAccount',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Login`
+  String get loginText {
+    return Intl.message('Login', name: 'loginText', desc: '', args: []);
+  }
+
+  /// `Cultural Heritage`
+  String get culturalHeritage {
+    return Intl.message(
+      'Cultural Heritage',
+      name: 'culturalHeritage',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Heritage extending for thousands of years`
+  String get onboardingTitle1 {
+    return Intl.message(
+      'Heritage extending for thousands of years',
+      name: 'onboardingTitle1',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Discover the secrets of the past in every corner, from ancient markets to fortified castles, where every stone tells the story of a great civilization.`
+  String get onboardingDesc1 {
+    return Intl.message(
+      'Discover the secrets of the past in every corner, from ancient markets to fortified castles, where every stone tells the story of a great civilization.',
+      name: 'onboardingDesc1',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Next`
+  String get nextButton {
+    return Intl.message('Next', name: 'nextButton', desc: '', args: []);
+  }
+
+  /// `Discover history treasures`
+  String get onboardingTitle2 {
+    return Intl.message(
+      'Discover history treasures',
+      name: 'onboardingTitle2',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Embark on a journey through time to explore the most ancient cities and monuments, a unique tourist experience blending the greatness of the past with the innovation of the future.`
+  String get onboardingDesc2 {
+    return Intl.message(
+      'Embark on a journey through time to explore the most ancient cities and monuments, a unique tourist experience blending the greatness of the past with the innovation of the future.',
+      name: 'onboardingDesc2',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Start Journey`
+  String get startJourneyButton {
+    return Intl.message(
+      'Start Journey',
+      name: 'startJourneyButton',
+      desc: '',
+      args: [],
+    );
+  }
 }
 
 class AppLocalizationDelegate extends LocalizationsDelegate<S> {

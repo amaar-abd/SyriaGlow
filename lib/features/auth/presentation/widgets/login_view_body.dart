@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+import 'package:syria_glow/core/extensions/context_extensions.dart';
 import 'package:syria_glow/core/routes/app_routes.dart';
+import 'package:syria_glow/core/theme/app_colors.dart';
 import 'package:syria_glow/core/utils/app_images.dart';
 import 'package:syria_glow/core/utils/main_button.dart';
 import 'package:syria_glow/features/auth/presentation/widgets/custom_text_form_field.dart';
@@ -51,21 +53,21 @@ class _LoginViewBodyState extends State<LoginViewBody> {
               ),
               SizedBox(height: 15),
               Text(
-                'استكشف عبق التاريخ بلمسة عصرية',
+                context.l10n.loginSubtitle,
                 style: TextTheme.of(
                   context,
                 ).bodyMedium?.copyWith(fontWeight: FontWeight.bold),
               ),
               SizedBox(height: 40),
               CustomTextFormField(
-                title: 'البريد الإلكتروني',
-                hintText: 'abdamaar64@gmail.com',
+                title: context.l10n.emailTitle,
+                hintText: context.l10n.emailHint,
                 controller: emailController,
                 obscureText: false,
-                suffixIcon: Icon(Icons.email),
+                suffixIcon: Icon(Icons.email, color: AppColors.primaryGreen),
               ),
               CustomTextFormField(
-                title: 'كلمةالمرور',
+                title: context.l10n.passwordTitle,
                 hintText: '********',
                 controller: passwordController,
                 obscureText: isObscure,
@@ -77,18 +79,21 @@ class _LoginViewBodyState extends State<LoginViewBody> {
                   },
                   child: Icon(
                     isObscure ? Icons.visibility_off : Icons.remove_red_eye,
+                    color: AppColors.primaryGreen,
                   ),
                 ),
               ),
-              UserQuestionRow(answer: 'هل نسيت كلمة المرور ؟'),
+              UserQuestionRow(answer: context.l10n.forgotPassword),
               SizedBox(height: 20),
-              MainButton(onPressed: () {}, text: 'تسجيل الدخول'),
+              MainButton(onPressed: () {}, text: context.l10n.loginButton),
               SizedBox(height: 15),
               Ordivider(),
               SizedBox(height: 15),
               SocialLoginButton(
-                onpressed: () {},
-                title: 'المتابعة كضيف',
+                onpressed: () {
+                  Navigator.pushNamed(context, AppRoutes.mainLayoutView);
+                },
+                title: context.l10n.continueAsGuest,
                 widget: FaIcon(FontAwesomeIcons.user, size: 22),
               ),
               SizedBox(height: 50),
@@ -97,8 +102,8 @@ class _LoginViewBodyState extends State<LoginViewBody> {
                   Navigator.of(context).pushNamed(AppRoutes.signupView);
                 },
                 mainAxisAlignment: MainAxisAlignment.center,
-                ask: 'لا تمتلك حساب ؟ ',
-                answer: 'قم بإنشاء حساب',
+                ask: context.l10n.dontHaveAccount,
+                answer: context.l10n.signUpNow,
               ),
               SizedBox(height: 10),
             ],

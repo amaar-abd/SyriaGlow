@@ -1,6 +1,7 @@
 import 'package:dots_indicator/dots_indicator.dart';
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+import 'package:syria_glow/core/extensions/context_extensions.dart';
 import 'package:syria_glow/core/theme/app_colors.dart';
 import 'package:syria_glow/core/utils/app_images.dart';
 import 'package:syria_glow/core/utils/main_button.dart';
@@ -49,7 +50,7 @@ class FirstPageView extends StatelessWidget {
                 Image.asset(Assets.assetsImagesContainer),
                 SizedBox(width: 5),
                 Text(
-                  'التراث الحضاري',
+                  context.l10n.culturalHeritage,
                   style: Theme.of(context).textTheme.labelSmall?.copyWith(
                     color: AppColors.primaryGreen,
                   ),
@@ -60,7 +61,7 @@ class FirstPageView extends StatelessWidget {
         ),
         SizedBox(height: 22),
         Text(
-          'تراث يمتد لآلاف السنين',
+          context.l10n.onboardingTitle1,
           style: Theme.of(
             context,
           ).textTheme.displayLarge?.copyWith(color: AppColors.primaryGreen),
@@ -69,7 +70,7 @@ class FirstPageView extends StatelessWidget {
         SizedBox(
           width: MediaQuery.of(context).size.width * .90,
           child: Text(
-            'اكتشف أسرار الماضي في كل زاوية، من الأسواق القديمة إلى القلاع الحصينة، حيث يروي كل حجر قصة حضارة عظيمة.',
+            context.l10n.onboardingDesc1,
             textAlign: TextAlign.center,
             style: Theme.of(
               context,
@@ -108,7 +109,7 @@ class FirstPageView extends StatelessWidget {
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
                 Text(
-                  'التالي',
+                 context.l10n.nextButton,
                   style: TextTheme.of(context).bodyLarge?.copyWith(
                     color: AppColors.surfaceWhite,
                     fontSize: 18,

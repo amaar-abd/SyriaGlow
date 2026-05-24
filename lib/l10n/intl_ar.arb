@@ -1,1 +1,24 @@
-{}
+{
+    "loginSubtitle": "استكشف عبق التاريخ بلمسة عصرية",
+  "emailTitle": "البريد الإلكتروني",
+  "emailHint": "abdamaar64@gmail.com",
+  "passwordTitle": "كلمة المرور",
+  "passwordHint": "********",
+  "forgotPassword": "هل نسيت كلمة المرور ؟",
+  "loginButton": "تسجيل الدخول",
+  "continueAsGuest": "المتابعة كضيف",
+  "dontHaveAccount": "لا تمتلك حساب ؟ ",
+  "signUpNow": "قم بإنشاء حساب",
+  "fullNameTitle": "الاسم الكامل",
+  "fullNameHint": "أدخل اسمك الثلاثي",
+  "signUpButton": "إنشاء حساب",
+  "alreadyHaveAccount": "لديك حساب بالفعل ؟ ",
+  "loginText": "تسجيل الدخول",
+  "culturalHeritage": "التراث الحضاري",
+  "onboardingTitle1": "تراث يمتد لآلاف السنين",
+  "onboardingDesc1": "اكتشف أسرار الماضي في كل زاوية، من الأسواق القديمة إلى القلاع الحصينة، حيث يروي كل حجر قصة حضارة عظيمة.",
+  "nextButton": "التالي",
+  "onboardingTitle2": "اكتشف كنوز التاريخ",
+  "onboardingDesc2": "انطلق في رحلة عبر الزمن لاستكشاف أعرق المدن و الآثار , تجربة سياحية فريدة تدمج عظمة الماضي بحداثة المستقبل.",
+  "startJourneyButton": "ابدأ الرحلة"
+}
