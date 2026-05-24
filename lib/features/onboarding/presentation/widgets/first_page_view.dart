@@ -1,5 +1,6 @@
 import 'package:dots_indicator/dots_indicator.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:syria_glow/core/extensions/context_extensions.dart';
 import 'package:syria_glow/core/theme/app_colors.dart';
@@ -17,86 +18,73 @@ class FirstPageView extends StatelessWidget {
   final int pageIndex;
   @override
   Widget build(BuildContext context) {
+    final isArabic = Localizations.localeOf(context).languageCode == 'ar';
     return Column(
       children: [
         Stack(
           children: [
             ClipRRect(
-              borderRadius: const BorderRadius.only(
-                bottomLeft: Radius.circular(25),
-                bottomRight: Radius.circular(25),
+              borderRadius: BorderRadius.only(
+                bottomLeft: Radius.circular(25.r),
+                bottomRight: Radius.circular(25.r),
               ),
               child: Image.asset(
                 Assets.assetsImagesPalmyraSyria,
                 width: double.infinity,
-                height: 390,
+                height: 350.h,
                 fit: BoxFit.cover,
               ),
             ),
             SkipButton(),
           ],
         ),
-        SizedBox(height: 40),
-        DecoratedBox(
-          decoration: BoxDecoration(
-            color: AppColors.elegantGold,
-            borderRadius: BorderRadius.circular(15),
-          ),
-          child: Padding(
-            padding: const EdgeInsets.symmetric(horizontal: 4, vertical: 2),
-            child: Row(
-              mainAxisSize: MainAxisSize.min,
-              children: [
-                Image.asset(Assets.assetsImagesContainer),
-                SizedBox(width: 5),
-                Text(
-                  context.l10n.culturalHeritage,
-                  style: Theme.of(context).textTheme.labelSmall?.copyWith(
-                    color: AppColors.primaryGreen,
-                  ),
+        SizedBox(height: 20.h),
+
+        Expanded(
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              Text(
+                context.l10n.onboardingTitle1,
+                textAlign: TextAlign.center,
+                style: Theme.of(context).textTheme.displayLarge?.copyWith(
+                      color: AppColors.primaryGreen,
+                    ),
+              ),
+              SizedBox(height: 15.h),
+              SizedBox(
+                width: context.width * .90,
+                child: Text(
+                  context.l10n.onboardingDesc1,
+                  textAlign: TextAlign.center,
+                  style: Theme.of(context).textTheme.bodyMedium?.copyWith(
+                        color: AppColors.primaryGreen,
+                      ),
                 ),
-              ],
-            ),
+              ),
+            ],
           ),
         ),
-        SizedBox(height: 22),
-        Text(
-          context.l10n.onboardingTitle1,
-          style: Theme.of(
-            context,
-          ).textTheme.displayLarge?.copyWith(color: AppColors.primaryGreen),
-        ),
-        SizedBox(height: 22),
-        SizedBox(
-          width: MediaQuery.of(context).size.width * .90,
-          child: Text(
-            context.l10n.onboardingDesc1,
-            textAlign: TextAlign.center,
-            style: Theme.of(
-              context,
-            ).textTheme.bodyMedium?.copyWith(color: AppColors.primaryGreen),
-          ),
-        ),
-        SizedBox(height: 22),
+        SizedBox(height: 20.h),
         DotsIndicator(
           dotsCount: 2,
           position: pageIndex.toDouble(),
           decorator: DotsDecorator(
-            size: const Size(25.0, 8.0),
+            size: Size(25.0.w, 8.0.h),
             activeColor: AppColors.elegantGold,
-            activeSize: const Size(25.0, 8.0),
+            activeSize: Size(25.0.w, 8.0.h),
             shape: RoundedRectangleBorder(
-              borderRadius: BorderRadius.circular(5.0),
+              borderRadius: BorderRadius.circular(5.0.r),
             ),
             activeShape: RoundedRectangleBorder(
-              borderRadius: BorderRadius.circular(5.0),
+              borderRadius: BorderRadius.circular(5.0.r),
             ),
           ),
         ),
-        Spacer(),
+        SizedBox(height: 10.h),
 
         Padding(
-          padding: const EdgeInsets.symmetric(horizontal: 14),
+          padding: EdgeInsets.symmetric(horizontal: 14.w),
           child: MainButton(
             onPressed: () {
               pageController.animateToPage(
@@ -109,15 +97,17 @@ class FirstPageView extends StatelessWidget {
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
                 Text(
-                 context.l10n.nextButton,
+                  context.l10n.nextButton,
                   style: TextTheme.of(context).bodyLarge?.copyWith(
                     color: AppColors.surfaceWhite,
-                    fontSize: 18,
+                    fontSize: 18.sp,
                   ),
                 ),
-                SizedBox(width: 10),
+                SizedBox(width: 10.w),
                 FaIcon(
-                  FontAwesomeIcons.arrowLeft,
+                  isArabic
+                      ? FontAwesomeIcons.arrowLeft
+                      : FontAwesomeIcons.arrowRight,
                   color: AppColors.surfaceWhite,
                 ),
               ],
@@ -125,7 +115,7 @@ class FirstPageView extends StatelessWidget {
           ),
         ),
 
-        SizedBox(height: 60),
+        SizedBox(height: 25.h),
       ],
     );
   }

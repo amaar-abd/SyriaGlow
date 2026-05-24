@@ -1,5 +1,6 @@
 import 'package:dots_indicator/dots_indicator.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:syria_glow/core/extensions/context_extensions.dart';
 import 'package:syria_glow/core/routes/app_routes.dart';
@@ -13,6 +14,7 @@ class SecondPageView extends StatelessWidget {
   final int pageIndex;
   @override
   Widget build(BuildContext context) {
+    final isArabic = Localizations.localeOf(context).languageCode == 'ar';
     return Column(
       children: [
         Stack(
@@ -25,53 +27,63 @@ class SecondPageView extends StatelessWidget {
               child: Image.asset(
                 Assets.assetsImagesAlHisnCastel,
                 width: double.infinity,
-                height: 390,
+                height: 350.h,
                 fit: BoxFit.cover,
               ),
             ),
             SkipButton(),
           ],
         ),
-        SizedBox(height: 80),
+        SizedBox(height: 20.h),
 
-        Text(
-          context.l10n.onboardingTitle2,
-          style: Theme.of(
-            context,
-          ).textTheme.displayLarge?.copyWith(color: AppColors.primaryGreen),
-        ),
-        SizedBox(height: 22),
-        SizedBox(
-          width: MediaQuery.of(context).size.width * .90,
-          child: Text(
-            context.l10n.onboardingDesc2,
-            textAlign: TextAlign.center,
-            style: Theme.of(
-              context,
-            ).textTheme.bodyMedium?.copyWith(color: AppColors.primaryGreen),
+        Expanded(
+          child: Padding(
+            padding: EdgeInsets.symmetric(horizontal: 20.w),
+            child: Column(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                Text(
+                  context.l10n.onboardingTitle2,
+                  textAlign: TextAlign.center,
+                  style: Theme.of(context).textTheme.displayLarge?.copyWith(
+                    color: AppColors.primaryGreen,
+                  ),
+                ),
+                SizedBox(height: 15.h),
+                SizedBox(
+                  width: context.width * .90,
+                  child: Text(
+                    context.l10n.onboardingDesc2,
+                    textAlign: TextAlign.center,
+                    style: Theme.of(context).textTheme.bodyMedium?.copyWith(
+                      color: AppColors.primaryGreen,
+                    ),
+                  ),
+                ),
+              ],
+            ),
           ),
         ),
-        SizedBox(height: 22),
+        SizedBox(height: 20.h),
         DotsIndicator(
           dotsCount: 2,
           position: pageIndex.toDouble(),
           decorator: DotsDecorator(
             color: AppColors.elegantGold,
             activeColor: AppColors.elegantGold,
-            size: const Size(25.0, 8.0),
-            activeSize: const Size(25.0, 8.0),
+            size: Size(25.0.w, 8.0.h),
+            activeSize: Size(25.0.w, 8.0.h),
             shape: RoundedRectangleBorder(
-              borderRadius: BorderRadius.circular(5.0),
+              borderRadius: BorderRadius.circular(5.0.r),
             ),
             activeShape: RoundedRectangleBorder(
-              borderRadius: BorderRadius.circular(5.0),
+              borderRadius: BorderRadius.circular(5.0.r),
             ),
           ),
         ),
-        Spacer(),
-
+        SizedBox(height: 10.h),
         Padding(
-          padding: const EdgeInsets.symmetric(horizontal: 14),
+          padding: EdgeInsets.symmetric(horizontal: 14.w),
           child: MainButton(
             onPressed: () {
               Navigator.of(context).pushNamed(AppRoutes.loginView);
@@ -83,12 +95,14 @@ class SecondPageView extends StatelessWidget {
                   context.l10n.startJourneyButton,
                   style: TextTheme.of(context).bodyLarge?.copyWith(
                     color: AppColors.surfaceWhite,
-                    fontSize: 18,
+                    fontSize: 18.sp,
                   ),
                 ),
-                SizedBox(width: 10),
+                SizedBox(width: 10.w),
                 FaIcon(
-                  FontAwesomeIcons.arrowLeft,
+                  isArabic
+                      ? FontAwesomeIcons.arrowLeft
+                      : FontAwesomeIcons.arrowRight,
                   color: AppColors.surfaceWhite,
                 ),
               ],
@@ -96,7 +110,7 @@ class SecondPageView extends StatelessWidget {
           ),
         ),
 
-        SizedBox(height: 60),
+        SizedBox(height: 25.h),
       ],
     );
   }

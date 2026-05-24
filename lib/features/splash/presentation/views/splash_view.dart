@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 import 'package:syria_glow/features/splash/presentation/widgets/splash_view_body.dart';
 
 class SplashView extends StatelessWidget {
@@ -6,6 +7,17 @@ class SplashView extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(body: SafeArea(child: SplashViewBody()));
+    return AnnotatedRegion<SystemUiOverlayStyle>(
+      value: const SystemUiOverlayStyle(
+        statusBarColor: Colors.transparent,
+
+        statusBarIconBrightness: Brightness.light, 
+        statusBarBrightness: Brightness.light,
+      ),
+      child: Scaffold(
+        extendBodyBehindAppBar: true, 
+      
+        body: const SplashViewBody()),
+    );
   }
 }
