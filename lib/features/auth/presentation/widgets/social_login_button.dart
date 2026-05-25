@@ -6,9 +6,12 @@ class SocialLoginButton extends StatelessWidget {
     super.key,
     required this.onpressed,
     required this.title,
-    required this.widget,
+
+    this.leading,
   });
-  final Widget widget;
+
+  final Widget? leading;
+
   final VoidCallback onpressed;
   final String title;
   @override
@@ -38,7 +41,7 @@ class SocialLoginButton extends StatelessWidget {
                 context,
               ).bodyMedium?.copyWith(fontWeight: FontWeight.bold),
             ),
-            leading: widget,
+            leading: leading,
           ),
         ),
       ),

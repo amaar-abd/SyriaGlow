@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:syria_glow/core/extensions/context_extensions.dart';
 import 'package:syria_glow/core/theme/app_colors.dart';
 
 class Ordivider extends StatelessWidget {
@@ -11,7 +12,7 @@ class Ordivider extends StatelessWidget {
         Expanded(child: Divider()),
         const SizedBox(width: 18),
         Text(
-          'أو',
+          context.l10n.loginOr,
           style: TextTheme.of(
             context,
           ).bodyMedium?.copyWith(fontSize: 18, color: AppColors.textDark),

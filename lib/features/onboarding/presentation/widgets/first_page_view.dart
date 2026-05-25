@@ -31,7 +31,7 @@ class FirstPageView extends StatelessWidget {
               child: Image.asset(
                 Assets.assetsImagesPalmyraSyria,
                 width: double.infinity,
-                height: 350.h,
+                height: 340.h,
                 fit: BoxFit.cover,
               ),
             ),
@@ -47,9 +47,9 @@ class FirstPageView extends StatelessWidget {
               Text(
                 context.l10n.onboardingTitle1,
                 textAlign: TextAlign.center,
-                style: Theme.of(context).textTheme.displayLarge?.copyWith(
-                      color: AppColors.primaryGreen,
-                    ),
+                style: Theme.of(context).textTheme.displayMedium?.copyWith(
+                  color: AppColors.primaryGreen,
+                ),
               ),
               SizedBox(height: 15.h),
               SizedBox(
@@ -58,8 +58,8 @@ class FirstPageView extends StatelessWidget {
                   context.l10n.onboardingDesc1,
                   textAlign: TextAlign.center,
                   style: Theme.of(context).textTheme.bodyMedium?.copyWith(
-                        color: AppColors.primaryGreen,
-                      ),
+                    color: AppColors.primaryGreen,
+                  ),
                 ),
               ),
             ],

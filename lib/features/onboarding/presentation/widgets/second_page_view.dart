@@ -27,7 +27,7 @@ class SecondPageView extends StatelessWidget {
               child: Image.asset(
                 Assets.assetsImagesAlHisnCastel,
                 width: double.infinity,
-                height: 350.h,
+                height: 340.h,
                 fit: BoxFit.cover,
               ),
             ),
@@ -45,7 +45,7 @@ class SecondPageView extends StatelessWidget {
                 Text(
                   context.l10n.onboardingTitle2,
                   textAlign: TextAlign.center,
-                  style: Theme.of(context).textTheme.displayLarge?.copyWith(
+                  style: Theme.of(context).textTheme.displayMedium?.copyWith(
                     color: AppColors.primaryGreen,
                   ),
                 ),
