@@ -1,13 +1,12 @@
 name: syria_glow
-description: "A new Flutter project."
+description: "Flutter project."
 publish_to: 'none'
 version: 1.0.0+1
-
 environment:
   sdk: ^3.9.2
-
 dependencies:
   cupertino_icons: ^1.0.8
+  dartz: ^0.10.1
   dio: ^5.9.2
   dots_indicator: ^4.0.1
   flutter:
@@ -18,6 +17,7 @@ dependencies:
     sdk: flutter
   flutter_screenutil: ^5.9.3
   font_awesome_flutter: ^11.0.0
+  get_it: ^9.2.1
   google_fonts: ^8.0.2
   intl: ^0.20.2
   svg_flutter: ^0.0.1

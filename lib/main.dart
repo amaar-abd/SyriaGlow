@@ -1,14 +1,25 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:syria_glow/core/depandency_injection/service_locator.dart';
+import 'package:syria_glow/core/localization/cubit/language_cubit.dart';
+import 'package:syria_glow/core/localization/cubit/language_state.dart';
 import 'package:syria_glow/core/routes/app_routes.dart';
 import 'package:syria_glow/core/routes/route_generator.dart';
 import 'package:syria_glow/core/theme/app_theme.dart';
 import 'package:syria_glow/generated/l10n.dart';
 
 void main() async {
-  runApp(const SyriaGlow());
+  WidgetsFlutterBinding.ensureInitialized();
   await ScreenUtil.ensureScreenSize();
+  setupServiceLocator();
+  runApp(
+    BlocProvider(
+      create: (context) => LanguageCubit(),
+      child: const SyriaGlow(),
+    ),
+  );
 }
 
 class SyriaGlow extends StatelessWidget {
@@ -21,20 +32,33 @@ class SyriaGlow extends StatelessWidget {
       minTextAdapt: true,
       splitScreenMode: true,
       builder: (context, child) {
-        return MaterialApp(
-          title: 'Syria Glow',
-          theme: AppTheme.mainTheme,
-          onGenerateRoute: RouteGenerator.onGenerateRoute,
-          initialRoute: AppRoutes.splashView,
-          debugShowCheckedModeBanner: false,
-          localizationsDelegates: const [
-            S.delegate,
-            GlobalMaterialLocalizations.delegate,
-            GlobalWidgetsLocalizations.delegate,
-            GlobalCupertinoLocalizations.delegate,
-          ],
-          supportedLocales: S.delegate.supportedLocales,
-          locale: const Locale('ar'),
+        return BlocBuilder<LanguageCubit, LanguageState>(
+          builder: (context, state) {
+            return MaterialApp(
+              title: 'Syria Glow',
+              theme: AppTheme.mainTheme,
+              onGenerateRoute: RouteGenerator.onGenerateRoute,
+              initialRoute: AppRoutes.splashView,
+              debugShowCheckedModeBanner: false,
+              localizationsDelegates: const [
+                S.delegate,
+                GlobalMaterialLocalizations.delegate,
+                GlobalWidgetsLocalizations.delegate,
+                GlobalCupertinoLocalizations.delegate,
+              ],
+              supportedLocales: S.delegate.supportedLocales,
+              locale: state.locale,
+              builder: (context, child) {
+                return AnimatedSwitcher(
+                  duration: const Duration(milliseconds: 400),
+                  switchInCurve: Curves.easeIn,
+                  switchOutCurve: Curves.easeInOut,
+                  key: ValueKey<String>(state.locale.languageCode),
+                  child: child,
+                );
+              },
+            );
+          },
         );
       },
     );
