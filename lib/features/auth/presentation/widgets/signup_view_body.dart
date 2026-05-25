@@ -1,9 +1,10 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:syria_glow/core/extensions/context_extensions.dart';
 import 'package:syria_glow/core/theme/app_colors.dart';
-import 'package:syria_glow/core/utils/main_button.dart';
 import 'package:syria_glow/features/auth/presentation/widgets/custom_checkbox_list_tile.dart';
 import 'package:syria_glow/features/auth/presentation/widgets/custom_text_form_field.dart';
+import 'package:syria_glow/features/auth/presentation/widgets/signup_bloc_consumer.dart';
 import 'package:syria_glow/features/auth/presentation/widgets/user_question_row.dart';
 
 class SignupViewBody extends StatefulWidget {
@@ -17,6 +18,8 @@ class _SignupViewBodyState extends State<SignupViewBody> {
   final TextEditingController nameController = TextEditingController();
   final TextEditingController emailController = TextEditingController();
   final TextEditingController passwordController = TextEditingController();
+  final TextEditingController passwordConfirmationController =
+      TextEditingController();
   final GlobalKey<FormState> _globalKey = GlobalKey<FormState>();
   AutovalidateMode autovalidateMode = AutovalidateMode.disabled;
   bool isObscure = true;
@@ -27,6 +30,7 @@ class _SignupViewBodyState extends State<SignupViewBody> {
     nameController.dispose();
     emailController.dispose();
     passwordController.dispose();
+    passwordConfirmationController.dispose();
     super.dispose();
   }
 
@@ -36,10 +40,9 @@ class _SignupViewBodyState extends State<SignupViewBody> {
       key: _globalKey,
       child: SingleChildScrollView(
         child: Padding(
-          padding: const EdgeInsets.symmetric(horizontal: 16),
+          padding: EdgeInsets.symmetric(horizontal: 16.w),
           child: Column(
             children: [
-              SizedBox(height: 40),
               CustomTextFormField(
                 title: context.l10n.fullNameTitle,
                 hintText: context.l10n.fullNameHint,
@@ -56,8 +59,25 @@ class _SignupViewBodyState extends State<SignupViewBody> {
               ),
               CustomTextFormField(
                 title: context.l10n.passwordTitle,
-                hintText: '********',
+                hintText: context.l10n.passwordHint,
                 controller: passwordController,
+                obscureText: isObscure,
+                suffixIcon: InkWell(
+                  onTap: () {
+                    setState(() {
+                      isObscure = !isObscure;
+                    });
+                  },
+                  child: Icon(
+                    isObscure ? Icons.visibility_off : Icons.remove_red_eye,
+                    color: AppColors.primaryGreen,
+                  ),
+                ),
+              ),
+              CustomTextFormField(
+                title: context.l10n.passwordConfirmationTitle,
+                hintText: context.l10n.passwordConfirmationHint,
+                controller: passwordConfirmationController,
                 obscureText: isObscure,
                 suffixIcon: InkWell(
                   onTap: () {
@@ -80,9 +100,20 @@ class _SignupViewBodyState extends State<SignupViewBody> {
                   });
                 },
               ),
-              SizedBox(height: 20),
-              MainButton(onPressed: () {}, text: context.l10n.signUpButton),
-              SizedBox(height: MediaQuery.of(context).size.height * .26),
+              SizedBox(height: 20.h),
+              SignUpBlocConsumer(
+                globalKey: _globalKey,
+                passwordController: passwordController,
+                passwordConfirmationController: passwordConfirmationController,
+                nameController: nameController,
+                emailController: emailController,
+                onValidations: () {
+                  setState(() {
+                    autovalidateMode = AutovalidateMode.always;
+                  });
+                },
+              ),
+              SizedBox(height: context.height * .12),
               UserQuestionRow(
                 onTap: () {
                   Navigator.of(context).pop();
@@ -91,7 +122,7 @@ class _SignupViewBodyState extends State<SignupViewBody> {
                 ask: context.l10n.alreadyHaveAccount,
                 answer: context.l10n.loginText,
               ),
-              SizedBox(height: 10),
+              SizedBox(height: 10.h),
             ],
           ),
         ),
