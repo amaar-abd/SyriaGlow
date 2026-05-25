@@ -20,6 +20,8 @@ typedef String MessageIfAbsent(String messageStr, List<dynamic> args);
 class MessageLookup extends MessageLookupByLibrary {
   String get localeName => 'ar';
 
+  static String m0(fieldName) => "الرجاء إدخال ${fieldName}";
+
   final messages = _notInlinedMessages(_notInlinedMessages);
   static Map<String, Function> _notInlinedMessages(_) => <String, Function>{
     "alreadyHaveAccount": MessageLookupByLibrary.simpleMessage(
@@ -28,7 +30,7 @@ class MessageLookup extends MessageLookupByLibrary {
     "continueAsGuest": MessageLookupByLibrary.simpleMessage("المتابعة كضيف"),
     "culturalHeritage": MessageLookupByLibrary.simpleMessage("التراث الحضاري"),
     "dontHaveAccount": MessageLookupByLibrary.simpleMessage("لا تمتلك حساب ؟ "),
-    "emailHint": MessageLookupByLibrary.simpleMessage("abdamaar64@gmail.com"),
+    "emailHint": MessageLookupByLibrary.simpleMessage("أدخل بريدك الإلكتروني"),
     "emailTitle": MessageLookupByLibrary.simpleMessage("البريد الإلكتروني"),
     "forgotPassword": MessageLookupByLibrary.simpleMessage(
       "هل نسيت كلمة المرور ؟",
@@ -36,6 +38,7 @@ class MessageLookup extends MessageLookupByLibrary {
     "fullNameHint": MessageLookupByLibrary.simpleMessage("أدخل اسمك الثلاثي"),
     "fullNameTitle": MessageLookupByLibrary.simpleMessage("الاسم الكامل"),
     "loginButton": MessageLookupByLibrary.simpleMessage("تسجيل الدخول"),
+    "loginOr": MessageLookupByLibrary.simpleMessage("أو"),
     "loginSubtitle": MessageLookupByLibrary.simpleMessage(
       "استكشف عبق التاريخ بلمسة عصرية",
     ),
@@ -53,10 +56,22 @@ class MessageLookup extends MessageLookupByLibrary {
     "onboardingTitle2": MessageLookupByLibrary.simpleMessage(
       "اكتشف كنوز التاريخ",
     ),
-    "passwordHint": MessageLookupByLibrary.simpleMessage("********"),
+    "passwordConfirmationHint": MessageLookupByLibrary.simpleMessage(
+      "أعد كتابة كلمة المرور",
+    ),
+    "passwordConfirmationTitle": MessageLookupByLibrary.simpleMessage(
+      "تأكيد كلمة المرور",
+    ),
+    "passwordHint": MessageLookupByLibrary.simpleMessage("أدخل كلمة المرور"),
     "passwordTitle": MessageLookupByLibrary.simpleMessage("كلمة المرور"),
+    "passwordValidationError": MessageLookupByLibrary.simpleMessage(
+      "كلمتا المرور غير متطابقتين",
+    ),
+    "privacyPolicy": MessageLookupByLibrary.simpleMessage("سياسة الخصوصية"),
+    "requiredField": m0,
     "signUpButton": MessageLookupByLibrary.simpleMessage("إنشاء حساب"),
     "signUpNow": MessageLookupByLibrary.simpleMessage("قم بإنشاء حساب"),
     "startJourneyButton": MessageLookupByLibrary.simpleMessage("ابدأ الرحلة"),
+    "termsOfService": MessageLookupByLibrary.simpleMessage("شروط الخدمة"),
   };
 }

@@ -1,9 +1,11 @@
 {
     "loginSubtitle": "Explore the fragrance of history with a modern touch",
   "emailTitle": "Email Address",
-  "emailHint": "abdamaar64@gmail.com",
+  "emailHint": "Enter your email",
   "passwordTitle": "Password",
-  "passwordHint": "********",
+"passwordHint": "Enter your password",
+"passwordConfirmationTitle": "Confirm Password",
+"passwordConfirmationHint": "Re-enter your password",
   "forgotPassword": "Forgot your password?",
   "loginButton": "Login",
   "continueAsGuest": "Continue as a guest",
@@ -16,9 +18,14 @@
   "loginText": "Login",
   "culturalHeritage": "Cultural Heritage",
   "onboardingTitle1": "Heritage extending for thousands of years",
-  "onboardingDesc1": "Discover the secrets of the past in every corner, from ancient markets to fortified castles, where every stone tells the story of a great civilization.",
+ "onboardingDesc1": "Discover ancient markets, majestic castles, and the secrets of a great civilization in every corner.",
   "nextButton": "Next",
   "onboardingTitle2": "Discover history treasures",
-  "onboardingDesc2": "Embark on a journey through time to explore the most ancient cities and monuments, a unique tourist experience blending the greatness of the past with the innovation of the future.",
-  "startJourneyButton": "Start Journey"
+ "onboardingDesc2": "Embark on a journey through time, exploring ancient heritage blended with modern innovation.",
+  "startJourneyButton": "Start Journey",
+  "loginOr":"Or",
+  "termsOfService": "Terms of Service",
+"privacyPolicy": "Privacy Policy",
+"passwordValidationError": "Passwords do not match",
+"requiredField": "Please enter {fieldName}"
 }

@@ -20,6 +20,8 @@ typedef String MessageIfAbsent(String messageStr, List<dynamic> args);
 class MessageLookup extends MessageLookupByLibrary {
   String get localeName => 'en';
 
+  static String m0(fieldName) => "Please enter ${fieldName}";
+
   final messages = _notInlinedMessages(_notInlinedMessages);
   static Map<String, Function> _notInlinedMessages(_) => <String, Function>{
     "alreadyHaveAccount": MessageLookupByLibrary.simpleMessage(
@@ -34,7 +36,7 @@ class MessageLookup extends MessageLookupByLibrary {
     "dontHaveAccount": MessageLookupByLibrary.simpleMessage(
       "Don\'t have an account? ",
     ),
-    "emailHint": MessageLookupByLibrary.simpleMessage("abdamaar64@gmail.com"),
+    "emailHint": MessageLookupByLibrary.simpleMessage("Enter your email"),
     "emailTitle": MessageLookupByLibrary.simpleMessage("Email Address"),
     "forgotPassword": MessageLookupByLibrary.simpleMessage(
       "Forgot your password?",
@@ -44,16 +46,17 @@ class MessageLookup extends MessageLookupByLibrary {
     ),
     "fullNameTitle": MessageLookupByLibrary.simpleMessage("Full Name"),
     "loginButton": MessageLookupByLibrary.simpleMessage("Login"),
+    "loginOr": MessageLookupByLibrary.simpleMessage("Or"),
     "loginSubtitle": MessageLookupByLibrary.simpleMessage(
       "Explore the fragrance of history with a modern touch",
     ),
     "loginText": MessageLookupByLibrary.simpleMessage("Login"),
     "nextButton": MessageLookupByLibrary.simpleMessage("Next"),
     "onboardingDesc1": MessageLookupByLibrary.simpleMessage(
-      "Discover the secrets of the past in every corner, from ancient markets to fortified castles, where every stone tells the story of a great civilization.",
+      "Discover ancient markets, majestic castles, and the secrets of a great civilization in every corner.",
     ),
     "onboardingDesc2": MessageLookupByLibrary.simpleMessage(
-      "Embark on a journey through time to explore the most ancient cities and monuments, a unique tourist experience blending the greatness of the past with the innovation of the future.",
+      "Embark on a journey through time, exploring ancient heritage blended with modern innovation.",
     ),
     "onboardingTitle1": MessageLookupByLibrary.simpleMessage(
       "Heritage extending for thousands of years",
@@ -61,10 +64,22 @@ class MessageLookup extends MessageLookupByLibrary {
     "onboardingTitle2": MessageLookupByLibrary.simpleMessage(
       "Discover history treasures",
     ),
-    "passwordHint": MessageLookupByLibrary.simpleMessage("********"),
+    "passwordConfirmationHint": MessageLookupByLibrary.simpleMessage(
+      "Re-enter your password",
+    ),
+    "passwordConfirmationTitle": MessageLookupByLibrary.simpleMessage(
+      "Confirm Password",
+    ),
+    "passwordHint": MessageLookupByLibrary.simpleMessage("Enter your password"),
     "passwordTitle": MessageLookupByLibrary.simpleMessage("Password"),
+    "passwordValidationError": MessageLookupByLibrary.simpleMessage(
+      "Passwords do not match",
+    ),
+    "privacyPolicy": MessageLookupByLibrary.simpleMessage("Privacy Policy"),
+    "requiredField": m0,
     "signUpButton": MessageLookupByLibrary.simpleMessage("Sign Up"),
     "signUpNow": MessageLookupByLibrary.simpleMessage("Create an account"),
     "startJourneyButton": MessageLookupByLibrary.simpleMessage("Start Journey"),
+    "termsOfService": MessageLookupByLibrary.simpleMessage("Terms of Service"),
   };
 }

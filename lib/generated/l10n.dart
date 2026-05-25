@@ -74,10 +74,10 @@ class S {
     );
   }
 
-  /// `abdamaar64@gmail.com`
+  /// `Enter your email`
   String get emailHint {
     return Intl.message(
-      'abdamaar64@gmail.com',
+      'Enter your email',
       name: 'emailHint',
       desc: '',
       args: [],
@@ -89,9 +89,34 @@ class S {
     return Intl.message('Password', name: 'passwordTitle', desc: '', args: []);
   }
 
-  /// `********`
+  /// `Enter your password`
   String get passwordHint {
-    return Intl.message('********', name: 'passwordHint', desc: '', args: []);
+    return Intl.message(
+      'Enter your password',
+      name: 'passwordHint',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Confirm Password`
+  String get passwordConfirmationTitle {
+    return Intl.message(
+      'Confirm Password',
+      name: 'passwordConfirmationTitle',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Re-enter your password`
+  String get passwordConfirmationHint {
+    return Intl.message(
+      'Re-enter your password',
+      name: 'passwordConfirmationHint',
+      desc: '',
+      args: [],
+    );
   }
 
   /// `Forgot your password?`
@@ -194,10 +219,10 @@ class S {
     );
   }
 
-  /// `Discover the secrets of the past in every corner, from ancient markets to fortified castles, where every stone tells the story of a great civilization.`
+  /// `Discover ancient markets, majestic castles, and the secrets of a great civilization in every corner.`
   String get onboardingDesc1 {
     return Intl.message(
-      'Discover the secrets of the past in every corner, from ancient markets to fortified castles, where every stone tells the story of a great civilization.',
+      'Discover ancient markets, majestic castles, and the secrets of a great civilization in every corner.',
       name: 'onboardingDesc1',
       desc: '',
       args: [],
@@ -219,10 +244,10 @@ class S {
     );
   }
 
-  /// `Embark on a journey through time to explore the most ancient cities and monuments, a unique tourist experience blending the greatness of the past with the innovation of the future.`
+  /// `Embark on a journey through time, exploring ancient heritage blended with modern innovation.`
   String get onboardingDesc2 {
     return Intl.message(
-      'Embark on a journey through time to explore the most ancient cities and monuments, a unique tourist experience blending the greatness of the past with the innovation of the future.',
+      'Embark on a journey through time, exploring ancient heritage blended with modern innovation.',
       name: 'onboardingDesc2',
       desc: '',
       args: [],
@@ -236,6 +261,51 @@ class S {
       name: 'startJourneyButton',
       desc: '',
       args: [],
+    );
+  }
+
+  /// `Or`
+  String get loginOr {
+    return Intl.message('Or', name: 'loginOr', desc: '', args: []);
+  }
+
+  /// `Terms of Service`
+  String get termsOfService {
+    return Intl.message(
+      'Terms of Service',
+      name: 'termsOfService',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Privacy Policy`
+  String get privacyPolicy {
+    return Intl.message(
+      'Privacy Policy',
+      name: 'privacyPolicy',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Passwords do not match`
+  String get passwordValidationError {
+    return Intl.message(
+      'Passwords do not match',
+      name: 'passwordValidationError',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Please enter {fieldName}`
+  String requiredField(Object fieldName) {
+    return Intl.message(
+      'Please enter $fieldName',
+      name: 'requiredField',
+      desc: '',
+      args: [fieldName],
     );
   }
 }
