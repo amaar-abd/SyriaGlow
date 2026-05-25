@@ -49,10 +49,24 @@ class DioErrorHandler {
     final String? statusCode = response?.statusCode?.toString();
 
     if (response != null && response.data != null) {
-      final String errorMessage =
-          response.data['message'] ?? "حدث خطأ ما في الخادم";
+      final data = response.data;
+      if (data['errors'] != null && data['errors'] is Map) {
+        final Map<String, dynamic> errorsMap = data['errors'];
+
+        if (errorsMap.isNotEmpty) {
+          final firstErrorList = errorsMap.values.first;
+          if (firstErrorList is List && firstErrorList.isNotEmpty) {
+            return ServerFailure(
+              message: firstErrorList.first.toString(),
+              code: statusCode,
+            );
+          }
+        }
+      }
+      final String errorMessage = data['message'] ?? "حدث خطأ ما في الخادم";
       return ServerFailure(message: errorMessage, code: statusCode);
     }
+
     return ServerFailure(message: "استجابة خاطئة من السيرفر", code: statusCode);
   }
 }
