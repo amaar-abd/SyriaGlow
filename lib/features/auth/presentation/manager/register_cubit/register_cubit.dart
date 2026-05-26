@@ -12,7 +12,7 @@ class RegisterCubit extends Cubit<RegisterState> {
   }) async {
     emit(RegisterLoading());
 
-    final result = await registerUseCase.call(registerRequest: registerRequest);
+    final result = await registerUseCase(registerRequest: registerRequest);
 
     result.fold(
       (failure) => emit(RegisterError(error: failure.message)),
