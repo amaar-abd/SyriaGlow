@@ -5,32 +5,28 @@ import 'package:syria_glow/core/routes/app_routes.dart';
 import 'package:syria_glow/core/theme/app_colors.dart';
 import 'package:syria_glow/core/utils/custom_snackbar.dart';
 import 'package:syria_glow/core/utils/main_button.dart';
-import 'package:syria_glow/features/auth/data/models/register_request.dart';
-import 'package:syria_glow/features/auth/presentation/manager/register_cubit/register_cubit.dart';
+import 'package:syria_glow/features/auth/data/models/login_request.dart';
+import 'package:syria_glow/features/auth/presentation/manager/login_cubit/login_cubit.dart';
 
-class SignUpBlocConsumer extends StatelessWidget {
-  const SignUpBlocConsumer({
+class LoginBlocConsumer extends StatelessWidget {
+  const LoginBlocConsumer({
     super.key,
     required GlobalKey<FormState> globalKey,
-    required this.passwordController,
-    required this.passwordConfirmationController,
-    required this.nameController,
     required this.emailController,
+    required this.passwordController,
     required this.onValidations,
   }) : _globalKey = globalKey;
 
   final GlobalKey<FormState> _globalKey;
-  final TextEditingController passwordController;
-  final TextEditingController passwordConfirmationController;
-  final TextEditingController nameController;
   final TextEditingController emailController;
+  final TextEditingController passwordController;
   final VoidCallback onValidations;
 
   @override
   Widget build(BuildContext context) {
-    return BlocConsumer<RegisterCubit, RegisterState>(
+    return BlocConsumer<LoginCubit, LoginState>(
       listener: (context, state) {
-        if (state is RegisterSuccess) {
+        if (state is LoginSuccess) {
           customSnackBar(
             context,
             state.authResponse.message,
@@ -42,39 +38,28 @@ class SignUpBlocConsumer extends StatelessWidget {
             (route) => false,
           );
         }
-        if (state is RegisterError) {
+        if (state is LoginError) {
           customSnackBar(context, state.error, AppColors.error);
         }
       },
       builder: (context, state) {
-        final bool isLoading = state is RegisterLoading;
+        final bool isLoading = state is LoginLoading;
         return MainButton(
           onPressed: isLoading
               ? null
               : () {
                   if (_globalKey.currentState!.validate()) {
-                    if (passwordController.text ==
-                        passwordConfirmationController.text) {
-                      context.read<RegisterCubit>().registerAccount(
-                        registerRequest: RegisterRequest(
-                          name: nameController.text,
-                          email: emailController.text,
-                          password: passwordController.text,
-                          passwordConf: passwordConfirmationController.text,
-                        ),
-                      );
-                    } else {
-                      customSnackBar(
-                        context,
-                        context.l10n.passwordValidationError,
-                        AppColors.error,
-                      );
-                    }
+                    context.read<LoginCubit>().login(
+                      LoginRequest(
+                        email: emailController.text,
+                        password: passwordController.text,
+                      ),
+                    );
                   } else {
                     onValidations();
                   }
                 },
-          text: isLoading ? null : context.l10n.signUpButton,
+          text: isLoading ? null : context.l10n.loginButton,
           widget: isLoading
               ? CircularProgressIndicator(
                   color: AppColors.backgroundLight,

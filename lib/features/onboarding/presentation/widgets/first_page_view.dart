@@ -41,28 +41,31 @@ class FirstPageView extends StatelessWidget {
         SizedBox(height: 20.h),
 
         Expanded(
-          child: Column(
-            mainAxisAlignment: MainAxisAlignment.center,
-            children: [
-              Text(
-                context.l10n.onboardingTitle1,
-                textAlign: TextAlign.center,
-                style: Theme.of(context).textTheme.displayMedium?.copyWith(
-                  color: AppColors.primaryGreen,
-                ),
-              ),
-              SizedBox(height: 15.h),
-              SizedBox(
-                width: context.width * .90,
-                child: Text(
-                  context.l10n.onboardingDesc1,
+          child: Padding(
+           padding: EdgeInsets.symmetric(horizontal: 20.w),
+            child: Column(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                Text(
+                  context.l10n.onboardingTitle1,
                   textAlign: TextAlign.center,
-                  style: Theme.of(context).textTheme.bodyMedium?.copyWith(
+                  style: Theme.of(context).textTheme.displayMedium?.copyWith(
                     color: AppColors.primaryGreen,
                   ),
                 ),
-              ),
-            ],
+                SizedBox(height: 15.h),
+                SizedBox(
+                  width: context.width * .90,
+                  child: Text(
+                    context.l10n.onboardingDesc1,
+                    textAlign: TextAlign.center,
+                    style: Theme.of(context).textTheme.bodyMedium?.copyWith(
+                      color: AppColors.primaryGreen,
+                    ),
+                  ),
+                ),
+              ],
+            ),
           ),
         ),
         SizedBox(height: 20.h),

@@ -37,6 +37,7 @@ class _SignupViewBodyState extends State<SignupViewBody> {
   @override
   Widget build(BuildContext context) {
     return Form(
+      autovalidateMode: autovalidateMode,
       key: _globalKey,
       child: SingleChildScrollView(
         child: Padding(

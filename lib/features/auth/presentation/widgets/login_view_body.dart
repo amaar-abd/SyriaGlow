@@ -4,8 +4,8 @@ import 'package:syria_glow/core/extensions/context_extensions.dart';
 import 'package:syria_glow/core/routes/app_routes.dart';
 import 'package:syria_glow/core/theme/app_colors.dart';
 import 'package:syria_glow/core/utils/app_images.dart';
-import 'package:syria_glow/core/utils/main_button.dart';
 import 'package:syria_glow/features/auth/presentation/widgets/custom_text_form_field.dart';
+import 'package:syria_glow/features/auth/presentation/widgets/login_bloc_consumer.dart';
 import 'package:syria_glow/features/auth/presentation/widgets/or_divider.dart';
 import 'package:syria_glow/features/auth/presentation/widgets/social_login_button.dart';
 import 'package:syria_glow/features/auth/presentation/widgets/user_question_row.dart';
@@ -33,6 +33,7 @@ class _LoginViewBodyState extends State<LoginViewBody> {
   @override
   Widget build(BuildContext context) {
     return Form(
+      autovalidateMode: autovalidateMode,
       key: _globalKey,
       child: SingleChildScrollView(
         child: Padding(
@@ -53,6 +54,7 @@ class _LoginViewBodyState extends State<LoginViewBody> {
               ),
               SizedBox(height: 15),
               Text(
+                textAlign: TextAlign.center,
                 context.l10n.loginSubtitle,
                 style: TextTheme.of(
                   context,
@@ -68,7 +70,7 @@ class _LoginViewBodyState extends State<LoginViewBody> {
               ),
               CustomTextFormField(
                 title: context.l10n.passwordTitle,
-                hintText: '********',
+                hintText: context.l10n.passwordHint,
                 controller: passwordController,
                 obscureText: isObscure,
                 suffixIcon: InkWell(
@@ -85,7 +87,16 @@ class _LoginViewBodyState extends State<LoginViewBody> {
               ),
               UserQuestionRow(answer: context.l10n.forgotPassword),
               SizedBox(height: 20),
-              MainButton(onPressed: () {}, text: context.l10n.loginButton),
+              LoginBlocConsumer(
+                globalKey: _globalKey,
+                emailController: emailController,
+                passwordController: passwordController,
+                onValidations: () {
+                  setState(() {
+                    autovalidateMode = AutovalidateMode.always;
+                  });
+                },
+              ),
               SizedBox(height: 15),
               Ordivider(),
               SizedBox(height: 15),
@@ -94,7 +105,8 @@ class _LoginViewBodyState extends State<LoginViewBody> {
                   Navigator.pushNamed(context, AppRoutes.mainLayoutView);
                 },
                 title: context.l10n.continueAsGuest,
-                widget: FaIcon(FontAwesomeIcons.user, size: 22),
+
+                leading: const FaIcon(FontAwesomeIcons.user, size: 22),
               ),
               SizedBox(height: 50),
               UserQuestionRow(
