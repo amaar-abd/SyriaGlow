@@ -6,7 +6,6 @@ abstract class AuthRemoteDataSource {
   Future<AuthResponse> signUpWithEmailAndPassword(
     RegisterRequest registerRequest,
   );
-  Future<AuthResponse> signInWithEmailAndPassword(
-    LoginRequest loginRequest,
-  );
+  Future<AuthResponse> signInWithEmailAndPassword(LoginRequest loginRequest);
+  Future<void> logOut();
 }

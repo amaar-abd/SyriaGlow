@@ -30,4 +30,9 @@ class AuthRemoteDataSourceImpl implements AuthRemoteDataSource {
     );
     return AuthResponse.fromJson(response);
   }
+
+  @override
+  Future<void> logOut() async {
+    await apiService.post(ApiConstants.logout);
+  }
 }
