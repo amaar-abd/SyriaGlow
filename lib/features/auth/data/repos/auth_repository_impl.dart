@@ -38,4 +38,14 @@ class AuthRepositoryImpl implements AuthRepository {
       return left(DioErrorHandler.handle(e));
     }
   }
+
+  @override
+  Future<Either<Failure, void>> logOut() async {
+    try {
+      await authRemoteDataSource.logOut();
+      return right(null);
+    } catch (e) {
+      return left(DioErrorHandler.handle(e));
+    }
+  }
 }

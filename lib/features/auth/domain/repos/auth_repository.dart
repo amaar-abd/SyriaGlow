@@ -11,4 +11,5 @@ abstract class AuthRepository {
   Future<Either<Failure, AuthResponse>> login({
     required LoginRequest loginRequest,
   });
+  Future<Either<Failure, void>> logOut();
 }
