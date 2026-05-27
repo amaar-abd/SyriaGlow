@@ -6,8 +6,8 @@ import 'package:syria_glow/features/auth/data/datasources/auth_remote_data_sourc
 import 'package:syria_glow/features/auth/data/datasources/auth_remote_data_source_impl.dart';
 import 'package:syria_glow/features/auth/data/repos/auth_repository_impl.dart';
 import 'package:syria_glow/features/auth/domain/repos/auth_repository.dart';
-import 'package:syria_glow/features/auth/domain/user_cases/login_use_case.dart';
-import 'package:syria_glow/features/auth/domain/user_cases/register_use_case.dart';
+import 'package:syria_glow/features/auth/domain/use_cases/login_use_case.dart';
+import 'package:syria_glow/features/auth/domain/use_cases/register_use_case.dart';
 
 final GetIt sl = GetIt.instance;
 
