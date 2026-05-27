@@ -1,7 +1,7 @@
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:syria_glow/features/auth/data/models/auth_response.dart';
 import 'package:syria_glow/features/auth/data/models/register_request.dart';
-import 'package:syria_glow/features/auth/domain/user_cases/register_use_case.dart';
+import 'package:syria_glow/features/auth/domain/use_cases/register_use_case.dart';
 part 'register_state.dart';
 
 class RegisterCubit extends Cubit<RegisterState> {
