@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:syria_glow/core/extensions/context_extensions.dart';
 import 'package:syria_glow/core/routes/app_routes.dart';
@@ -37,14 +38,14 @@ class _LoginViewBodyState extends State<LoginViewBody> {
       key: _globalKey,
       child: SingleChildScrollView(
         child: Padding(
-          padding: const EdgeInsets.symmetric(horizontal: 16),
+          padding: EdgeInsets.symmetric(horizontal: 16.w),
           child: Column(
             children: [
               SizedBox(
-                height: MediaQuery.of(context).size.height * 0.13,
-                width: MediaQuery.of(context).size.width * 0.27,
+                height: context.height * 0.13,
+                width: context.width * 0.27,
                 child: ClipRRect(
-                  borderRadius: BorderRadius.circular(30),
+                  borderRadius: BorderRadius.circular(30.r),
 
                   child: Image.asset(
                     Assets.assetsImagesLogoApp,
@@ -52,7 +53,7 @@ class _LoginViewBodyState extends State<LoginViewBody> {
                   ),
                 ),
               ),
-              SizedBox(height: 15),
+              SizedBox(height: 15.h),
               Text(
                 textAlign: TextAlign.center,
                 context.l10n.loginSubtitle,
@@ -60,7 +61,7 @@ class _LoginViewBodyState extends State<LoginViewBody> {
                   context,
                 ).bodyMedium?.copyWith(fontWeight: FontWeight.bold),
               ),
-              SizedBox(height: 40),
+              SizedBox(height: 40.h),
               CustomTextFormField(
                 title: context.l10n.emailTitle,
                 hintText: context.l10n.emailHint,
@@ -85,8 +86,14 @@ class _LoginViewBodyState extends State<LoginViewBody> {
                   ),
                 ),
               ),
-              UserQuestionRow(answer: context.l10n.forgotPassword),
-              SizedBox(height: 20),
+              SizedBox(height: 4.h),
+              InkWell(
+                onTap: () {
+                  Navigator.pushNamed(context, AppRoutes.forgotePasswordView);
+                },
+                child: UserQuestionRow(answer: context.l10n.forgotPassword),
+              ),
+              SizedBox(height: 20.h),
               LoginBlocConsumer(
                 globalKey: _globalKey,
                 emailController: emailController,

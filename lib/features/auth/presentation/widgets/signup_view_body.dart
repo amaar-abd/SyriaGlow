@@ -92,7 +92,7 @@ class _SignupViewBodyState extends State<SignupViewBody> {
                   ),
                 ),
               ),
-              SizedBox(height: 20),
+              SizedBox(height: 20.h),
               CustomCheckboxListTile(
                 value: isChecked,
                 onChanged: (value) {
