@@ -308,6 +308,146 @@ class S {
       args: [fieldName],
     );
   }
+
+  /// `Enter your email address and we will send you an OTP code to verify your identity.`
+  String get forgotPasswordDesc {
+    return Intl.message(
+      'Enter your email address and we will send you an OTP code to verify your identity.',
+      name: 'forgotPasswordDesc',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Verification Code`
+  String get verificationTitle {
+    return Intl.message(
+      'Verification Code',
+      name: 'verificationTitle',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `We have sent a 4-digit verification code to your email`
+  String get verificationDesc {
+    return Intl.message(
+      'We have sent a 4-digit verification code to your email',
+      name: 'verificationDesc',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Send Verification Code`
+  String get sendVerificationCode {
+    return Intl.message(
+      'Send Verification Code',
+      name: 'sendVerificationCode',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `confirmCode`
+  String get confirmCode {
+    return Intl.message('confirmCode', name: 'confirmCode', desc: '', args: []);
+  }
+
+  /// `Didn't receive the code?`
+  String get didntReceiveCode {
+    return Intl.message(
+      'Didn\'t receive the code?',
+      name: 'didntReceiveCode',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Resend`
+  String get resendCode {
+    return Intl.message('Resend', name: 'resendCode', desc: '', args: []);
+  }
+
+  /// `Reset New Password`
+  String get resetPasswordTitle {
+    return Intl.message(
+      'Reset New Password',
+      name: 'resetPasswordTitle',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Please enter a new strong password to secure your account`
+  String get resetPasswordDesc {
+    return Intl.message(
+      'Please enter a new strong password to secure your account',
+      name: 'resetPasswordDesc',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `New Password`
+  String get newPasswordLabel {
+    return Intl.message(
+      'New Password',
+      name: 'newPasswordLabel',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Update Password`
+  String get updatePasswordBtn {
+    return Intl.message(
+      'Update Password',
+      name: 'updatePasswordBtn',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Password updated successfully `
+  String get passwordUpdatedSuccess {
+    return Intl.message(
+      'Password updated successfully ',
+      name: 'passwordUpdatedSuccess',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `You can now log in with your new password`
+  String get loginNowDesc {
+    return Intl.message(
+      'You can now log in with your new password',
+      name: 'loginNowDesc',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Back to Login`
+  String get backToLogin {
+    return Intl.message(
+      'Back to Login',
+      name: 'backToLogin',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Please Enter The Full Code`
+  String get enterFullCode {
+    return Intl.message(
+      'Please Enter The Full Code',
+      name: 'enterFullCode',
+      desc: '',
+      args: [],
+    );
+  }
 }
 
 class AppLocalizationDelegate extends LocalizationsDelegate<S> {

@@ -27,22 +27,37 @@ class MessageLookup extends MessageLookupByLibrary {
     "alreadyHaveAccount": MessageLookupByLibrary.simpleMessage(
       "لديك حساب بالفعل ؟ ",
     ),
+    "backToLogin": MessageLookupByLibrary.simpleMessage("العودة لتسجيل الدخول"),
+    "confirmCode": MessageLookupByLibrary.simpleMessage("تأكيد الرمز"),
     "continueAsGuest": MessageLookupByLibrary.simpleMessage("المتابعة كضيف"),
     "culturalHeritage": MessageLookupByLibrary.simpleMessage("التراث الحضاري"),
+    "didntReceiveCode": MessageLookupByLibrary.simpleMessage("لم يصلك الرمز؟"),
     "dontHaveAccount": MessageLookupByLibrary.simpleMessage("لا تمتلك حساب ؟ "),
     "emailHint": MessageLookupByLibrary.simpleMessage("أدخل بريدك الإلكتروني"),
     "emailTitle": MessageLookupByLibrary.simpleMessage("البريد الإلكتروني"),
+    "enterFullCode": MessageLookupByLibrary.simpleMessage(
+      "الرجاء إدخال الرمز كامل",
+    ),
     "forgotPassword": MessageLookupByLibrary.simpleMessage(
       "هل نسيت كلمة المرور ؟",
+    ),
+    "forgotPasswordDesc": MessageLookupByLibrary.simpleMessage(
+      "أدخل بريدك الإلكتروني وسوف نرسل لك رمزاً للتحقق من الهوية",
     ),
     "fullNameHint": MessageLookupByLibrary.simpleMessage("أدخل اسمك الثلاثي"),
     "fullNameTitle": MessageLookupByLibrary.simpleMessage("الاسم الكامل"),
     "loginButton": MessageLookupByLibrary.simpleMessage("تسجيل الدخول"),
+    "loginNowDesc": MessageLookupByLibrary.simpleMessage(
+      "يمكنك الآن تسجيل الدخول بكلمة المرور الجديدة.",
+    ),
     "loginOr": MessageLookupByLibrary.simpleMessage("أو"),
     "loginSubtitle": MessageLookupByLibrary.simpleMessage(
       "استكشف عبق التاريخ بلمسة عصرية",
     ),
     "loginText": MessageLookupByLibrary.simpleMessage("تسجيل الدخول"),
+    "newPasswordLabel": MessageLookupByLibrary.simpleMessage(
+      "كلمة المرور الجديدة",
+    ),
     "nextButton": MessageLookupByLibrary.simpleMessage("التالي"),
     "onboardingDesc1": MessageLookupByLibrary.simpleMessage(
       "اكتشف أسرار الماضي في كل زاوية، من الأسواق القديمة إلى القلاع الحصينة، حيث يروي كل حجر قصة حضارة عظيمة.",
@@ -64,14 +79,34 @@ class MessageLookup extends MessageLookupByLibrary {
     ),
     "passwordHint": MessageLookupByLibrary.simpleMessage("أدخل كلمة المرور"),
     "passwordTitle": MessageLookupByLibrary.simpleMessage("كلمة المرور"),
+    "passwordUpdatedSuccess": MessageLookupByLibrary.simpleMessage(
+      "تم تحديث كلمة المرور بنجاح!",
+    ),
     "passwordValidationError": MessageLookupByLibrary.simpleMessage(
       "كلمتا المرور غير متطابقتين",
     ),
     "privacyPolicy": MessageLookupByLibrary.simpleMessage("سياسة الخصوصية"),
     "requiredField": m0,
+    "resendCode": MessageLookupByLibrary.simpleMessage("إعادة إرسال"),
+    "resetPasswordDesc": MessageLookupByLibrary.simpleMessage(
+      "الرجاء إدخال كلمة مرور جديدة وقوية لحماية حسابك",
+    ),
+    "resetPasswordTitle": MessageLookupByLibrary.simpleMessage(
+      "تعيين كلمة مرور جديدة",
+    ),
+    "sendVerificationCode": MessageLookupByLibrary.simpleMessage(
+      "إرسال رمز التحقق",
+    ),
     "signUpButton": MessageLookupByLibrary.simpleMessage("إنشاء حساب"),
     "signUpNow": MessageLookupByLibrary.simpleMessage("قم بإنشاء حساب"),
     "startJourneyButton": MessageLookupByLibrary.simpleMessage("ابدأ الرحلة"),
     "termsOfService": MessageLookupByLibrary.simpleMessage("شروط الخدمة"),
+    "updatePasswordBtn": MessageLookupByLibrary.simpleMessage(
+      "تحديث كلمة المرور",
+    ),
+    "verificationDesc": MessageLookupByLibrary.simpleMessage(
+      "لقد أرسلنا لك رمزاً مكوناً من أربعة أرقام اللى بريدك الالكتروني",
+    ),
+    "verificationTitle": MessageLookupByLibrary.simpleMessage("رمز التحقق"),
   };
 }

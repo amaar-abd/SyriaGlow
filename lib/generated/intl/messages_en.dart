@@ -27,30 +27,45 @@ class MessageLookup extends MessageLookupByLibrary {
     "alreadyHaveAccount": MessageLookupByLibrary.simpleMessage(
       "Already have an account? ",
     ),
+    "backToLogin": MessageLookupByLibrary.simpleMessage("Back to Login"),
+    "confirmCode": MessageLookupByLibrary.simpleMessage("confirmCode"),
     "continueAsGuest": MessageLookupByLibrary.simpleMessage(
       "Continue as a guest",
     ),
     "culturalHeritage": MessageLookupByLibrary.simpleMessage(
       "Cultural Heritage",
     ),
+    "didntReceiveCode": MessageLookupByLibrary.simpleMessage(
+      "Didn\'t receive the code?",
+    ),
     "dontHaveAccount": MessageLookupByLibrary.simpleMessage(
       "Don\'t have an account? ",
     ),
     "emailHint": MessageLookupByLibrary.simpleMessage("Enter your email"),
     "emailTitle": MessageLookupByLibrary.simpleMessage("Email Address"),
+    "enterFullCode": MessageLookupByLibrary.simpleMessage(
+      "Please Enter The Full Code",
+    ),
     "forgotPassword": MessageLookupByLibrary.simpleMessage(
       "Forgot your password?",
+    ),
+    "forgotPasswordDesc": MessageLookupByLibrary.simpleMessage(
+      "Enter your email address and we will send you an OTP code to verify your identity.",
     ),
     "fullNameHint": MessageLookupByLibrary.simpleMessage(
       "Enter your triple name",
     ),
     "fullNameTitle": MessageLookupByLibrary.simpleMessage("Full Name"),
     "loginButton": MessageLookupByLibrary.simpleMessage("Login"),
+    "loginNowDesc": MessageLookupByLibrary.simpleMessage(
+      "You can now log in with your new password",
+    ),
     "loginOr": MessageLookupByLibrary.simpleMessage("Or"),
     "loginSubtitle": MessageLookupByLibrary.simpleMessage(
       "Explore the fragrance of history with a modern touch",
     ),
     "loginText": MessageLookupByLibrary.simpleMessage("Login"),
+    "newPasswordLabel": MessageLookupByLibrary.simpleMessage("New Password"),
     "nextButton": MessageLookupByLibrary.simpleMessage("Next"),
     "onboardingDesc1": MessageLookupByLibrary.simpleMessage(
       "Discover ancient markets, majestic castles, and the secrets of a great civilization in every corner.",
@@ -72,14 +87,36 @@ class MessageLookup extends MessageLookupByLibrary {
     ),
     "passwordHint": MessageLookupByLibrary.simpleMessage("Enter your password"),
     "passwordTitle": MessageLookupByLibrary.simpleMessage("Password"),
+    "passwordUpdatedSuccess": MessageLookupByLibrary.simpleMessage(
+      "Password updated successfully ",
+    ),
     "passwordValidationError": MessageLookupByLibrary.simpleMessage(
       "Passwords do not match",
     ),
     "privacyPolicy": MessageLookupByLibrary.simpleMessage("Privacy Policy"),
     "requiredField": m0,
+    "resendCode": MessageLookupByLibrary.simpleMessage("Resend"),
+    "resetPasswordDesc": MessageLookupByLibrary.simpleMessage(
+      "Please enter a new strong password to secure your account",
+    ),
+    "resetPasswordTitle": MessageLookupByLibrary.simpleMessage(
+      "Reset New Password",
+    ),
+    "sendVerificationCode": MessageLookupByLibrary.simpleMessage(
+      "Send Verification Code",
+    ),
     "signUpButton": MessageLookupByLibrary.simpleMessage("Sign Up"),
     "signUpNow": MessageLookupByLibrary.simpleMessage("Create an account"),
     "startJourneyButton": MessageLookupByLibrary.simpleMessage("Start Journey"),
     "termsOfService": MessageLookupByLibrary.simpleMessage("Terms of Service"),
+    "updatePasswordBtn": MessageLookupByLibrary.simpleMessage(
+      "Update Password",
+    ),
+    "verificationDesc": MessageLookupByLibrary.simpleMessage(
+      "We have sent a 4-digit verification code to your email",
+    ),
+    "verificationTitle": MessageLookupByLibrary.simpleMessage(
+      "Verification Code",
+    ),
   };
 }

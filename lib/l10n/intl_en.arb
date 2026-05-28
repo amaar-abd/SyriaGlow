@@ -27,5 +27,20 @@
   "termsOfService": "Terms of Service",
 "privacyPolicy": "Privacy Policy",
 "passwordValidationError": "Passwords do not match",
-"requiredField": "Please enter {fieldName}"
+"requiredField": "Please enter {fieldName}",
+"forgotPasswordDesc" : "Enter your email address and we will send you an OTP code to verify your identity.",
+"verificationTitle" : "Verification Code",
+"verificationDesc":"We have sent a 4-digit verification code to your email",
+"sendVerificationCode":"Send Verification Code",
+"confirmCode":"confirmCode",
+"didntReceiveCode":"Didn't receive the code?",
+"resendCode":"Resend",
+"resetPasswordTitle":"Reset New Password",
+"resetPasswordDesc":"Please enter a new strong password to secure your account",
+"newPasswordLabel":"New Password",
+"updatePasswordBtn":"Update Password",
+"passwordUpdatedSuccess":"Password updated successfully ",
+"loginNowDesc":"You can now log in with your new password",
+"backToLogin":"Back to Login",
+"enterFullCode":"Please Enter The Full Code"
 }

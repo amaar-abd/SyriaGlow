@@ -27,5 +27,20 @@
   "termsOfService": "شروط الخدمة",
 "privacyPolicy": "سياسة الخصوصية",
 "passwordValidationError": "كلمتا المرور غير متطابقتين",
-"requiredField": "الرجاء إدخال {fieldName}"
+"requiredField": "الرجاء إدخال {fieldName}",
+"forgotPasswordDesc":"أدخل بريدك الإلكتروني وسوف نرسل لك رمزاً للتحقق من الهوية",
+"sendVerificationCode":"إرسال رمز التحقق",
+"verificationTitle":"رمز التحقق",
+"verificationDesc":"لقد أرسلنا لك رمزاً مكوناً من أربعة أرقام اللى بريدك الالكتروني",
+"confirmCode":"تأكيد الرمز",
+"didntReceiveCode":"لم يصلك الرمز؟",
+"resendCode":"إعادة إرسال",
+"resetPasswordTitle":"تعيين كلمة مرور جديدة",
+"resetPasswordDesc":"الرجاء إدخال كلمة مرور جديدة وقوية لحماية حسابك",
+"newPasswordLabel":"كلمة المرور الجديدة",
+"updatePasswordBtn":"تحديث كلمة المرور",
+"passwordUpdatedSuccess":"تم تحديث كلمة المرور بنجاح!",
+"loginNowDesc":"يمكنك الآن تسجيل الدخول بكلمة المرور الجديدة.",
+"backToLogin":"العودة لتسجيل الدخول",
+"enterFullCode":"الرجاء إدخال الرمز كامل"
 }
