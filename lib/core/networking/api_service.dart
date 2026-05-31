@@ -17,8 +17,8 @@ class ApiService {
         options: Options(headers: headers),
       );
       return response.data;
-    } on DioException catch (e) {
-      throw Exception(e.message);
+    } on DioException {
+      rethrow;
     }
   }
 
@@ -36,8 +36,8 @@ class ApiService {
         options: Options(headers: headers),
       );
       return response.data;
-    } on DioException catch (e) {
-      throw Exception(e.message);
+    } on DioException {
+      rethrow;
     }
   }
 }

@@ -30,6 +30,17 @@ class DioErrorHandler {
           message: "لا يوجد اتصال بالإنترنت، يرجى التحقق من الشبكة",
           code: statusCode,
         );
+      case DioExceptionType.unknown:
+        if (error.error != null && error.error.toString().contains('SocketException')) {
+          return ServerFailure(
+            message: "لا يوجد اتصال بالإنترنت، يرجى التحقق من الشبكة",
+            code: statusCode,
+          );
+        }
+        return ServerFailure(
+          message: "عذراً، حدث خطأ أثناء الاتصال بالسيرفر",
+          code: statusCode,
+        );
 
       case DioExceptionType.cancel:
         return ServerFailure(

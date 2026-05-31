@@ -2,7 +2,7 @@ import 'package:syria_glow/features/auth/data/models/user_data.dart';
 
 class AuthResponse {
   final String message;
-  final UserData userData;
+  final UserData? userData;
   final String token;
 
   const AuthResponse({
@@ -12,12 +12,15 @@ class AuthResponse {
   });
 
   factory AuthResponse.fromJson(Map<String, dynamic> response) {
+    final data = response['data'];
     return AuthResponse(
-      message: response['message'] ?? "تمت العملية بنجاح",
-      token: response['data']['token'] ?? '',
-      userData: UserData.fromJson(
-        response['data']['user'] as Map<String, dynamic>,
-      ),
+      message: response['message'] ??'',
+      token: data != null ? (data['token'] ?? '') : '',
+    
+      userData: (data != null && data['user'] != null)
+          ? UserData.fromJson(data['user'] as Map<String, dynamic>)
+          : null,
+    
     );
   }
 }
