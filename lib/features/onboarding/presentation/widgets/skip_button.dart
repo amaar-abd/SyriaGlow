@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:syria_glow/core/extensions/context_extensions.dart';
-import 'package:syria_glow/core/localization/cubit/language_cubit.dart';
+import 'package:syria_glow/core/manager/localization_cubit/language_cubit.dart';
 import 'package:syria_glow/core/routes/app_routes.dart';
 import 'package:syria_glow/core/theme/app_colors.dart';
 

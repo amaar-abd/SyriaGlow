@@ -2,8 +2,11 @@ import 'package:dots_indicator/dots_indicator.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+import 'package:syria_glow/core/Constants/app_constatntes.dart';
+import 'package:syria_glow/core/depandency_injection/service_locator.dart';
 import 'package:syria_glow/core/extensions/context_extensions.dart';
 import 'package:syria_glow/core/routes/app_routes.dart';
+import 'package:syria_glow/core/services/shared_preferences_service.dart';
 import 'package:syria_glow/core/theme/app_colors.dart';
 import 'package:syria_glow/core/utils/app_images.dart';
 import 'package:syria_glow/core/utils/main_button.dart';
@@ -85,8 +88,12 @@ class SecondPageView extends StatelessWidget {
         Padding(
           padding: EdgeInsets.symmetric(horizontal: 14.w),
           child: MainButton(
-            onPressed: () {
+            onPressed: ()async {
               Navigator.of(context).pushNamed(AppRoutes.loginView);
+           await   sl.get<SharedPreferencesService>().setBool(
+                AppConstants.isOnboardingCompleted,
+                true,
+              );
             },
             widget: Row(
               mainAxisAlignment: MainAxisAlignment.center,
