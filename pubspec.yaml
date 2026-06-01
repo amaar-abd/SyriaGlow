@@ -16,12 +16,14 @@ dependencies:
   flutter_localizations:
     sdk: flutter
   flutter_screenutil: ^5.9.3
+  flutter_secure_storage: ^10.3.1
   font_awesome_flutter: ^11.0.0
   get_it: ^9.2.1
   google_fonts: ^8.0.2
   intl: ^0.20.2
   lottie: ^3.3.3
   pinput: ^6.0.2
+  shared_preferences: ^2.5.5
   svg_flutter: ^0.0.1
 
 dev_dependencies:
