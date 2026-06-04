@@ -115,7 +115,8 @@ class _SignupViewBodyState extends State<SignupViewBody> {
                   });
                 },
               ),
-              SizedBox(height: context.height * .12),
+              SizedBox(height: 50.h),
+
               UserQuestionRow(
                 onTap: () {
                   Navigator.of(context).pop();
@@ -124,7 +125,7 @@ class _SignupViewBodyState extends State<SignupViewBody> {
                 ask: context.l10n.alreadyHaveAccount,
                 answer: context.l10n.loginText,
               ),
-              SizedBox(height: 15.h),
+              SizedBox(height: 10.h),
             ],
           ),
         ),

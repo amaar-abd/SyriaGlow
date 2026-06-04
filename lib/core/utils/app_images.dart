@@ -26,6 +26,10 @@ class Assets {
   /// assets/images/logo_app.png
   static const String assetsImagesLogoApp = "assets/images/logo_app.png";
 
+  /// Assets for assetsImagesMan
+  /// assets/images/man.png
+  static const String assetsImagesMan = "assets/images/man.png";
+
   /// Assets for assetsImagesPalmyraSyria
   /// assets/images/palmyra_syria.png
   static const String assetsImagesPalmyraSyria = "assets/images/palmyra_syria.png";

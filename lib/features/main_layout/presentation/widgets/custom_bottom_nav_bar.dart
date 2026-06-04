@@ -31,7 +31,7 @@ class _CustomBottomNavBarState extends State<CustomBottomNavBar> {
         borderRadius: BorderRadius.circular(30.r),
         boxShadow: [
           BoxShadow(
-            color: Colors.black.withAlpha(10),
+            color: Colors.black.withAlpha(15),
             blurRadius: 15,
             offset: const Offset(0, 8),
           ),
@@ -53,7 +53,7 @@ class _CustomBottomNavBarState extends State<CustomBottomNavBar> {
               padding: EdgeInsets.symmetric(vertical: 10.h, horizontal: 10.w),
               decoration: BoxDecoration(
                 color: isSelected
-                    ? AppColors.primaryGreen.withAlpha(20)
+                    ? AppColors.primaryGreen.withAlpha(30)
                     : Colors.transparent,
                 borderRadius: BorderRadius.circular(20.r),
               ),
@@ -64,7 +64,7 @@ class _CustomBottomNavBarState extends State<CustomBottomNavBar> {
                     color: isSelected
                         ? AppColors.primaryGreen
                         : const Color(0xff8A8A8E),
-                    size: 24.sp,
+                    size: 23.sp,
                   ),
                   AnimatedCrossFade(
                     firstChild: Padding(

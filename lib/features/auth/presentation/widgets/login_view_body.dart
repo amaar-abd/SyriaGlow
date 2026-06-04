@@ -54,7 +54,7 @@ class _LoginViewBodyState extends State<LoginViewBody> {
                   ),
                 ),
               ),
-              SizedBox(height: 15.h),
+              SizedBox(height: 10.h),
               Text(
                 textAlign: TextAlign.center,
                 context.l10n.loginSubtitle,
@@ -62,16 +62,16 @@ class _LoginViewBodyState extends State<LoginViewBody> {
                   context,
                 ).bodyMedium?.copyWith(fontWeight: FontWeight.bold),
               ),
-              SizedBox(height: 40.h),
+              SizedBox(height: 25.h),
               Container(
                 padding: EdgeInsets.symmetric(horizontal: 14.w, vertical: 20.h),
                 decoration: BoxDecoration(
-                  color: const Color(0xFFFBFBFC),
+                  color: Colors.white.withAlpha(200),
                   borderRadius: BorderRadius.circular(20.r),
                   boxShadow: [
                     BoxShadow(
-                      color: Colors.black.withAlpha(8),
-                      blurRadius: 12,
+                      color: Colors.black.withAlpha(20),
+                      blurRadius: 15,
                       offset: const Offset(0, 4),
                     ),
                   ],
@@ -129,9 +129,9 @@ class _LoginViewBodyState extends State<LoginViewBody> {
                   });
                 },
               ),
-              SizedBox(height: 15),
+              SizedBox(height: 7.h),
               Ordivider(),
-              SizedBox(height: 15),
+              SizedBox(height: 7.h),
               SocialLoginButton(
                 onpressed: () {
                   Navigator.pushNamed(context, AppRoutes.mainLayoutView);
@@ -140,7 +140,7 @@ class _LoginViewBodyState extends State<LoginViewBody> {
 
                 leading: const FaIcon(FontAwesomeIcons.user, size: 22),
               ),
-              SizedBox(height: 50),
+              SizedBox(height: 20.h),
               UserQuestionRow(
                 onTap: () {
                   Navigator.of(context).pushNamed(AppRoutes.signupView);
@@ -149,7 +149,7 @@ class _LoginViewBodyState extends State<LoginViewBody> {
                 ask: context.l10n.dontHaveAccount,
                 answer: context.l10n.signUpNow,
               ),
-              SizedBox(height: 10),
+              
             ],
           ),
         ),
