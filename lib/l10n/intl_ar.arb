@@ -42,5 +42,10 @@
 "passwordUpdatedSuccess":"تم تحديث كلمة المرور بنجاح!",
 "loginNowDesc":"يمكنك الآن تسجيل الدخول بكلمة المرور الجديدة.",
 "backToLogin":"العودة لتسجيل الدخول",
-"enterFullCode":"الرجاء إدخال الرمز كامل"
+"enterFullCode":"الرجاء إدخال الرمز كامل",
+"nav_home": "الرئيسية",
+  "nav_explore": "اكتشف",
+  "nav_my_trips": "رحلاتي",
+  "nav_favorites": "المحفوظات",
+  "nav_profile": "الحساب"
 }

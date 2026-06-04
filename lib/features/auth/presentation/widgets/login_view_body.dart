@@ -26,9 +26,9 @@ class _LoginViewBodyState extends State<LoginViewBody> {
   bool isObscure = true;
   @override
   void dispose() {
-    super.dispose();
     emailController.dispose();
     passwordController.dispose();
+    super.dispose();
   }
 
   @override
@@ -37,6 +37,7 @@ class _LoginViewBodyState extends State<LoginViewBody> {
       autovalidateMode: autovalidateMode,
       key: _globalKey,
       child: SingleChildScrollView(
+        physics: const ClampingScrollPhysics(),
         child: Padding(
           padding: EdgeInsets.symmetric(horizontal: 16.w),
           child: Column(
@@ -62,30 +63,54 @@ class _LoginViewBodyState extends State<LoginViewBody> {
                 ).bodyMedium?.copyWith(fontWeight: FontWeight.bold),
               ),
               SizedBox(height: 40.h),
-              CustomTextFormField(
-                title: context.l10n.emailTitle,
-                hintText: context.l10n.emailHint,
-                controller: emailController,
-                obscureText: false,
-                suffixIcon: Icon(Icons.email, color: AppColors.primaryGreen),
-              ),
-              CustomTextFormField(
-                title: context.l10n.passwordTitle,
-                hintText: context.l10n.passwordHint,
-                controller: passwordController,
-                obscureText: isObscure,
-                suffixIcon: InkWell(
-                  onTap: () {
-                    setState(() {
-                      isObscure = !isObscure;
-                    });
-                  },
-                  child: Icon(
-                    isObscure ? Icons.visibility_off : Icons.remove_red_eye,
-                    color: AppColors.primaryGreen,
-                  ),
+              Container(
+                padding: EdgeInsets.symmetric(horizontal: 14.w, vertical: 20.h),
+                decoration: BoxDecoration(
+                  color: const Color(0xFFFBFBFC),
+                  borderRadius: BorderRadius.circular(20.r),
+                  boxShadow: [
+                    BoxShadow(
+                      color: Colors.black.withAlpha(8),
+                      blurRadius: 12,
+                      offset: const Offset(0, 4),
+                    ),
+                  ],
+                ),
+                child: Column(
+                  children: [
+                    CustomTextFormField(
+                      title: context.l10n.emailTitle,
+                      hintText: context.l10n.emailHint,
+                      controller: emailController,
+                      obscureText: false,
+                      suffixIcon: Icon(
+                        Icons.email,
+                        color: AppColors.primaryGreen,
+                      ),
+                    ),
+                    CustomTextFormField(
+                      title: context.l10n.passwordTitle,
+                      hintText: context.l10n.passwordHint,
+                      controller: passwordController,
+                      obscureText: isObscure,
+                      suffixIcon: InkWell(
+                        onTap: () {
+                          setState(() {
+                            isObscure = !isObscure;
+                          });
+                        },
+                        child: Icon(
+                          isObscure
+                              ? Icons.visibility_off
+                              : Icons.remove_red_eye,
+                          color: AppColors.primaryGreen,
+                        ),
+                      ),
+                    ),
+                  ],
                 ),
               ),
+
               SizedBox(height: 4.h),
               InkWell(
                 onTap: () {

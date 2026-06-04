@@ -42,5 +42,10 @@
 "passwordUpdatedSuccess":"Password updated successfully ",
 "loginNowDesc":"You can now log in with your new password",
 "backToLogin":"Back to Login",
-"enterFullCode":"Please Enter The Full Code"
+"enterFullCode":"Please Enter The Full Code",
+"nav_home": "Home",
+  "nav_explore": "Explore",
+  "nav_my_trips": "My Trips",
+  "nav_favorites": "Favorites",
+  "nav_profile": "Profile"
 }

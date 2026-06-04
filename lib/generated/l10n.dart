@@ -448,6 +448,31 @@ class S {
       args: [],
     );
   }
+
+  /// `Home`
+  String get nav_home {
+    return Intl.message('Home', name: 'nav_home', desc: '', args: []);
+  }
+
+  /// `Explore`
+  String get nav_explore {
+    return Intl.message('Explore', name: 'nav_explore', desc: '', args: []);
+  }
+
+  /// `My Trips`
+  String get nav_my_trips {
+    return Intl.message('My Trips', name: 'nav_my_trips', desc: '', args: []);
+  }
+
+  /// `Favorites`
+  String get nav_favorites {
+    return Intl.message('Favorites', name: 'nav_favorites', desc: '', args: []);
+  }
+
+  /// `Profile`
+  String get nav_profile {
+    return Intl.message('Profile', name: 'nav_profile', desc: '', args: []);
+  }
 }
 
 class AppLocalizationDelegate extends LocalizationsDelegate<S> {

@@ -55,6 +55,11 @@ class MessageLookup extends MessageLookupByLibrary {
       "استكشف عبق التاريخ بلمسة عصرية",
     ),
     "loginText": MessageLookupByLibrary.simpleMessage("تسجيل الدخول"),
+    "nav_explore": MessageLookupByLibrary.simpleMessage("اكتشف"),
+    "nav_favorites": MessageLookupByLibrary.simpleMessage("المحفوظات"),
+    "nav_home": MessageLookupByLibrary.simpleMessage("الرئيسية"),
+    "nav_my_trips": MessageLookupByLibrary.simpleMessage("رحلاتي"),
+    "nav_profile": MessageLookupByLibrary.simpleMessage("الحساب"),
     "newPasswordLabel": MessageLookupByLibrary.simpleMessage(
       "كلمة المرور الجديدة",
     ),

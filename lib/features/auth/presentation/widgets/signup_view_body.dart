@@ -40,6 +40,7 @@ class _SignupViewBodyState extends State<SignupViewBody> {
       autovalidateMode: autovalidateMode,
       key: _globalKey,
       child: SingleChildScrollView(
+        physics: const ClampingScrollPhysics(),
         child: Padding(
           padding: EdgeInsets.symmetric(horizontal: 16.w),
           child: Column(
@@ -123,7 +124,7 @@ class _SignupViewBodyState extends State<SignupViewBody> {
                 ask: context.l10n.alreadyHaveAccount,
                 answer: context.l10n.loginText,
               ),
-              SizedBox(height: 10.h),
+              SizedBox(height: 15.h),
             ],
           ),
         ),
