@@ -17,6 +17,7 @@ import 'package:syria_glow/features/auth/domain/use_cases/register_use_case.dart
 import 'package:syria_glow/features/auth/domain/use_cases/reset_password_use_case.dart';
 import 'package:syria_glow/features/auth/domain/use_cases/verify_reset_code_use_case.dart';
 import 'package:syria_glow/features/auth/presentation/manager/forgot_password_cubit/forgot_password_cubit.dart';
+import 'package:syria_glow/features/home/data/data_sources/location_local_data_source.dart';
 
 final GetIt sl = GetIt.instance;
 
@@ -64,4 +65,7 @@ void setupServiceLocator() async {
   );
 
   sl.registerFactory<RoutingCubit>(() => RoutingCubit());
+  sl.registerFactory<LocationLocalDataSource>(
+    () => LocationLocalDataSourceImpl(),
+  );
 }
