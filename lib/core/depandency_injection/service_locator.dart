@@ -13,18 +13,19 @@ import 'package:syria_glow/features/auth/data/repos/auth_repository_impl.dart';
 import 'package:syria_glow/features/auth/domain/repos/auth_repository.dart';
 import 'package:syria_glow/features/auth/domain/use_cases/forgot_password_use_case.dart';
 import 'package:syria_glow/features/auth/domain/use_cases/login_use_case.dart';
+import 'package:syria_glow/features/auth/domain/use_cases/logout_use_case.dart';
 import 'package:syria_glow/features/auth/domain/use_cases/register_use_case.dart';
 import 'package:syria_glow/features/auth/domain/use_cases/reset_password_use_case.dart';
 import 'package:syria_glow/features/auth/domain/use_cases/verify_reset_code_use_case.dart';
 import 'package:syria_glow/features/auth/presentation/manager/forgot_password_cubit/forgot_password_cubit.dart';
+import 'package:syria_glow/features/auth/presentation/manager/logout_cubit/logout_cubit.dart';
 import 'package:syria_glow/features/home/data/data_sources/location_local_data_source.dart';
 
 final GetIt sl = GetIt.instance;
 
 void setupServiceLocator() async {
   final sharedPrefs = await SharedPreferences.getInstance();
-  sl.registerLazySingleton<SharedPreferencesService>(
-    () => SharedPreferencesService(sharedPrefs),
+  sl.registerLazySingleton<SharedPreferencesService>(() => SharedPreferencesService(sharedPrefs),
   );
 
   sl.registerLazySingleton<SecureStorageService>(
@@ -68,4 +69,9 @@ void setupServiceLocator() async {
   sl.registerFactory<LocationLocalDataSource>(
     () => LocationLocalDataSourceImpl(),
   );
+
+  sl.registerFactory<LogoutUseCase>(() => LogoutUseCase(authRepository: sl()));
+  
+  sl.registerFactory<LogoutCubit>(() => LogoutCubit(sl()));
+
 }

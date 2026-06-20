@@ -1,6 +1,10 @@
 import 'package:dartz/dartz.dart';
+import 'package:syria_glow/core/Constants/app_constatntes.dart';
+import 'package:syria_glow/core/depandency_injection/service_locator.dart';
 import 'package:syria_glow/core/errors/dio_error_handler.dart';
 import 'package:syria_glow/core/errors/failure.dart';
+import 'package:syria_glow/core/services/secure_storage_service.dart';
+import 'package:syria_glow/core/services/shared_preferences_service.dart';
 import 'package:syria_glow/features/auth/data/datasources/auth_remote_data_source.dart';
 import 'package:syria_glow/features/auth/data/models/auth_response.dart';
 import 'package:syria_glow/features/auth/data/models/forgot_password_response.dart';
@@ -45,10 +49,15 @@ class AuthRepositoryImpl implements AuthRepository {
   }
 
   @override
-  Future<Either<Failure, void>> logOut() async {
+  Future<Either<Failure, String>> logOut({required String userToken}) async {
     try {
-      await authRemoteDataSource.logOut();
-      return right(null);
+     final data = await authRemoteDataSource.logOut(userToken: userToken);
+
+     await sl<SharedPreferencesService>().removeSaved(AppConstants.username);
+     await sl<SecureStorageService>().delete(
+                        AppConstants.authToken,
+                      );
+      return right(data);
     } catch (e) {
       return left(DioErrorHandler.handle(e));
     }

@@ -6,10 +6,14 @@ final class LogoutInitial extends LogoutState {}
 
 final class LogoutLoading extends LogoutState {}
 
-final class LogoutSuccess extends LogoutState {}
+final class LogoutSuccess extends LogoutState {
+  final String message;
+
+  LogoutSuccess({required this.message});
+}
 
 final class LogoutError extends LogoutState {
-  final String error;
+  final String message;
 
-  LogoutError({required this.error});
+  LogoutError({required this.message});
 }

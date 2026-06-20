@@ -10,7 +10,7 @@ abstract class AuthRemoteDataSource {
     RegisterRequest registerRequest,
   );
   Future<AuthResponse> signInWithEmailAndPassword(LoginRequest loginRequest);
-  Future<void> logOut();
+  Future<String> logOut({required String userToken});
 
   Future<ForgotPasswordResponse> forgotPassword({required String email});
 

@@ -35,8 +35,11 @@ class AuthRemoteDataSourceImpl implements AuthRemoteDataSource {
   }
 
   @override
-  Future<void> logOut() async {
-    await apiService.post(ApiConstants.logout);
+  Future<String> logOut({required String userToken}) async {
+  final response =  await apiService.post(ApiConstants.logout,headers: {
+      'Authorization': 'Bearer $userToken',
+    },);
+    return response['message'] ;
   }
 
   @override

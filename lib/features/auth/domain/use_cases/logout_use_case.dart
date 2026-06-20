@@ -6,7 +6,7 @@ class LogoutUseCase {
   LogoutUseCase({required this.authRepository});
   final AuthRepository authRepository;
 
-  Future<Either<Failure, void>> call() async {
-    return await authRepository.logOut();
+  Future<Either<Failure, String>> call({required String userToken}) async {
+    return await authRepository.logOut(userToken: userToken);
   }
 }
