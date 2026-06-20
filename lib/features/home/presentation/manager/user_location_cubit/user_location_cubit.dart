@@ -19,12 +19,12 @@ class UserLocationCubit extends Cubit<UserLocationState> {
       ServiceStatus status,
     ) {
       if (status == ServiceStatus.enabled) {
-        fetchLocation();
+        fetchLocation(languageCode: 'ar');
       }
     });
   }
 
-  Future<void> fetchLocation() async {
+  Future<void> fetchLocation({String? languageCode}) async {
     emit(UserLocationLoading());
 
     try {
@@ -33,6 +33,8 @@ class UserLocationCubit extends Cubit<UserLocationState> {
       Placemark placemark = await localDataSource.getPlacemarkFromCoordinates(
         position.latitude,
         position.longitude,
+        languageCode,
+
       );
 
       String fullAddress =

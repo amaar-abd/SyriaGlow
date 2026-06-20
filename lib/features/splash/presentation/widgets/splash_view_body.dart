@@ -27,7 +27,7 @@ class SplashViewBody extends StatelessWidget {
         children: [
           SizedBox.expand(
             child: Image.asset(
-              Assets.assetsImagesAleppoAtNight2,
+              Assets.assetsImagesAleppoAtNight,
               fit: BoxFit.cover,
               color: Colors.black.withAlpha(50),
               colorBlendMode: BlendMode.darken,

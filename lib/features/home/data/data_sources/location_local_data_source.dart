@@ -4,7 +4,7 @@ import 'package:geolocator/geolocator.dart';
 abstract class LocationLocalDataSource {
   Future<Position> getCurrentPosition();
 
-  Future<Placemark> getPlacemarkFromCoordinates(double lat, double long);
+  Future<Placemark> getPlacemarkFromCoordinates(double lat, double long,String? localeIdentifier,);
 }
 
 class LocationLocalDataSourceImpl implements LocationLocalDataSource {
@@ -35,7 +35,10 @@ class LocationLocalDataSourceImpl implements LocationLocalDataSource {
   }
 
   @override
-  Future<Placemark> getPlacemarkFromCoordinates(double lat, double long) async {
+  Future<Placemark> getPlacemarkFromCoordinates(double lat, double long,String? localeIdentifier,) async {
+    if (localeIdentifier != null) {
+      await GeocodingPlatform.instance?.setLocaleIdentifier(localeIdentifier);
+    }
     List<Placemark> placemarks = await placemarkFromCoordinates(lat, long);
     if (placemarks.isNotEmpty) {
       return placemarks.first;
