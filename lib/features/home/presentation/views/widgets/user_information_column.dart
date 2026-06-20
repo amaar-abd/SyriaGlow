@@ -1,7 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_animate/flutter_animate.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:syria_glow/core/Constants/app_constatntes.dart';
+import 'package:syria_glow/core/depandency_injection/service_locator.dart';
 import 'package:syria_glow/core/extensions/context_extensions.dart';
+import 'package:syria_glow/core/services/shared_preferences_service.dart';
 import 'package:syria_glow/core/theme/app_colors.dart';
 
 class UserInformationColumn extends StatelessWidget {
@@ -18,11 +21,11 @@ class UserInformationColumn extends StatelessWidget {
               TextSpan(
                 children: [
                   TextSpan(
-                    text: ' مرحبا ',
+                    text: context.l10n.welcome ,
                     style: context.textTheme.bodyMedium,
                   ),
                   TextSpan(
-                    text: 'عمار',
+                    text:sl<SharedPreferencesService>().getString(AppConstants.username),
                     style: context.textTheme.bodyMedium?.copyWith(
                       color: AppColors.elegantGold,
                       fontWeight: FontWeight.bold,
@@ -50,7 +53,7 @@ class UserInformationColumn extends StatelessWidget {
         ),
         SizedBox(height: 2.h),
         Text(
-          'اهلا بك في سوريا',
+          context.l10n.welcomeToSyria,
           style: context.textTheme.displayMedium?.copyWith(
             color: AppColors.primaryGreen,
           ),

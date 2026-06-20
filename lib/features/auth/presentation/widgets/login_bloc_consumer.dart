@@ -5,6 +5,7 @@ import 'package:syria_glow/core/depandency_injection/service_locator.dart';
 import 'package:syria_glow/core/extensions/context_extensions.dart';
 import 'package:syria_glow/core/routes/app_routes.dart';
 import 'package:syria_glow/core/services/secure_storage_service.dart';
+import 'package:syria_glow/core/services/shared_preferences_service.dart';
 import 'package:syria_glow/core/theme/app_colors.dart';
 import 'package:syria_glow/core/utils/custom_snackbar.dart';
 import 'package:syria_glow/core/utils/main_button.dart';
@@ -39,6 +40,10 @@ class LoginBlocConsumer extends StatelessWidget {
             AppConstants.authToken,
             state.authResponse.token,
           );
+          await sl<SharedPreferencesService>().setString(
+            AppConstants.username,
+            state.authResponse.userData?.name ?? '', 
+          );
 
           if (context.mounted) {
             Navigator.pushNamedAndRemoveUntil(
@@ -67,6 +72,7 @@ class LoginBlocConsumer extends StatelessWidget {
                         password: passwordController.text,
                       ),
                     );
+                    
                   } else {
                     onValidations();
                   }
