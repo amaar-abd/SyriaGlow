@@ -49,17 +49,18 @@ class _SignupViewBodyState extends State<SignupViewBody> {
                 title: context.l10n.fullNameTitle,
                 hintText: context.l10n.fullNameHint,
                 controller: nameController,
-                obscureText: false,
                 suffixIcon: Icon(Icons.person, color: AppColors.primaryGreen),
               ),
               CustomTextFormField(
                 title: context.l10n.emailTitle,
                 hintText: context.l10n.emailHint,
                 controller: emailController,
-                obscureText: false,
+                keyboardType: TextInputType.emailAddress,
+                validator: context.validateEmail,
                 suffixIcon: Icon(Icons.email, color: AppColors.primaryGreen),
               ),
               CustomTextFormField(
+                validator: context.validatePassword,
                 title: context.l10n.passwordTitle,
                 hintText: context.l10n.passwordHint,
                 controller: passwordController,
@@ -77,6 +78,7 @@ class _SignupViewBodyState extends State<SignupViewBody> {
                 ),
               ),
               CustomTextFormField(
+                validator: context.validatePassword,
                 title: context.l10n.passwordConfirmationTitle,
                 hintText: context.l10n.passwordConfirmationHint,
                 controller: passwordConfirmationController,
@@ -104,6 +106,7 @@ class _SignupViewBodyState extends State<SignupViewBody> {
               ),
               SizedBox(height: 20.h),
               SignUpBlocConsumer(
+                isChecked: isChecked,
                 globalKey: _globalKey,
                 passwordController: passwordController,
                 passwordConfirmationController: passwordConfirmationController,

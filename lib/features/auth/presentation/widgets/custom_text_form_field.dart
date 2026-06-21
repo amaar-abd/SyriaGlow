@@ -11,7 +11,11 @@ class CustomTextFormField extends StatelessWidget {
     required this.controller,
     this.obscureText,
     this.suffixIcon,
-    this.prefixIcon,
+    this.prefixIcon, 
+    this.keyboardType,
+     this.validator, this.onChanged, 
+
+    
   });
   final String? title;
   final String hintText;
@@ -19,19 +23,25 @@ class CustomTextFormField extends StatelessWidget {
   final Widget? prefixIcon;
   final bool? obscureText;
   final TextEditingController controller;
+  final TextInputType? keyboardType;
+  final String? Function(String?)? validator;
+  final ValueChanged<String>? onChanged;
+  
 
   @override
   Widget build(BuildContext context) {
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
-        Text(
-          title ?? '',
-          style: TextTheme.of(
-            context,
-          ).bodyMedium?.copyWith(fontWeight: FontWeight.bold, fontSize: 16.sp),
-        ),
-        SizedBox(height: 8.h),
+       if (title != null && title!.isNotEmpty) ...[
+          Text(
+            title!,
+            style: TextTheme.of(
+              context,
+            ).bodyMedium?.copyWith(fontWeight: FontWeight.bold, fontSize: 16.sp),
+          ),
+          SizedBox(height: 8.h),
+        ],
         DecoratedBox(
           decoration: BoxDecoration(
             borderRadius: BorderRadius.circular(16.r),
@@ -48,14 +58,14 @@ class CustomTextFormField extends StatelessWidget {
               ),
             ),
             child: TextFormField(
-              obscureText: obscureText ?? true,
+              onChanged: onChanged,
+             keyboardType: keyboardType ?? TextInputType.text,
+              obscureText: obscureText ?? false,
               controller: controller,
               style: TextTheme.of(
                 context,
               ).bodyMedium?.copyWith(fontSize: 16.sp),
-              validator: (value) => value == null || value.isEmpty
-                  ? context.l10n.requiredField(title ?? '')
-                  : null,
+              validator:validator?? (value) => value == null || value.isEmpty ? context.l10n.requiredField(title ?? '') : null,
               decoration: InputDecoration(
                 filled: true,
                 fillColor: Colors.white,

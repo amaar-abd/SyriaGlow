@@ -24,6 +24,10 @@ class MessageLookup extends MessageLookupByLibrary {
 
   final messages = _notInlinedMessages(_notInlinedMessages);
   static Map<String, Function> _notInlinedMessages(_) => <String, Function>{
+    "acceptTermsAndConditionsError": MessageLookupByLibrary.simpleMessage(
+      "الرجاء الموافقة على الشروط والأحكام للمتابعة",
+    ),
+    "airports": MessageLookupByLibrary.simpleMessage("مطارات"),
     "alreadyHaveAccount": MessageLookupByLibrary.simpleMessage(
       "لديك حساب بالفعل ؟ ",
     ),
@@ -32,6 +36,9 @@ class MessageLookup extends MessageLookupByLibrary {
     "continueAsGuest": MessageLookupByLibrary.simpleMessage("المتابعة كضيف"),
     "culturalHeritage": MessageLookupByLibrary.simpleMessage("التراث الحضاري"),
     "didntReceiveCode": MessageLookupByLibrary.simpleMessage("لم يصلك الرمز؟"),
+    "discoverByCategory": MessageLookupByLibrary.simpleMessage(
+      "اكتشف حسب التصنيف",
+    ),
     "dontHaveAccount": MessageLookupByLibrary.simpleMessage("لا تمتلك حساب ؟ "),
     "emailHint": MessageLookupByLibrary.simpleMessage("أدخل بريدك الإلكتروني"),
     "emailTitle": MessageLookupByLibrary.simpleMessage("البريد الإلكتروني"),
@@ -46,6 +53,11 @@ class MessageLookup extends MessageLookupByLibrary {
     ),
     "fullNameHint": MessageLookupByLibrary.simpleMessage("أدخل اسمك الثلاثي"),
     "fullNameTitle": MessageLookupByLibrary.simpleMessage("الاسم الكامل"),
+    "historicalPlaces": MessageLookupByLibrary.simpleMessage("أماكن أثرية"),
+    "hotels": MessageLookupByLibrary.simpleMessage("فنادق"),
+    "invalidEmail": MessageLookupByLibrary.simpleMessage(
+      "الرجاء إدخال بريد إلكتروني صحيح",
+    ),
     "loginButton": MessageLookupByLibrary.simpleMessage("تسجيل الدخول"),
     "loginNowDesc": MessageLookupByLibrary.simpleMessage(
       "يمكنك الآن تسجيل الدخول بكلمة المرور الجديدة.",
@@ -55,11 +67,15 @@ class MessageLookup extends MessageLookupByLibrary {
       "استكشف عبق التاريخ بلمسة عصرية",
     ),
     "loginText": MessageLookupByLibrary.simpleMessage("تسجيل الدخول"),
+    "mostVisitedPlaces": MessageLookupByLibrary.simpleMessage(
+      "الأماكن الأكثر زيارة",
+    ),
+    "nature": MessageLookupByLibrary.simpleMessage("طبيعة"),
     "nav_explore": MessageLookupByLibrary.simpleMessage("اكتشف"),
     "nav_favorites": MessageLookupByLibrary.simpleMessage("المحفوظات"),
     "nav_home": MessageLookupByLibrary.simpleMessage("الرئيسية"),
     "nav_my_trips": MessageLookupByLibrary.simpleMessage("رحلاتي"),
-    "nav_profile": MessageLookupByLibrary.simpleMessage("الحساب"),
+    "nav_profile": MessageLookupByLibrary.simpleMessage("حسابي"),
     "newPasswordLabel": MessageLookupByLibrary.simpleMessage(
       "كلمة المرور الجديدة",
     ),
@@ -83,6 +99,9 @@ class MessageLookup extends MessageLookupByLibrary {
       "تأكيد كلمة المرور",
     ),
     "passwordHint": MessageLookupByLibrary.simpleMessage("أدخل كلمة المرور"),
+    "passwordLengthError": MessageLookupByLibrary.simpleMessage(
+      "كلمة المرور قصيرة (8 محارف على الأقل)",
+    ),
     "passwordTitle": MessageLookupByLibrary.simpleMessage("كلمة المرور"),
     "passwordUpdatedSuccess": MessageLookupByLibrary.simpleMessage(
       "تم تحديث كلمة المرور بنجاح!",
@@ -99,6 +118,7 @@ class MessageLookup extends MessageLookupByLibrary {
     "resetPasswordTitle": MessageLookupByLibrary.simpleMessage(
       "تعيين كلمة مرور جديدة",
     ),
+    "restaurants": MessageLookupByLibrary.simpleMessage("مطاعم"),
     "sendVerificationCode": MessageLookupByLibrary.simpleMessage(
       "إرسال رمز التحقق",
     ),
@@ -106,6 +126,7 @@ class MessageLookup extends MessageLookupByLibrary {
     "signUpNow": MessageLookupByLibrary.simpleMessage("قم بإنشاء حساب"),
     "startJourneyButton": MessageLookupByLibrary.simpleMessage("ابدأ الرحلة"),
     "termsOfService": MessageLookupByLibrary.simpleMessage("شروط الخدمة"),
+    "traditionalMarkets": MessageLookupByLibrary.simpleMessage("أسواق شعبية"),
     "updatePasswordBtn": MessageLookupByLibrary.simpleMessage(
       "تحديث كلمة المرور",
     ),
@@ -113,5 +134,8 @@ class MessageLookup extends MessageLookupByLibrary {
       "لقد أرسلنا لك رمزاً مكوناً من أربعة أرقام اللى بريدك الالكتروني",
     ),
     "verificationTitle": MessageLookupByLibrary.simpleMessage("رمز التحقق"),
+    "viewAll": MessageLookupByLibrary.simpleMessage("عرض الكل"),
+    "welcome": MessageLookupByLibrary.simpleMessage("مرحباً "),
+    "welcomeToSyria": MessageLookupByLibrary.simpleMessage("أهلاً بك في سوريا"),
   };
 }

@@ -20,7 +20,8 @@ class SignUpBlocConsumer extends StatelessWidget {
     required this.passwordConfirmationController,
     required this.nameController,
     required this.emailController,
-    required this.onValidations,
+    required this.onValidations, 
+    required this.isChecked,
   }) : _globalKey = globalKey;
 
   final GlobalKey<FormState> _globalKey;
@@ -29,6 +30,7 @@ class SignUpBlocConsumer extends StatelessWidget {
   final TextEditingController nameController;
   final TextEditingController emailController;
   final VoidCallback onValidations;
+  final bool  isChecked ;
 
   @override
   Widget build(BuildContext context) {
@@ -70,6 +72,14 @@ class SignUpBlocConsumer extends StatelessWidget {
               ? null
               : () {
                   if (_globalKey.currentState!.validate()) {
+                    if (!isChecked) {
+                      customSnackBar(
+                        context,
+                        context.l10n.acceptTermsAndConditionsError,
+                        AppColors.error,
+                      );
+                      return; 
+                    }
                     if (passwordController.text ==
                         passwordConfirmationController.text) {
                       context.read<RegisterCubit>().registerAccount(

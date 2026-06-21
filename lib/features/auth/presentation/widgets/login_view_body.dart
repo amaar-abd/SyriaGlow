@@ -81,14 +81,17 @@ class _LoginViewBodyState extends State<LoginViewBody> {
                     CustomTextFormField(
                       title: context.l10n.emailTitle,
                       hintText: context.l10n.emailHint,
+                      keyboardType: TextInputType.emailAddress,
+                      validator: context.validateEmail,
                       controller: emailController,
-                      obscureText: false,
                       suffixIcon: Icon(
                         Icons.email,
                         color: AppColors.primaryGreen,
                       ),
                     ),
                     CustomTextFormField(
+                      
+                      validator: context.validatePassword,
                       title: context.l10n.passwordTitle,
                       hintText: context.l10n.passwordHint,
                       controller: passwordController,

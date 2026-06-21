@@ -24,6 +24,10 @@ class MessageLookup extends MessageLookupByLibrary {
 
   final messages = _notInlinedMessages(_notInlinedMessages);
   static Map<String, Function> _notInlinedMessages(_) => <String, Function>{
+    "acceptTermsAndConditionsError": MessageLookupByLibrary.simpleMessage(
+      "Please accept the terms and conditions ",
+    ),
+    "airports": MessageLookupByLibrary.simpleMessage("Airports"),
     "alreadyHaveAccount": MessageLookupByLibrary.simpleMessage(
       "Already have an account? ",
     ),
@@ -37,6 +41,9 @@ class MessageLookup extends MessageLookupByLibrary {
     ),
     "didntReceiveCode": MessageLookupByLibrary.simpleMessage(
       "Didn\'t receive the code?",
+    ),
+    "discoverByCategory": MessageLookupByLibrary.simpleMessage(
+      "Discover by Category",
     ),
     "dontHaveAccount": MessageLookupByLibrary.simpleMessage(
       "Don\'t have an account? ",
@@ -56,6 +63,11 @@ class MessageLookup extends MessageLookupByLibrary {
       "Enter your triple name",
     ),
     "fullNameTitle": MessageLookupByLibrary.simpleMessage("Full Name"),
+    "historicalPlaces": MessageLookupByLibrary.simpleMessage("Historical "),
+    "hotels": MessageLookupByLibrary.simpleMessage("Hotels"),
+    "invalidEmail": MessageLookupByLibrary.simpleMessage(
+      "Please enter a valid email address",
+    ),
     "loginButton": MessageLookupByLibrary.simpleMessage("Login"),
     "loginNowDesc": MessageLookupByLibrary.simpleMessage(
       "You can now log in with your new password",
@@ -65,6 +77,10 @@ class MessageLookup extends MessageLookupByLibrary {
       "Explore the fragrance of history with a modern touch",
     ),
     "loginText": MessageLookupByLibrary.simpleMessage("Login"),
+    "mostVisitedPlaces": MessageLookupByLibrary.simpleMessage(
+      "Most Visited Places",
+    ),
+    "nature": MessageLookupByLibrary.simpleMessage("Nature"),
     "nav_explore": MessageLookupByLibrary.simpleMessage("Explore"),
     "nav_favorites": MessageLookupByLibrary.simpleMessage("Favorites"),
     "nav_home": MessageLookupByLibrary.simpleMessage("Home"),
@@ -91,6 +107,9 @@ class MessageLookup extends MessageLookupByLibrary {
       "Confirm Password",
     ),
     "passwordHint": MessageLookupByLibrary.simpleMessage("Enter your password"),
+    "passwordLengthError": MessageLookupByLibrary.simpleMessage(
+      "Password too short (min 8 chars)",
+    ),
     "passwordTitle": MessageLookupByLibrary.simpleMessage("Password"),
     "passwordUpdatedSuccess": MessageLookupByLibrary.simpleMessage(
       "Password updated successfully ",
@@ -107,6 +126,7 @@ class MessageLookup extends MessageLookupByLibrary {
     "resetPasswordTitle": MessageLookupByLibrary.simpleMessage(
       "Reset New Password",
     ),
+    "restaurants": MessageLookupByLibrary.simpleMessage("Restaurants"),
     "sendVerificationCode": MessageLookupByLibrary.simpleMessage(
       "Send Verification Code",
     ),
@@ -114,6 +134,7 @@ class MessageLookup extends MessageLookupByLibrary {
     "signUpNow": MessageLookupByLibrary.simpleMessage("Create an account"),
     "startJourneyButton": MessageLookupByLibrary.simpleMessage("Start Journey"),
     "termsOfService": MessageLookupByLibrary.simpleMessage("Terms of Service"),
+    "traditionalMarkets": MessageLookupByLibrary.simpleMessage("Markets"),
     "updatePasswordBtn": MessageLookupByLibrary.simpleMessage(
       "Update Password",
     ),
@@ -123,5 +144,8 @@ class MessageLookup extends MessageLookupByLibrary {
     "verificationTitle": MessageLookupByLibrary.simpleMessage(
       "Verification Code",
     ),
+    "viewAll": MessageLookupByLibrary.simpleMessage("View All"),
+    "welcome": MessageLookupByLibrary.simpleMessage("Welcome "),
+    "welcomeToSyria": MessageLookupByLibrary.simpleMessage("Welcome to Syria"),
   };
 }

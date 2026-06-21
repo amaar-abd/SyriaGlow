@@ -20,6 +20,10 @@ class ForgotePasswordView extends StatefulWidget {
 class _ForgotePasswordViewState extends State<ForgotePasswordView> {
   final TextEditingController _emailController = TextEditingController();
   final GlobalKey<FormState> _formKey = GlobalKey<FormState>();
+ 
+  AutovalidateMode autovalidateMode = AutovalidateMode.disabled;
+  @override
+
 
   @override
   void dispose() {
@@ -32,9 +36,7 @@ class _ForgotePasswordViewState extends State<ForgotePasswordView> {
     return Scaffold(
       appBar: authAppBar(context, showButton: true),
       body: BlocConsumer<ForgotPasswordCubit, ForgotPasswordState>(
-        
         listener: (context, state) {
-
           if (state is ForgotPasswordSuccess) {
             Navigator.pushNamed(
               context,
@@ -50,6 +52,7 @@ class _ForgotePasswordViewState extends State<ForgotePasswordView> {
             padding: EdgeInsets.symmetric(horizontal: 16.w),
             child: SingleChildScrollView(
               child: Form(
+                autovalidateMode: autovalidateMode,
                 key: _formKey,
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
@@ -70,10 +73,12 @@ class _ForgotePasswordViewState extends State<ForgotePasswordView> {
                     ),
                     SizedBox(height: 20.h),
                     CustomTextFormField(
-                      obscureText: false,
+                     
                       hintText: context.l10n.emailHint,
                       title: context.l10n.emailTitle,
                       controller: _emailController,
+                      keyboardType: TextInputType.emailAddress,
+                      validator: context.validateEmail,
                       suffixIcon: Icon(
                         Icons.email,
                         color: AppColors.primaryGreen,
@@ -92,6 +97,10 @@ class _ForgotePasswordViewState extends State<ForgotePasswordView> {
                                       email: _emailController.text,
                                     );
                               }
+                              setState(() {
+                                autovalidateMode =
+                                    AutovalidateMode.always;
+                              });
                             },
                       widget: state is ForgotPasswordLoading
                           ? CircularProgressIndicator(

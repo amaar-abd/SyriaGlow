@@ -74,6 +74,16 @@ class S {
     );
   }
 
+  /// `Please enter a valid email address`
+  String get invalidEmail {
+    return Intl.message(
+      'Please enter a valid email address',
+      name: 'invalidEmail',
+      desc: '',
+      args: [],
+    );
+  }
+
   /// `Enter your email`
   String get emailHint {
     return Intl.message(
@@ -197,6 +207,26 @@ class S {
   /// `Login`
   String get loginText {
     return Intl.message('Login', name: 'loginText', desc: '', args: []);
+  }
+
+  /// `Please accept the terms and conditions `
+  String get acceptTermsAndConditionsError {
+    return Intl.message(
+      'Please accept the terms and conditions ',
+      name: 'acceptTermsAndConditionsError',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Password too short (min 8 chars)`
+  String get passwordLengthError {
+    return Intl.message(
+      'Password too short (min 8 chars)',
+      name: 'passwordLengthError',
+      desc: '',
+      args: [],
+    );
   }
 
   /// `Cultural Heritage`
@@ -444,6 +474,86 @@ class S {
     return Intl.message(
       'Please Enter The Full Code',
       name: 'enterFullCode',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Discover by Category`
+  String get discoverByCategory {
+    return Intl.message(
+      'Discover by Category',
+      name: 'discoverByCategory',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `View All`
+  String get viewAll {
+    return Intl.message('View All', name: 'viewAll', desc: '', args: []);
+  }
+
+  /// `Welcome `
+  String get welcome {
+    return Intl.message('Welcome ', name: 'welcome', desc: '', args: []);
+  }
+
+  /// `Welcome to Syria`
+  String get welcomeToSyria {
+    return Intl.message(
+      'Welcome to Syria',
+      name: 'welcomeToSyria',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Most Visited Places`
+  String get mostVisitedPlaces {
+    return Intl.message(
+      'Most Visited Places',
+      name: 'mostVisitedPlaces',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Hotels`
+  String get hotels {
+    return Intl.message('Hotels', name: 'hotels', desc: '', args: []);
+  }
+
+  /// `Restaurants`
+  String get restaurants {
+    return Intl.message('Restaurants', name: 'restaurants', desc: '', args: []);
+  }
+
+  /// `Historical `
+  String get historicalPlaces {
+    return Intl.message(
+      'Historical ',
+      name: 'historicalPlaces',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Nature`
+  String get nature {
+    return Intl.message('Nature', name: 'nature', desc: '', args: []);
+  }
+
+  /// `Airports`
+  String get airports {
+    return Intl.message('Airports', name: 'airports', desc: '', args: []);
+  }
+
+  /// `Markets`
+  String get traditionalMarkets {
+    return Intl.message(
+      'Markets',
+      name: 'traditionalMarkets',
       desc: '',
       args: [],
     );
