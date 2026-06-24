@@ -8,4 +8,6 @@ class AppRoutes {
   static const String otpVerificationView = 'OtpVerificationView';
   static const String resetPasswordView = 'ResetPasswordView';
   static const String successResetPasswordViw = 'SuccessResetPasswordViw';
+  static const String homeDetailsView = 'HomeDetailsView';
+  static const String categoryView = 'CategoryView';
 }

@@ -9,6 +9,9 @@ import 'package:syria_glow/features/auth/presentation/views/forgote_password/res
 import 'package:syria_glow/features/auth/presentation/views/forgote_password/success_reset_password_viw.dart';
 import 'package:syria_glow/features/auth/presentation/views/login_view.dart';
 import 'package:syria_glow/features/auth/presentation/views/signup_view.dart';
+import 'package:syria_glow/features/home/data/models/landmark_model.dart';
+import 'package:syria_glow/features/home/presentation/views/home_details_view.dart';
+import 'package:syria_glow/features/home/presentation/views/category_view.dart';
 import 'package:syria_glow/features/main_layout/presentation/views/main_layout_view.dart';
 import 'package:syria_glow/features/onboarding/presentation/views/onboarding_view.dart';
 import 'package:syria_glow/features/splash/presentation/views/splash_view.dart';
@@ -54,6 +57,19 @@ class RouteGenerator {
       case AppRoutes.successResetPasswordViw:
         return MaterialPageRoute(
           builder: (context) => const SuccessResetPasswordViw(),
+        );
+      case AppRoutes.homeDetailsView:
+        final args = settings.arguments;
+        return MaterialPageRoute(
+          builder: (context) => HomeDetailsView(landmark: args as Landmark),
+        );
+      case AppRoutes.categoryView:
+        final args = settings.arguments as Map;
+        return MaterialPageRoute(
+          builder: (context) => CategoryView(
+            categoryId: args['id']?? 1,
+            categoryTitle: args['title']??'',
+          ),
         );
 
       default:
