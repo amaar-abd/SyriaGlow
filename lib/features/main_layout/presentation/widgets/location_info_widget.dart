@@ -43,7 +43,7 @@ class LocationInfoWidget extends StatelessWidget {
                     child: Padding(
                       padding: EdgeInsets.all(8.0.r),
                       child: CircularProgressIndicator(
-                        color: AppColors.primaryGreenLight,
+                        color: AppColors.primaryGreen,
                         strokeWidth: 2,
                       ),
                     ),
