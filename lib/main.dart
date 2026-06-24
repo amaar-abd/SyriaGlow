@@ -41,7 +41,7 @@ class SyriaGlow extends StatelessWidget {
               initialRoute: AppRoutes.splashView,
               debugShowCheckedModeBanner: false,
               localizationsDelegates: const [
-                S.delegate,
+                S.delegate, 
                 GlobalMaterialLocalizations.delegate,
                 GlobalWidgetsLocalizations.delegate,
                 GlobalCupertinoLocalizations.delegate,

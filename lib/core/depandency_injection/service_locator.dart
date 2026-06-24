@@ -19,13 +19,22 @@ import 'package:syria_glow/features/auth/domain/use_cases/reset_password_use_cas
 import 'package:syria_glow/features/auth/domain/use_cases/verify_reset_code_use_case.dart';
 import 'package:syria_glow/features/auth/presentation/manager/forgot_password_cubit/forgot_password_cubit.dart';
 import 'package:syria_glow/features/auth/presentation/manager/logout_cubit/logout_cubit.dart';
+import 'package:syria_glow/features/home/data/data_sources/home_remote_data_source.dart';
+import 'package:syria_glow/features/home/data/data_sources/home_remote_data_source_impl.dart';
 import 'package:syria_glow/features/home/data/data_sources/location_local_data_source.dart';
+import 'package:syria_glow/features/home/data/repos/home_repository_impl.dart';
+import 'package:syria_glow/features/home/domain/repos/home_repository.dart';
+import 'package:syria_glow/features/home/domain/use_cases/get_home_data_by_category_use_case.dart';
+import 'package:syria_glow/features/home/domain/use_cases/get_home_data_use_case.dart';
+import 'package:syria_glow/features/home/presentation/manager/home_category_cubit/category_cubit.dart';
+import 'package:syria_glow/features/home/presentation/manager/home_cubit/home_cubit.dart';
 
 final GetIt sl = GetIt.instance;
 
 void setupServiceLocator() async {
   final sharedPrefs = await SharedPreferences.getInstance();
-  sl.registerLazySingleton<SharedPreferencesService>(() => SharedPreferencesService(sharedPrefs),
+  sl.registerLazySingleton<SharedPreferencesService>(
+    () => SharedPreferencesService(sharedPrefs),
   );
 
   sl.registerLazySingleton<SecureStorageService>(
@@ -66,12 +75,29 @@ void setupServiceLocator() async {
   );
 
   sl.registerFactory<RoutingCubit>(() => RoutingCubit());
-  sl.registerFactory<LocationLocalDataSource>(
+  sl.registerLazySingleton<LocationLocalDataSource>(
     () => LocationLocalDataSourceImpl(),
   );
 
-  sl.registerFactory<LogoutUseCase>(() => LogoutUseCase(authRepository: sl()));
-  
+  sl.registerLazySingleton<LogoutUseCase>(
+    () => LogoutUseCase(authRepository: sl()),
+  );
+
   sl.registerFactory<LogoutCubit>(() => LogoutCubit(sl()));
 
+  sl.registerLazySingleton<HomeRemoteDataSource>(
+    () => HomeRemoteDataSourceImpl(apiService: sl()),
+  );
+  sl.registerLazySingleton<HomeRepository>(
+    () => HomeRepositoryImpl(homeRemoteDataSource: sl()),
+  );
+  sl.registerLazySingleton<GetHomeDataUseCase>(
+    () => GetHomeDataUseCase(homeRepository: sl()),
+  );
+  sl.registerFactory<HomeCubit>(() => HomeCubit(sl()));
+
+  sl.registerLazySingleton<GetHomeDataByCategoryUseCase>(
+    () => GetHomeDataByCategoryUseCase(homeRepository: sl()),
+  );
+  sl.registerFactory<CategoryCubit>(() => CategoryCubit(sl()));
 }
