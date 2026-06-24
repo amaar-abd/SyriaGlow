@@ -22,3 +22,11 @@ subprojects {
 tasks.register<Delete>("clean") {
     delete(rootProject.layout.buildDirectory)
 }
+
+buildscript {
+    configurations.all {
+        resolutionStrategy {
+            force("com.android.tools.build:gradle:8.9.1")
+        }
+    }
+}

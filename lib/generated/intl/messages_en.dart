@@ -118,6 +118,7 @@ class MessageLookup extends MessageLookupByLibrary {
       "Passwords do not match",
     ),
     "privacyPolicy": MessageLookupByLibrary.simpleMessage("Privacy Policy"),
+    "religious": MessageLookupByLibrary.simpleMessage("Religious"),
     "requiredField": m0,
     "resendCode": MessageLookupByLibrary.simpleMessage("Resend"),
     "resetPasswordDesc": MessageLookupByLibrary.simpleMessage(
@@ -134,7 +135,6 @@ class MessageLookup extends MessageLookupByLibrary {
     "signUpNow": MessageLookupByLibrary.simpleMessage("Create an account"),
     "startJourneyButton": MessageLookupByLibrary.simpleMessage("Start Journey"),
     "termsOfService": MessageLookupByLibrary.simpleMessage("Terms of Service"),
-    "traditionalMarkets": MessageLookupByLibrary.simpleMessage("Markets"),
     "updatePasswordBtn": MessageLookupByLibrary.simpleMessage(
       "Update Password",
     ),

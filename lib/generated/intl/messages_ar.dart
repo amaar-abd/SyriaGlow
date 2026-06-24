@@ -110,6 +110,7 @@ class MessageLookup extends MessageLookupByLibrary {
       "كلمتا المرور غير متطابقتين",
     ),
     "privacyPolicy": MessageLookupByLibrary.simpleMessage("سياسة الخصوصية"),
+    "religious": MessageLookupByLibrary.simpleMessage("ديني"),
     "requiredField": m0,
     "resendCode": MessageLookupByLibrary.simpleMessage("إعادة إرسال"),
     "resetPasswordDesc": MessageLookupByLibrary.simpleMessage(
@@ -126,7 +127,6 @@ class MessageLookup extends MessageLookupByLibrary {
     "signUpNow": MessageLookupByLibrary.simpleMessage("قم بإنشاء حساب"),
     "startJourneyButton": MessageLookupByLibrary.simpleMessage("ابدأ الرحلة"),
     "termsOfService": MessageLookupByLibrary.simpleMessage("شروط الخدمة"),
-    "traditionalMarkets": MessageLookupByLibrary.simpleMessage("أسواق شعبية"),
     "updatePasswordBtn": MessageLookupByLibrary.simpleMessage(
       "تحديث كلمة المرور",
     ),

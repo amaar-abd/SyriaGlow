@@ -549,14 +549,9 @@ class S {
     return Intl.message('Airports', name: 'airports', desc: '', args: []);
   }
 
-  /// `Markets`
-  String get traditionalMarkets {
-    return Intl.message(
-      'Markets',
-      name: 'traditionalMarkets',
-      desc: '',
-      args: [],
-    );
+  /// `Religious`
+  String get religious {
+    return Intl.message('Religious', name: 'religious', desc: '', args: []);
   }
 
   /// `Home`
