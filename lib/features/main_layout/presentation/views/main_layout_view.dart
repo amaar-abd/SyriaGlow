@@ -10,8 +10,9 @@ class MainLayoutView extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    String currentLanguage = Localizations.localeOf(context).languageCode;
     return BlocProvider(
-      create: (context) => UserLocationCubit(sl.get<LocationLocalDataSource>())..fetchLocation(),
+      create: (context) => UserLocationCubit(sl.get<LocationLocalDataSource>())..fetchLocation(languageCode:currentLanguage ),
       child: const MainLayoutViewBody(),
     );
   }

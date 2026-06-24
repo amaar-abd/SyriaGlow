@@ -22,74 +22,88 @@ class CustomBottomNavBar extends StatefulWidget {
 class _CustomBottomNavBarState extends State<CustomBottomNavBar> {
   @override
   Widget build(BuildContext context) {
-    return Container(
-      height: 68.h,
-      margin: EdgeInsets.only(bottom: 10.h, left: 15.w, right: 15.w),
-      padding: EdgeInsets.symmetric(horizontal: 8.w),
-      decoration: BoxDecoration(
-        color: const Color(0xFFF9F9FB),
-        borderRadius: BorderRadius.circular(30.r),
-        boxShadow: [
-          BoxShadow(
-            color: Colors.black.withAlpha(15),
-            blurRadius: 15,
-            offset: const Offset(0, 8),
+    return OrientationBuilder(
+      builder: (context, orientation) {
+        final isLandscape = orientation == Orientation.landscape;
+        return Container(
+          height: isLandscape ? 70.h : 68.h,
+          margin: EdgeInsets.symmetric(
+            vertical: isLandscape ? 0 : 5.h,
+            horizontal: isLandscape ? 0 : 12.w,
           ),
-        ],
-      ),
-      child: Row(
-        mainAxisAlignment: MainAxisAlignment.spaceAround,
-        children: List.generate(widget.menuItems.length, (index) {
-          final isSelected = widget.currentIndex == index;
-
-          return GestureDetector(
-            onTap: () {
-              widget.onTap!(index);
-            },
-            behavior: HitTestBehavior.opaque,
-            child: AnimatedContainer(
-              duration: const Duration(milliseconds: 300),
-              curve: Curves.linearToEaseOut,
-              padding: EdgeInsets.symmetric(vertical: 10.h, horizontal: 10.w),
-              decoration: BoxDecoration(
-                color: isSelected
-                    ? AppColors.primaryGreen.withAlpha(30)
-                    : Colors.transparent,
-                borderRadius: BorderRadius.circular(20.r),
+          padding: EdgeInsets.symmetric(
+            horizontal: 8.w,
+            vertical: isLandscape ? 4.h : 0,
+          ),
+          decoration: BoxDecoration(
+            color: const Color(0xFFF9F9FB),
+            borderRadius: isLandscape ? null : BorderRadius.circular(25.r),
+            boxShadow: [
+              BoxShadow(
+                color: Colors.black.withAlpha(80),
+                blurRadius: 20,
+                spreadRadius: 2,
+                offset: const Offset(0, 10),
               ),
-              child: Row(
-                children: [
-                  FaIcon(
-                    widget.menuItems[index].icon,
-                    color: isSelected
-                        ? AppColors.primaryGreen
-                        : const Color(0xff8A8A8E),
-                    size: 23.sp,
-                  ),
-                  AnimatedCrossFade(
-                    firstChild: Padding(
-                      padding: EdgeInsets.only(right: 6.w),
-                      child: Text(
-                        widget.menuItems[index].label,
-                        style: TextStyle(
-                          color: AppColors.primaryGreen,
-                          fontWeight: FontWeight.bold,
-                          fontSize: 13.sp,
-                        ),
-                      ),
+            ],
+          ),
+          child: Row(
+            mainAxisAlignment: MainAxisAlignment.spaceAround,
+            children: List.generate(widget.menuItems.length, (index) {
+              final isSelected = widget.currentIndex == index;
+              return Expanded(
+                child: InkWell(
+                  onTap: () {
+                    widget.onTap!(index);
+                  },
+                  child: AnimatedContainer(
+                    duration: const Duration(milliseconds: 300),
+                    curve: Curves.easeInOut,
+                    padding: EdgeInsets.symmetric(
+                      vertical: 8.h,
+                      horizontal: 2.w,
                     ),
-                    secondChild: const SizedBox.shrink(),
-                    crossFadeState: isSelected
-                        ? CrossFadeState.showFirst
-                        : CrossFadeState.showSecond,
-                    duration: const Duration(milliseconds: 250),
+                    decoration: BoxDecoration(
+                      color: isSelected
+                          ? AppColors.primaryGreen.withAlpha(30)
+                          : Colors.transparent,
+                      borderRadius: BorderRadius.circular(20.r),
+                    ),
+                    child: Column(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      mainAxisSize: MainAxisSize.min,
+                      children: [
+                        FaIcon(
+                          isSelected
+                              ? widget.menuItems[index].activeIcon
+                              : widget.menuItems[index].icon,
+                          color: isSelected
+                              ? AppColors.primaryGreen
+                              : const Color(0xff8A8A8E),
+                          size: isLandscape ? 8.sp : 22.sp,
+                        ),
+                        SizedBox(height: 6.h),
+                        Flexible(
+                          child: Text(
+                            widget.menuItems[index].label,
+                            style: TextStyle(
+                              color: isSelected
+                                  ? AppColors.primaryGreen
+                                  : const Color(0xff8A8A8E),
+                              fontWeight: FontWeight.bold,
+                              fontSize: isLandscape ? 11 : 10.sp,
+                            ),
+                          ),
+                        ),
+                      ],
+                    ),
                   ),
-                ],
-              ),
-            ),
-          );
-        }),
-      ),
+                ),
+              );
+            }),
+          ),
+        );
+      },
     );
   }
 }
