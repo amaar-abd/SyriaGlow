@@ -10,8 +10,10 @@ import 'package:syria_glow/features/auth/presentation/views/forgote_password/suc
 import 'package:syria_glow/features/auth/presentation/views/login_view.dart';
 import 'package:syria_glow/features/auth/presentation/views/signup_view.dart';
 import 'package:syria_glow/features/home/data/models/landmark_model.dart';
+import 'package:syria_glow/features/home/presentation/manager/user_location_cubit/user_location_cubit.dart';
 import 'package:syria_glow/features/home/presentation/views/home_details_view.dart';
 import 'package:syria_glow/features/home/presentation/views/category_view.dart';
+import 'package:syria_glow/features/home/presentation/views/map_location_view.dart';
 import 'package:syria_glow/features/main_layout/presentation/views/main_layout_view.dart';
 import 'package:syria_glow/features/onboarding/presentation/views/onboarding_view.dart';
 import 'package:syria_glow/features/splash/presentation/views/splash_view.dart';
@@ -67,8 +69,16 @@ class RouteGenerator {
         final args = settings.arguments as Map;
         return MaterialPageRoute(
           builder: (context) => CategoryView(
-            categoryId: args['id']?? 1,
-            categoryTitle: args['title']??'',
+            categoryId: args['id'] ?? 1,
+            categoryTitle: args['title'] ?? '',
+          ),
+        );
+      case AppRoutes.mapLocationView:
+        final args = settings.arguments as Landmark;
+        return MaterialPageRoute(
+          builder: (_) => BlocProvider.value(
+            value: sl.get<UserLocationCubit>(),
+            child: MapLocationView(landmark: args),
           ),
         );
 

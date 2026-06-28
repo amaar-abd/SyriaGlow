@@ -9,5 +9,6 @@ class AppRoutes {
   static const String resetPasswordView = 'ResetPasswordView';
   static const String successResetPasswordViw = 'SuccessResetPasswordViw';
   static const String homeDetailsView = 'HomeDetailsView';
+  static const String mapLocationView = 'MapLocationView';
   static const String categoryView = 'CategoryView';
 }
