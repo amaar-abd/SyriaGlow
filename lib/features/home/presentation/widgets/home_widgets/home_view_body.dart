@@ -3,11 +3,11 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:syria_glow/core/theme/app_colors.dart';
 import 'package:syria_glow/features/home/presentation/manager/home_cubit/home_cubit.dart';
-import 'package:syria_glow/features/home/presentation/views/widgets/explory_py_catecory_row.dart';
-import 'package:syria_glow/features/home/presentation/views/widgets/home_categories_horizontal_list.dart';
-import 'package:syria_glow/features/home/presentation/views/widgets/home_list_view_popular_items.dart';
-import 'package:syria_glow/features/home/presentation/views/widgets/popular_drstinations_row.dart';
-import 'package:syria_glow/features/home/presentation/views/widgets/user_information_column.dart';
+import 'package:syria_glow/features/home/presentation/widgets/home_widgets/explory_py_catecory_row.dart';
+import 'package:syria_glow/features/home/presentation/widgets/home_widgets/home_categories_horizontal_list.dart';
+import 'package:syria_glow/features/home/presentation/widgets/home_widgets/home_list_view_popular_items.dart';
+import 'package:syria_glow/features/home/presentation/widgets/home_widgets/popular_drstinations_row.dart';
+import 'package:syria_glow/features/home/presentation/widgets/home_widgets/user_information_column.dart';
 
 class HomeViewBody extends StatelessWidget {
   const HomeViewBody({super.key});

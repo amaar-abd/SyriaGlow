@@ -3,7 +3,7 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:syria_glow/core/depandency_injection/service_locator.dart';
 import 'package:syria_glow/core/theme/app_colors.dart';
 import 'package:syria_glow/features/home/presentation/manager/home_category_cubit/category_cubit.dart';
-import 'package:syria_glow/features/home/presentation/views/widgets/category_widgeets/category_view_body.dart';
+import 'package:syria_glow/features/home/presentation/widgets/category_widgeets/category_view_body.dart';
 
 class CategoryView extends StatelessWidget {
   const CategoryView({

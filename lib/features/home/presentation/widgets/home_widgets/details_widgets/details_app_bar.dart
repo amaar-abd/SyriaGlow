@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:syria_glow/core/theme/app_colors.dart';
-import 'package:syria_glow/features/home/presentation/views/widgets/details_widgets/details_app_bar_circle_button.dart';
+import 'package:syria_glow/features/home/presentation/widgets/home_widgets/details_widgets/details_app_bar_circle_button.dart';
 
 class DetailsAppBar extends StatelessWidget  {
   const DetailsAppBar({super.key});

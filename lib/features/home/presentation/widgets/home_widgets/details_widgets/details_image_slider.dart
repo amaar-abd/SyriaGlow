@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:syria_glow/core/theme/app_colors.dart';
 import 'package:syria_glow/features/home/data/models/landmark_model.dart';
-import 'package:syria_glow/features/home/presentation/views/widgets/details_widgets/details_app_bar.dart';
+import 'package:syria_glow/features/home/presentation/widgets/home_widgets/details_widgets/details_app_bar.dart';
 
 class DetailsImageSlider extends StatefulWidget   {
   const DetailsImageSlider({super.key, required this.landmark});

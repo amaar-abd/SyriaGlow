@@ -28,6 +28,7 @@ import 'package:syria_glow/features/home/domain/use_cases/get_home_data_by_categ
 import 'package:syria_glow/features/home/domain/use_cases/get_home_data_use_case.dart';
 import 'package:syria_glow/features/home/presentation/manager/home_category_cubit/category_cubit.dart';
 import 'package:syria_glow/features/home/presentation/manager/home_cubit/home_cubit.dart';
+import 'package:syria_glow/features/home/presentation/manager/user_location_cubit/user_location_cubit.dart';
 
 final GetIt sl = GetIt.instance;
 
@@ -75,9 +76,11 @@ void setupServiceLocator() async {
   );
 
   sl.registerFactory<RoutingCubit>(() => RoutingCubit());
+
   sl.registerLazySingleton<LocationLocalDataSource>(
     () => LocationLocalDataSourceImpl(),
   );
+  sl.registerLazySingleton<UserLocationCubit>(() => UserLocationCubit(sl(),sl()));
 
   sl.registerLazySingleton<LogoutUseCase>(
     () => LogoutUseCase(authRepository: sl()),

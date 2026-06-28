@@ -3,7 +3,7 @@ import 'package:flutter_animate/flutter_animate.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:syria_glow/core/routes/app_routes.dart';
 import 'package:syria_glow/features/home/data/models/landmark_model.dart';
-import 'package:syria_glow/features/home/presentation/views/widgets/popular_item.dart';
+import 'package:syria_glow/features/home/presentation/widgets/home_widgets/popular_item.dart';
 
 class HomeListViewPopularItems extends StatelessWidget {
   const HomeListViewPopularItems({super.key, required this.landmarks});
