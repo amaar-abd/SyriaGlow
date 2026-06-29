@@ -80,7 +80,7 @@ void setupServiceLocator() async {
   sl.registerLazySingleton<LocationLocalDataSource>(
     () => LocationLocalDataSourceImpl(),
   );
-  sl.registerLazySingleton<UserLocationCubit>(() => UserLocationCubit(sl(),sl()));
+  sl.registerLazySingleton<UserLocationCubit>(() => UserLocationCubit(sl()));
 
   sl.registerLazySingleton<LogoutUseCase>(
     () => LogoutUseCase(authRepository: sl()),
