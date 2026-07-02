@@ -11,4 +11,5 @@ class AppRoutes {
   static const String homeDetailsView = 'HomeDetailsView';
   static const String mapLocationView = 'MapLocationView';
   static const String categoryView = 'CategoryView';
+  static const String notificationsView = 'NotificationsView';
 }

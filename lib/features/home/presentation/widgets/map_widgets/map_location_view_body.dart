@@ -115,7 +115,7 @@ class _MapLocationViewBodyState extends State<MapLocationViewBody> {
                     endCap: Cap.roundCap,
                   ),
                 },
-              ),
+              ),     
               if (distance != null && duration != null)
                 Positioned(
                   bottom: 10,

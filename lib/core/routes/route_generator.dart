@@ -14,6 +14,7 @@ import 'package:syria_glow/features/home/presentation/manager/user_location_cubi
 import 'package:syria_glow/features/home/presentation/views/home_details_view.dart';
 import 'package:syria_glow/features/home/presentation/views/category_view.dart';
 import 'package:syria_glow/features/home/presentation/views/map_location_view.dart';
+import 'package:syria_glow/features/notifications/presentation/views/notifications_view.dart';
 import 'package:syria_glow/features/main_layout/presentation/views/main_layout_view.dart';
 import 'package:syria_glow/features/onboarding/presentation/views/onboarding_view.dart';
 import 'package:syria_glow/features/splash/presentation/views/splash_view.dart';
@@ -81,7 +82,10 @@ class RouteGenerator {
             child: MapLocationView(landmark: args),
           ),
         );
-
+      case AppRoutes.notificationsView:
+        return MaterialPageRoute(
+          builder: (context) => const NotificationsView(),
+        );
       default:
         return MaterialPageRoute(
           builder: (context) => Scaffold(
