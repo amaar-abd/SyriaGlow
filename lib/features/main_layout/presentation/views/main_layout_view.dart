@@ -3,6 +3,7 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:syria_glow/core/depandency_injection/service_locator.dart';
 import 'package:syria_glow/features/home/presentation/manager/user_location_cubit/user_location_cubit.dart';
 import 'package:syria_glow/features/main_layout/presentation/widgets/main_layout_view_body.dart';
+import 'package:syria_glow/features/notifications/presentation/manager/notification_cubit/notifications_cubit.dart';
 
 class MainLayoutView extends StatelessWidget {
   const MainLayoutView({super.key});
@@ -10,8 +11,17 @@ class MainLayoutView extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     String currentLanguage = Localizations.localeOf(context).languageCode;
-    return BlocProvider(
-      create: (context) => sl<UserLocationCubit>()..fetchLocation(languageCode:currentLanguage ),
+    return MultiBlocProvider(
+      providers: [
+        BlocProvider(
+          create: (context) =>
+              sl<UserLocationCubit>()
+                ..fetchLocation(languageCode: currentLanguage),
+        ),
+        BlocProvider(
+          create: (context) => sl<NotificationsCubit>()..streamNotifications(),
+        ),
+      ],
       child: const MainLayoutViewBody(),
     );
   }
