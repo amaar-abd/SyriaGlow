@@ -1,3 +1,4 @@
+import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:dio/dio.dart';
 import 'package:flutter_secure_storage/flutter_secure_storage.dart';
 import 'package:get_it/get_it.dart';
@@ -5,6 +6,7 @@ import 'package:shared_preferences/shared_preferences.dart';
 import 'package:syria_glow/core/manager/routing_cubit/routing_cubit.dart';
 import 'package:syria_glow/core/networking/api_service.dart';
 import 'package:syria_glow/core/networking/dio_factory.dart';
+import 'package:syria_glow/core/services/notification_service.dart';
 import 'package:syria_glow/core/services/secure_storage_service.dart';
 import 'package:syria_glow/core/services/shared_preferences_service.dart';
 import 'package:syria_glow/features/auth/data/datasources/auth_remote_data_source.dart';
@@ -29,10 +31,14 @@ import 'package:syria_glow/features/home/domain/use_cases/get_home_data_use_case
 import 'package:syria_glow/features/home/presentation/manager/home_category_cubit/category_cubit.dart';
 import 'package:syria_glow/features/home/presentation/manager/home_cubit/home_cubit.dart';
 import 'package:syria_glow/features/home/presentation/manager/user_location_cubit/user_location_cubit.dart';
+import 'package:syria_glow/features/notifications/data/data_source/notifications_remote_data_source.dart';
+import 'package:syria_glow/features/notifications/data/repo/notifications_repository_impl.dart';
+import 'package:syria_glow/features/notifications/domain/repos/notifications_repository.dart';
+import 'package:syria_glow/features/notifications/presentation/manager/notification_cubit/notifications_cubit.dart';
 
 final GetIt sl = GetIt.instance;
 
-void setupServiceLocator() async {
+Future <void> setupServiceLocator() async {
   final sharedPrefs = await SharedPreferences.getInstance();
   sl.registerLazySingleton<SharedPreferencesService>(
     () => SharedPreferencesService(sharedPrefs),
@@ -102,5 +108,18 @@ void setupServiceLocator() async {
   sl.registerLazySingleton<GetHomeDataByCategoryUseCase>(
     () => GetHomeDataByCategoryUseCase(homeRepository: sl()),
   );
+
   sl.registerFactory<CategoryCubit>(() => CategoryCubit(sl()));
+
+  sl.registerLazySingleton<FirebaseFirestore>(() => FirebaseFirestore.instance);
+  sl.registerLazySingleton<NotificationsRemoteDataSource>(
+    () => NotificationsRemoteDataSourceImpl(firestore: sl()),
+  );
+  sl.registerLazySingleton<NotificationsRepository>(
+    () => NotificationsRepositoryImpl(remoteDataSource: sl()),
+  );
+  sl.registerLazySingleton<NotificationService>(
+    () => NotificationService(firestore: sl()),
+  );
+  sl.registerFactory<NotificationsCubit>(() => NotificationsCubit(sl()));
 }
