@@ -30,8 +30,28 @@ class Assets {
   /// assets/images/man.png
   static const String assetsImagesMan = "assets/images/man.png";
 
+  /// Assets for assetsImagesMapPin
+  /// assets/images/map-pin.png
+  static const String assetsImagesMapPin = "assets/images/map-pin.png";
+
+  /// Assets for assetsImagesMuseum
+  /// assets/images/museum.png
+  static const String assetsImagesMuseum = "assets/images/museum.png";
+
+  /// Assets for assetsImagesMuseumLocation
+  /// assets/images/museum_location.png
+  static const String assetsImagesMuseumLocation = "assets/images/museum_location.png";
+
   /// Assets for assetsImagesPalmyraSyria
   /// assets/images/palmyra_syria.png
   static const String assetsImagesPalmyraSyria = "assets/images/palmyra_syria.png";
+
+  /// Assets for assetsImagesUserLocation
+  /// assets/images/user_location.png
+  static const String assetsImagesUserLocation = "assets/images/user_location.png";
+
+  /// Assets for assetsImagesUserLocation1
+  /// assets/images/user_location1.png
+  static const String assetsImagesUserLocation1 = "assets/images/user_location1.png";
 }
 

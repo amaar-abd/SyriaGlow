@@ -6,18 +6,19 @@ class DetailsAppBarCircleButton extends StatelessWidget {
     super.key,
     required this.icon,
     required this.onPressed,
-      this.iconColor = Colors.white,
+      this.iconColor = Colors.white,  this.backgroundColor,
      
   });
   final IconData icon;
   final VoidCallback onPressed;
   final Color iconColor;
+  final Color? backgroundColor;
   @override
   Widget build(BuildContext context) {
     return Container(
       decoration: BoxDecoration(
         shape: BoxShape.circle,
-        color: Colors.black.withAlpha(77),
+        color: backgroundColor?? Colors.black.withAlpha(77),
         border: Border.all(color: Colors.white.withAlpha(51)),
       ),
       child: IconButton(

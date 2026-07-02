@@ -3,7 +3,7 @@ import 'package:flutter/services.dart';
 
 
 import 'package:syria_glow/features/home/data/models/landmark_model.dart';
-import 'package:syria_glow/features/home/presentation/widgets/home_widgets/details_widgets/home_details_view_body.dart';
+import 'package:syria_glow/features/home/presentation/widgets/details_widgets/home_details_view_body.dart';
 
 class HomeDetailsView extends StatelessWidget {
   const HomeDetailsView({super.key, required this.landmark});

@@ -1,3 +1,4 @@
+import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
@@ -7,13 +8,17 @@ import 'package:syria_glow/core/manager/localization_cubit/language_cubit.dart';
 import 'package:syria_glow/core/manager/localization_cubit/language_state.dart';
 import 'package:syria_glow/core/routes/app_routes.dart';
 import 'package:syria_glow/core/routes/route_generator.dart';
+import 'package:syria_glow/core/services/notification_service.dart';
 import 'package:syria_glow/core/theme/app_theme.dart';
+import 'package:syria_glow/firebase_options.dart';
 import 'package:syria_glow/generated/l10n.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
+  await Firebase.initializeApp(options: DefaultFirebaseOptions.currentPlatform);
   await ScreenUtil.ensureScreenSize();
-  setupServiceLocator();
+ await setupServiceLocator();
+  await sl.get<NotificationService>().initNotifications();
   runApp(
     BlocProvider(
       create: (context) => LanguageCubit(),
@@ -41,7 +46,7 @@ class SyriaGlow extends StatelessWidget {
               initialRoute: AppRoutes.splashView,
               debugShowCheckedModeBanner: false,
               localizationsDelegates: const [
-                S.delegate, 
+                S.delegate,
                 GlobalMaterialLocalizations.delegate,
                 GlobalWidgetsLocalizations.delegate,
                 GlobalCupertinoLocalizations.delegate,

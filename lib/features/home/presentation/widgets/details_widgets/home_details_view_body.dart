@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:syria_glow/features/home/data/models/landmark_model.dart';
-import 'package:syria_glow/features/home/presentation/widgets/home_widgets/details_widgets/details_image_slider.dart';
-import 'package:syria_glow/features/home/presentation/widgets/home_widgets/details_widgets/details_info_section.dart';
+import 'package:syria_glow/features/home/presentation/widgets/details_widgets/details_image_slider.dart';
+import 'package:syria_glow/features/home/presentation/widgets/details_widgets/details_info_section.dart';
 
 class HomeDetailsViewBody extends StatelessWidget {
   const HomeDetailsViewBody({super.key, required this.landmark});
