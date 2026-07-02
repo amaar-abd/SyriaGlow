@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:intl/intl.dart';
 import 'package:syria_glow/generated/l10n.dart';
 
 extension ContextExtensions on BuildContext {
@@ -33,4 +34,14 @@ extension ContextExtensions on BuildContext {
 
   return null; 
 }
+
+  String getFormattedTime(DateTime dateTime) {
+    final now = DateTime.now();
+
+    if (dateTime.year == now.year &&dateTime.month == now.month && dateTime.day == now.day) {
+      return DateFormat.jm('ar').format(dateTime);
+    }
+    return DateFormat.MMMd('ar').format(dateTime);
+  }
+
 }
