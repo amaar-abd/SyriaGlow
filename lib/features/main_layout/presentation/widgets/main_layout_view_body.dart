@@ -1,13 +1,16 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:syria_glow/core/extensions/context_extensions.dart';
+import 'package:syria_glow/core/routes/app_routes.dart';
 import 'package:syria_glow/core/theme/app_colors.dart';
 import 'package:syria_glow/core/utils/app_images.dart';
 import 'package:syria_glow/features/home/presentation/views/home_view.dart';
 import 'package:syria_glow/features/main_layout/presentation/models/nav_bar_item_model.dart';
 import 'package:syria_glow/features/main_layout/presentation/widgets/custom_bottom_nav_bar.dart';
 import 'package:syria_glow/features/main_layout/presentation/widgets/location_info_widget.dart';
+import 'package:syria_glow/features/notifications/presentation/manager/notification_cubit/notifications_cubit.dart';
 import 'package:syria_glow/features/profile/presentation/views/profile_view.dart';
 
 class MainLayoutViewBody extends StatefulWidget {
@@ -73,13 +76,43 @@ class _MainLayoutViewBodyState extends State<MainLayoutViewBody> {
                 color: AppColors.primaryGreen.withAlpha(20),
                 borderRadius: BorderRadius.circular(30),
               ),
-              child: IconButton(
-                icon: FaIcon(
-                  FontAwesomeIcons.bell,
-                  color: AppColors.primaryGreen,
-                  size: 22.r,
-                ),
-                onPressed: () {},
+              child: BlocBuilder<NotificationsCubit, NotificationsState>(
+                builder: (context, state) {
+                  bool hasUnread = false;
+                  if (state is NotificationsSuccess) {
+                    hasUnread = state.unread;
+                  }
+                  return Stack(
+                    children: [
+                      IconButton(
+                        icon: FaIcon(
+                          FontAwesomeIcons.bell,
+                          color: AppColors.primaryGreen,
+                          size: 22.r,
+                        ),
+                        onPressed: () {
+                          context.read<NotificationsCubit>().clearRedDot();
+                          Navigator.of(
+                            context,
+                          ).pushNamed(AppRoutes.notificationsView);
+                        },
+                      ),
+                      if (hasUnread)
+                        Positioned(
+                          left: 12,
+                          top: 8,
+                          child: Container(
+                            width: 10,
+                            height: 10,
+                            decoration: const BoxDecoration(
+                              color: Colors.red,
+                              shape: BoxShape.circle,
+                            ),
+                          ),
+                        ),
+                    ],
+                  );
+                },
               ),
             ),
           ],
