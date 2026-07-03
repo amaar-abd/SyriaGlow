@@ -11,6 +11,7 @@ import 'package:syria_glow/features/auth/presentation/views/login_view.dart';
 import 'package:syria_glow/features/auth/presentation/views/signup_view.dart';
 import 'package:syria_glow/features/home/data/models/landmark_model.dart';
 import 'package:syria_glow/features/home/presentation/manager/user_location_cubit/user_location_cubit.dart';
+import 'package:syria_glow/features/home/presentation/views/all_categories_view.dart';
 import 'package:syria_glow/features/home/presentation/views/home_details_view.dart';
 import 'package:syria_glow/features/home/presentation/views/category_view.dart';
 import 'package:syria_glow/features/home/presentation/views/map_location_view.dart';
@@ -85,6 +86,10 @@ class RouteGenerator {
       case AppRoutes.notificationsView:
         return MaterialPageRoute(
           builder: (context) => const NotificationsView(),
+        );
+      case AppRoutes.allCategoriesView:
+        return MaterialPageRoute(
+          builder: (context) => const AllCategoriesView(),
         );
       default:
         return MaterialPageRoute(
