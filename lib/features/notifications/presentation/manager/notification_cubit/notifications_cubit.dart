@@ -33,10 +33,11 @@ class NotificationsCubit extends Cubit<NotificationsState> {
     );
   }
 
-  void clearRedDot() {
-    if (state is NotificationsSuccess) {
-      final currentList = (state as NotificationsSuccess).notifications;
-      emit(NotificationsSuccess(notifications: currentList, unread: false));
+  void clearRedDot() async {
+    try {
+      await repository.markNotificationsAsRead();
+    } catch (error) {
+      emit(NotificationsFailure(message: error.toString()));
     }
   }
 
