@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:syria_glow/core/extensions/context_extensions.dart';
+import 'package:syria_glow/core/routes/app_routes.dart';
 import 'package:syria_glow/core/theme/app_colors.dart';
 
 class ExploryPyCatecoryRow extends StatelessWidget {
@@ -18,8 +19,10 @@ class ExploryPyCatecoryRow extends StatelessWidget {
           ),
         ),
 
-        InkWell(
-          onTap: () {},
+        TextButton(
+          onPressed: () {
+            Navigator.of(context).pushNamed(AppRoutes.allCategoriesView);
+          },
           child: Text(
             context.l10n.viewAll,
             style: context.textTheme.bodySmall?.copyWith(

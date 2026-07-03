@@ -1,3 +1,4 @@
+import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
@@ -21,7 +22,7 @@ class CategoryViewBody extends StatelessWidget {
       builder: (context, state) {
         if (state is CategoryLoading) {
           return const Center(
-            child: CircularProgressIndicator(color: AppColors.primaryGreen),
+            child: CircularProgressIndicator(color: AppColors.primaryGreen,strokeWidth: 3,),
           );
         } else if (state is CategoryFailure) {
           return Center(
@@ -79,7 +80,7 @@ class CategoryViewBody extends StatelessWidget {
                 },
                 child: Container(
                   decoration: BoxDecoration(
-                    color: Colors.white,
+                    color: AppColors.primaryGreen,
                     borderRadius: BorderRadius.circular(16.r),
                     boxShadow: [
                       BoxShadow(
@@ -94,19 +95,19 @@ class CategoryViewBody extends StatelessWidget {
                     child: Stack(
                       children: [
                         Positioned.fill(
-                          child: Image.network(
-                            landmark.images.isNotEmpty
+                          child: CachedNetworkImage(
+                            imageUrl: landmark.images.isNotEmpty
                                 ? landmark.images[0].image
                                 : '',
                             fit: BoxFit.cover,
-                            errorBuilder: (context, error, stackTrace) =>
-                                Container(
-                                  color: Colors.grey[200],
-                                  child: Icon(
-                                    Icons.image_not_supported,
-                                    color: Colors.grey[400],
-                                  ),
-                                ),
+                            placeholder: (context, url) => const Center(
+                              child: CircularProgressIndicator(
+                                color: Color(0xFFD4AF37),
+                                strokeWidth: 3,
+                              ),
+                            ),
+                            errorWidget: (context, url, error) =>
+                                const Icon(Icons.broken_image, size: 50),
                           ),
                         ),
 

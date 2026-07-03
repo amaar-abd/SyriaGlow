@@ -60,7 +60,7 @@ class _DetailsImageSliderState extends State<DetailsImageSlider> {
                     fit: BoxFit.cover,
                     placeholder: (context, url) => const Center(
                       child: CircularProgressIndicator(
-                        color: Color(0xFFD4AF37), 
+                        color: Color(0xFFD4AF37),strokeWidth: 3, 
                       ),
                     ),
                     errorWidget: (context, url, error) =>
