@@ -3,6 +3,7 @@ import 'package:syria_glow/core/networking/api_constants.dart';
 
 abstract class NotificationsRemoteDataSource {
   Stream<QuerySnapshot<Map<String, dynamic>>> getNotificationsStream();
+   Future<void> markPublicNotificationsAsRead();
 }
 
 class NotificationsRemoteDataSourceImpl
@@ -17,4 +18,21 @@ class NotificationsRemoteDataSourceImpl
         .orderBy('createdAt', descending: true)
         .snapshots();
   }
-}
+  
+  @override
+  Future<void> markPublicNotificationsAsRead()async {
+    final unreadDocs = await firestore
+        .collection(ApiConstants.publicNotifications)
+        .where('isRead', isEqualTo: false)
+        .get();
+
+    final batch = firestore.batch();
+    for (var doc in unreadDocs.docs) {
+      batch.update(doc.reference, {'isRead': true});
+    }
+
+    await batch.commit();
+  }
+  }
+  
+
