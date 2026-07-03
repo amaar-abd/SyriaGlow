@@ -12,4 +12,12 @@ class NotificationsRepositoryImpl implements NotificationsRepository {
       return snapshot.docs.map((doc) => NotificationModel.fromFirestore(doc)).toList();
     });
   }
-}
+  
+  @override
+  Future<void> markNotificationsAsRead() async{
+   await remoteDataSource.markPublicNotificationsAsRead();
+  }
+ 
+
+  }
+
