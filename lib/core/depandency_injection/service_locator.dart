@@ -21,6 +21,11 @@ import 'package:syria_glow/features/auth/domain/use_cases/reset_password_use_cas
 import 'package:syria_glow/features/auth/domain/use_cases/verify_reset_code_use_case.dart';
 import 'package:syria_glow/features/auth/presentation/manager/forgot_password_cubit/forgot_password_cubit.dart';
 import 'package:syria_glow/features/auth/presentation/manager/logout_cubit/logout_cubit.dart';
+import 'package:syria_glow/features/explore/data/data_source/explore_remote_data_source.dart';
+import 'package:syria_glow/features/explore/data/data_source/explore_remote_data_source_impl.dart';
+import 'package:syria_glow/features/explore/data/repo/explore_repository_impl.dart';
+import 'package:syria_glow/features/explore/domain/repo/explore_repository.dart';
+import 'package:syria_glow/features/explore/presentation/manager/explore_cubit/explore_cubit.dart';
 import 'package:syria_glow/features/home/data/data_sources/home_remote_data_source.dart';
 import 'package:syria_glow/features/home/data/data_sources/home_remote_data_source_impl.dart';
 import 'package:syria_glow/features/home/data/data_sources/location_local_data_source.dart';
@@ -122,4 +127,13 @@ Future <void> setupServiceLocator() async {
     () => NotificationService(firestore: sl()),
   );
   sl.registerFactory<NotificationsCubit>(() => NotificationsCubit(sl()));
+
+
+  sl.registerLazySingleton<ExploreRemoteDataSource>(
+    () => ExploreRemoteDataSourceImpl(apiService: sl()),
+  );
+  sl.registerLazySingleton<ExploreRepository>(
+    () => ExploreRepositoryImpl(exploreRemoteDataSource: sl()),
+  );
+  sl.registerLazySingleton<ExploreCubit>(() => ExploreCubit(sl()));
 }
