@@ -15,14 +15,10 @@ class EmptyNotificationsView extends StatelessWidget {
           children: [
             Container(
               padding: EdgeInsets.all(24.r),
-              decoration: BoxDecoration(
-                color: AppColors.backgroundLight,
-                shape: BoxShape.circle,
-                border: Border.all(
-                  color: AppColors.elegantGold.withAlpha(110),
-                  width: 2.w,
-                ),
-              ),
+              decoration:BoxDecoration(
+              color: AppColors.primaryGreen.withAlpha(10),
+              shape: BoxShape.circle,
+            ),
               child: Icon(
                 Icons.notifications_none_outlined,
                 size: 80.r,

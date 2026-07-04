@@ -1,16 +1,10 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:syria_glow/core/extensions/context_extensions.dart';
-import 'package:syria_glow/core/routes/app_routes.dart';
-import 'package:syria_glow/core/theme/app_colors.dart';
-import 'package:syria_glow/core/utils/app_images.dart';
+import 'package:syria_glow/features/explore/presentation/views/explore_view.dart';
 import 'package:syria_glow/features/home/presentation/views/home_view.dart';
 import 'package:syria_glow/features/main_layout/presentation/models/nav_bar_item_model.dart';
 import 'package:syria_glow/features/main_layout/presentation/widgets/custom_bottom_nav_bar.dart';
-import 'package:syria_glow/features/main_layout/presentation/widgets/location_info_widget.dart';
-import 'package:syria_glow/features/notifications/presentation/manager/notification_cubit/notifications_cubit.dart';
 import 'package:syria_glow/features/profile/presentation/views/profile_view.dart';
 
 class MainLayoutViewBody extends StatefulWidget {
@@ -25,7 +19,7 @@ class _MainLayoutViewBodyState extends State<MainLayoutViewBody> {
 
   final List<Widget> _screens = [
     const HomeView(),
-    const Center(child: Text('شاشة البحث (Search)')),
+    const ExploreView(),
     const Center(child: Text('شاشة العروض / سيريا غلو')),
     const Center(child: Text('شاشة الحساب (saved)')),
     const ProfileView(),
@@ -40,8 +34,8 @@ class _MainLayoutViewBodyState extends State<MainLayoutViewBody> {
       ),
       NavBarItemModel(
         label: context.l10n.nav_explore,
-        icon: FontAwesomeIcons.magnifyingGlass,
-        activeIcon: FontAwesomeIcons.magnifyingGlass,
+        icon: FontAwesomeIcons.compass,
+        activeIcon: FontAwesomeIcons.solidCompass,
       ),
       NavBarItemModel(
         label: context.l10n.nav_my_trips,
@@ -59,86 +53,9 @@ class _MainLayoutViewBodyState extends State<MainLayoutViewBody> {
         activeIcon: FontAwesomeIcons.solidUser,
       ),
     ];
-
-    final List<PreferredSizeWidget> appBars = [
-      AppBar(
-        automaticallyImplyLeading: false,
-        backgroundColor: Colors.white,
-        scrolledUnderElevation: 0,
-        title: Row(
-          mainAxisSize: MainAxisSize.min,
-          mainAxisAlignment: MainAxisAlignment.start,
-          children: [
-            Image.asset(Assets.assetsImagesMan, width: 40.r),
-            SizedBox(width: 10.w),
-            DecoratedBox(
-              decoration: BoxDecoration(
-                color: AppColors.primaryGreen.withAlpha(20),
-                borderRadius: BorderRadius.circular(30),
-              ),
-              child: BlocBuilder<NotificationsCubit, NotificationsState>(
-                builder: (context, state) {
-                  bool hasUnread = false;
-                  if (state is NotificationsSuccess) {
-                    hasUnread = state.unread;
-                  }
-                  return Stack(
-                    children: [
-                      IconButton(
-                        icon: FaIcon(
-                          FontAwesomeIcons.bell,
-                          color: AppColors.primaryGreen,
-                          size: 22.r,
-                        ),
-                        onPressed: () {
-                          context.read<NotificationsCubit>().clearRedDot();
-                          Navigator.of(
-                            context,
-                          ).pushNamed(AppRoutes.notificationsView);
-                        },
-                      ),
-                      if (hasUnread)
-                        Positioned(
-                          left: 12,
-                          top: 8,
-                          child: Container(
-                            width: 10,
-                            height: 10,
-                            decoration: const BoxDecoration(
-                              color: Colors.red,
-                              shape: BoxShape.circle,
-                            ),
-                          ),
-                        ),
-                    ],
-                  );
-                },
-              ),
-            ),
-          ],
-        ),
-        actions: [
-          Padding(
-            padding: EdgeInsets.symmetric(horizontal: 2.r),
-            child: Center(child: LocationInfoWidget()),
-          ),
-        ],
-      ),
-      AppBar(
-        title: Text(context.l10n.nav_explore),
-        backgroundColor: Colors.blue,
-      ),
-      AppBar(title: Text(context.l10n.nav_my_trips)),
-      AppBar(title: Text(context.l10n.nav_favorites)),
-      AppBar(
-        title: const Text(''),
-        backgroundColor: Colors.transparent,
-        elevation: 0,
-      ),
-    ];
+final isLandscape = MediaQuery.of(context).orientation == Orientation.landscape;
     return Scaffold(
-      appBar: appBars[currentIndex],
-      bottomNavigationBar: CustomBottomNavBar(
+      bottomNavigationBar:isLandscape?null: CustomBottomNavBar(
         menuItems: navBarItems,
         currentIndex: currentIndex,
         onTap: (index) {

@@ -34,21 +34,24 @@ class PopularItem extends StatelessWidget {
         child: Stack(
           children: [
             Positioned.fill(
-              child: CachedNetworkImage(
-                imageUrl: imageUrl,
-                fit: BoxFit.cover,
-                placeholder: (context, url) => Center(
-                  child: CircularProgressIndicator(
-                    color: AppColors.primaryGreen,
-                    strokeWidth: 2.5.w,
+              child: Container(
+                color: AppColors.primaryGreen,
+                child: CachedNetworkImage(
+                  imageUrl: imageUrl,
+                  fit: BoxFit.cover,
+                  placeholder: (context, url) => Center(
+                    child: CircularProgressIndicator(
+                      color: Color(0xFFD4AF37),
+                      strokeWidth: 3,
+                    ),
                   ),
-                ),
-                errorWidget: (context, url, error) => Container(
-                  color: AppColors.primaryGreen.withAlpha(26),
-                  child: Icon(
-                    Icons.image_not_supported_rounded,
-                    color: AppColors.error.withAlpha(179),
-                    size: 32.sp,
+                  errorWidget: (context, url, error) => Container(
+                    color: AppColors.primaryGreen.withAlpha(26),
+                    child: Icon(
+                      Icons.image_not_supported_rounded,
+                      color: AppColors.error.withAlpha(179),
+                      size: 32.sp,
+                    ),
                   ),
                 ),
               ),

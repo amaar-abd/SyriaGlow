@@ -13,9 +13,9 @@ class CategoriesData {
         id: 1,
       ),
       Categories(
-        title: localizations.restaurants,
-        icon: FontAwesomeIcons.utensils,
-        id: 2,
+        title: localizations.airports,
+        icon: FontAwesomeIcons.planeDeparture,
+        id: 4,
       ),
       Categories(
         title: localizations.historicalPlaces,
@@ -23,14 +23,14 @@ class CategoriesData {
         id: 3,
       ),
       Categories(
-        title: localizations.airports,
-        icon: FontAwesomeIcons.planeDeparture,
-        id: 4,
-      ),
-      Categories(
         title: localizations.nature,
         icon: FontAwesomeIcons.mountain,
         id: 5,
+      ),
+      Categories(
+        title: localizations.restaurants,
+        icon: FontAwesomeIcons.utensils,
+        id: 2,
       ),
       Categories(
         title: localizations.religious,

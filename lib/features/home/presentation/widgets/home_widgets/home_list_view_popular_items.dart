@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_animate/flutter_animate.dart';
+// import 'package:flutter_animate/flutter_animate.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:syria_glow/core/routes/app_routes.dart';
 import 'package:syria_glow/features/home/data/models/landmark_model.dart';
@@ -54,22 +54,27 @@ class HomeListViewPopularItems extends StatelessWidget {
     required Landmark landmark,
   }) {
     return PopularItem(
-          landmark: landmark,
-          onTap: () {
-            Navigator.pushNamed(context, AppRoutes.homeDetailsView,arguments: landmark);
-          },
-        )
-        .animate(target: 1)
-        .fade(
-          delay: const Duration(milliseconds: 120),
-          duration: const Duration(milliseconds: 450),
-          curve: Curves.easeOut,
-        )
-        .slideX(
-          begin: 0.25,
-          end: 0.0,
-          duration: const Duration(milliseconds: 400),
-          curve: Curves.easeOutQuad,
+      // key: ValueKey('popular_${landmark.id}'),
+      landmark: landmark,
+      onTap: () {
+        Navigator.pushNamed(
+          context,
+          AppRoutes.homeDetailsView,
+          arguments: landmark,
         );
+      },
+    );
+    // .animate()
+    // .fade(
+    //   delay: const Duration(milliseconds: 100),
+    //   duration: const Duration(milliseconds: 350),
+    //   curve: Curves.easeOut,
+    // )
+    // .slideX(
+    //   begin: 0.15,
+    //   end: 0.0,
+    //   duration: const Duration(milliseconds: 300),
+    //   curve: Curves.easeOutQuad,
+    // );
   }
 }
