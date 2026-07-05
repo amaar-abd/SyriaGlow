@@ -17,7 +17,17 @@ class ExploreRepositoryImpl implements ExploreRepository {
       final response = await exploreRemoteDataSource.searchByNmae(query: query);
       return right(response.landmarks);
     } catch (e) {
-       return left(DioErrorHandler.handle(e));
+      return left(DioErrorHandler.handle(e));
+    }
+  }
+
+  @override
+  Future<Either<Failure, List<Landmark>>> getEvents() async {
+    try {
+      final response = await exploreRemoteDataSource.getEvents();
+      return right(response.landmarks);
+    } catch (e) {
+      return left(DioErrorHandler.handle(e));
     }
   }
 }
