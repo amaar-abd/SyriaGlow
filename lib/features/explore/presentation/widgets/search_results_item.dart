@@ -73,7 +73,7 @@ class SearchResultsItem extends StatelessWidget {
                       maxLines: 1,
                       overflow: TextOverflow.ellipsis,
                       style: textTheme.bodyMedium?.copyWith(
-                        color: AppColors.primaryGreen,
+                        color: AppColors.textDark,
                         fontWeight: FontWeight.bold,
                       ),
                     ),
@@ -83,7 +83,7 @@ class SearchResultsItem extends StatelessWidget {
                       maxLines: 1,
                       overflow: TextOverflow.ellipsis,
                       style: textTheme.bodySmall?.copyWith(
-                        color: AppColors.elegantGold,
+                        color: AppColors.textGray,
                         fontWeight: FontWeight.bold,
                         fontSize: 10.sp,
                       ),
@@ -94,7 +94,7 @@ class SearchResultsItem extends StatelessWidget {
 
               FaIcon(
                 FontAwesomeIcons.chevronLeft,
-                color: AppColors.primaryGreen.withAlpha(200),
+                color: AppColors.textDark.withAlpha(200),
                 size: 14.r,
               ),
             ],

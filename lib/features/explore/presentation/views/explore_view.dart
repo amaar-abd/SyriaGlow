@@ -11,7 +11,7 @@ class ExploreView extends StatelessWidget {
   Widget build(BuildContext context) {
     return SafeArea(
       child: BlocProvider(
-        create: (context) => sl.get<ExploreCubit>(),
+        create: (context) => sl.get<ExploreCubit>()..events(),
         child: const ExploreViewBody(),
       ),
     );

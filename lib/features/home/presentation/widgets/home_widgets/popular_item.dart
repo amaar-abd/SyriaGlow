@@ -94,7 +94,7 @@ class PopularItem extends StatelessWidget {
                       child: Text(
                         landmark.category.nameAr,
                         style: textTheme.labelSmall?.copyWith(
-                          color: AppColors.primaryGreen,
+                          color: AppColors.textDark,
                           fontWeight: FontWeight.bold,
                         ),
                       ),

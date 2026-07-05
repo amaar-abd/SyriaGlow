@@ -4,9 +4,11 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:syria_glow/core/theme/app_colors.dart';
 import 'package:syria_glow/features/explore/presentation/manager/explore_cubit/explore_cubit.dart';
 import 'package:syria_glow/features/explore/presentation/manager/explore_cubit/explore_state.dart';
+import 'package:syria_glow/features/explore/presentation/widgets/events_list.dart';
 import 'package:syria_glow/features/explore/presentation/widgets/search_no_results.dart';
 import 'package:syria_glow/features/explore/presentation/widgets/search_results_list_view.dart';
 import 'package:syria_glow/features/explore/presentation/widgets/search_text_form_field.dart';
+import 'package:syria_glow/features/home/data/models/landmark_model.dart';
 
 class ExploreViewBody extends StatefulWidget {
   const ExploreViewBody({super.key});
@@ -117,11 +119,58 @@ class _ExploreViewBodyState extends State<ExploreViewBody> {
                 ),
               );
             }
+            if (state.eventsStatus == EventsStatus.loading) {
+            return  SliverFillRemaining(
+                hasScrollBody: false,
+                child: Column(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    CircularProgressIndicator(
+                      color: AppColors.primaryGreen,
+                      strokeWidth: 3,
+                    ),
+                  ],
+                ),
+              );
+            }
+              if (state.eventsStatus == EventsStatus.failure) {
+               return SliverToBoxAdapter(
+                  child: Padding(
+                    padding: EdgeInsets.only(top: 25.h),
+                    child: Center(
+                      child: Text(
+                        state.searchErrorMessage,
+                        style: TextStyle(color: Colors.red),
+                      ),
+                    ),
+                  ),
+                );
+              }
+              if (state.eventsStatus == EventsStatus.success) {
+                final List<Landmark> events = state.events;
+                return SliverMainAxisGroup(
+                  slivers: [
+                    SliverToBoxAdapter(
+                      child: Padding(
+                        padding: EdgeInsets.symmetric(
+                          horizontal: 16.w,
+                          vertical: 12.h,
+                        ),
+                        child: Text(
+                          'المعارض والفعاليات الرائجة',
+                          style: TextTheme.of(context).bodyMedium?.copyWith(
+                            fontWeight: FontWeight.bold,
+                            color: AppColors.textDark,
+                          ),
+                        ),
+                      ),
+                    ),
+                    EventsList(events: events),
+                  ],
+                );
+              }
             return SliverToBoxAdapter(
-              child: Padding(
-                padding: const EdgeInsets.all(50.0),
-                child: Container(color: Colors.amber, width: 100, height: 100),
-              ),
+              child: Container(color: Colors.amber, height: 200, width: 100),
             );
           },
         ),
