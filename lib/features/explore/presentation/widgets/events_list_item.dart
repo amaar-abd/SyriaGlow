@@ -19,7 +19,6 @@ class EventListItem extends StatelessWidget {
     return GestureDetector(
       onTap: onTap,
       child: Container(
-        // تثبيت العرض ليتناسب مع ربع الشاشة تقريباً أثناء التمرير الأفقي
         width: 150.w,
         margin: EdgeInsets.symmetric(horizontal: 8.w, vertical: 6.h),
         decoration: BoxDecoration(
@@ -27,7 +26,7 @@ class EventListItem extends StatelessWidget {
           borderRadius: BorderRadius.circular(16.r),
           boxShadow: [
             BoxShadow(
-              color: Colors.black.withOpacity(0.04),
+              color: Colors.black.withAlpha(30),
               blurRadius: 10,
               offset: const Offset(0, 4),
             ),
@@ -36,7 +35,6 @@ class EventListItem extends StatelessWidget {
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            // 1️⃣ الجزء العلوي: الصورة مربعة مع حواف دائرية علوية فقط
             SizedBox(
               height: 110.h,
               width: double.infinity,
@@ -46,7 +44,7 @@ class EventListItem extends StatelessWidget {
                   imageUrl: imageUrl,
                   fit: BoxFit.cover,
                   placeholder: (context, url) => Container(
-                    color: Colors.grey[100],
+                    color: AppColors.primaryGreen,
                     child: const Center(
                       child: CircularProgressIndicator(
                         color: Color(0xFFD4AF37),
@@ -55,14 +53,16 @@ class EventListItem extends StatelessWidget {
                     ),
                   ),
                   errorWidget: (context, url, error) => Container(
-                    color: Colors.grey[200],
-                    child: const Icon(Icons.broken_image, color: Colors.grey),
+                    color: AppColors.primaryGreen,
+                    child: const Icon(
+                      Icons.broken_image,
+                      color: AppColors.primaryGreen,
+                    ),
                   ),
                 ),
               ),
             ),
 
-            // 2️⃣ الجزء السفلي: محتوى الفعالية والزر
             Expanded(
               child: Padding(
                 padding: EdgeInsets.all(10.r),
@@ -70,7 +70,6 @@ class EventListItem extends StatelessWidget {
                   crossAxisAlignment: CrossAxisAlignment.start,
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
-                    // العنوان والموقع
                     Column(
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
@@ -89,7 +88,7 @@ class EventListItem extends StatelessWidget {
                           children: [
                             FaIcon(
                               FontAwesomeIcons.locationDot,
-                              color: AppColors.primaryGreen,
+                              color: AppColors.elegantGold,
                               size: 10.r,
                             ),
                             SizedBox(width: 4.w),
@@ -99,6 +98,7 @@ class EventListItem extends StatelessWidget {
                                 style: TextStyle(
                                   color: Colors.grey[600],
                                   fontSize: 10.sp,
+                                  fontWeight: FontWeight.w600,
                                 ),
                                 maxLines: 1,
                                 overflow: TextOverflow.ellipsis,
@@ -108,22 +108,27 @@ class EventListItem extends StatelessWidget {
                         ),
                       ],
                     ),
-
-                    // زر عرض التفاصيل الأنيق
-                    Container(
-                      width: double.infinity,
-                      height: 26.h,
-                      decoration: BoxDecoration(
-                        color: AppColors.primaryGreen.withOpacity(0.08),
+                    Material(
+                      color: Colors.transparent, 
+                      child: InkWell(
+                        onTap: onTap,
                         borderRadius: BorderRadius.circular(8.r),
-                      ),
-                      child: Center(
-                        child: Text(
-                          'التفاصيل',
-                          style: TextStyle(
-                            color: AppColors.primaryGreen,
-                            fontSize: 10.sp,
-                            fontWeight: FontWeight.bold,
+                        child: Ink(
+                          width: double.infinity,
+                          height: 30.h,
+                          decoration: BoxDecoration(
+                            color: AppColors.primaryGreen.withAlpha(20),
+                            borderRadius: BorderRadius.circular(8.r),
+                          ),
+                          child: Center(
+                            child: Text(
+                              'التفاصيل',
+                              style: TextStyle(
+                                color: AppColors.primaryGreen,
+                                fontSize: 10.sp,
+                                fontWeight: FontWeight.bold,
+                              ),
+                            ),
                           ),
                         ),
                       ),
