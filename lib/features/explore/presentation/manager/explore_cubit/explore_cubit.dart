@@ -33,6 +33,25 @@ class ExploreCubit extends Cubit<ExploreState> {
     );
   }
 
+  Future<void> events() async {
+    emit(state.copyWith(eventsStatus: EventsStatus.loading));
+    final results = await repository.getEvents();
+    results.fold(
+      (failure) => emit(
+        state.copyWith(
+        eventsStatus: EventsStatus.failure,
+        eventsErrorMessage: failure.message,
+      ),
+      ),
+      (events) => emit(
+       state.copyWith(
+        eventsStatus: EventsStatus.success,
+        events: events,
+      ),
+      ),
+    );
+  }
+
   void resetSearch() {
     emit(
       state.copyWith(
