@@ -12,13 +12,19 @@ class SearchResultsListView extends StatelessWidget {
       itemCount: landmarks.length,
 
       itemBuilder: (context, index) {
-        return SearchResultsItem(
-          landmark: landmarks[index],
-          onTap: () {
-            Navigator.of(
-              context,
-            ).pushNamed(AppRoutes.homeDetailsView, arguments: landmarks[index]);
-          },
+        return Column(
+          mainAxisSize: MainAxisSize.min,
+          children: [
+            SearchResultsItem(
+              landmark: landmarks[index],
+              onTap: () {
+                Navigator.of(
+                  context,
+                ).pushNamed(AppRoutes.homeDetailsView, arguments: landmarks[index]);
+              },
+            ),
+          
+          ],
         );
       },
     );

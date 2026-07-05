@@ -17,6 +17,9 @@ class HomeCategoryItem extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Column(
+      mainAxisSize: MainAxisSize.min,
+      mainAxisAlignment: MainAxisAlignment.center,
+      crossAxisAlignment: CrossAxisAlignment.center,
       children: [
         Material(
           color: Colors.transparent,
@@ -38,6 +41,7 @@ class HomeCategoryItem extends StatelessWidget {
         SizedBox(height: 4.h),
         Text(
           title,
+          textAlign: TextAlign.center,
           style: context.textTheme.bodyMedium?.copyWith(
             color: AppColors.textDark,
           ),

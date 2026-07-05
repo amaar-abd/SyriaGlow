@@ -19,4 +19,14 @@ class ExploreRemoteDataSourceImpl implements ExploreRemoteDataSource {
       rethrow;
     }
   }
+
+  @override
+  Future<LandMarkResponse> getEvents() async {
+    try {
+      final response = await apiService.get(ApiConstants.events);
+      return LandMarkResponse.fromJson(response);
+    } catch (e) {
+      rethrow;
+    }
+  }
 }

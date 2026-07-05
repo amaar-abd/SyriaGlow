@@ -39,8 +39,7 @@ class AllCategoriesViewBody extends StatelessWidget {
               ),
             ],
           ),
-          child: Padding(
-            padding: EdgeInsets.only(top: 30.h),
+          child: Center(
             child: HomeCategoryItem(
               title: category.title,
               icon: category.icon,

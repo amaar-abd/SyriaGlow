@@ -22,7 +22,10 @@ class CategoryViewBody extends StatelessWidget {
       builder: (context, state) {
         if (state is CategoryLoading) {
           return const Center(
-            child: CircularProgressIndicator(color: AppColors.primaryGreen,strokeWidth: 3,),
+            child: CircularProgressIndicator(
+              color: AppColors.primaryGreen,
+              strokeWidth: 3,
+            ),
           );
         } else if (state is CategoryFailure) {
           return Center(
@@ -119,10 +122,10 @@ class CategoryViewBody extends StatelessWidget {
                                 end: Alignment.bottomCenter,
                                 colors: [
                                   Colors.transparent,
-                                  Colors.black.withAlpha(20),
-                                  Colors.black.withAlpha(200),
+                                  AppColors.primaryGreen.withAlpha(102),
+                                  AppColors.primaryGreen.withAlpha(242),
                                 ],
-                                stops: const [0.0, 0.5, 1.0],
+                                stops: const [0.4, 0.7, 1.0],
                               ),
                             ),
                           ),
@@ -160,7 +163,7 @@ class CategoryViewBody extends StatelessWidget {
                                       maxLines: 1,
                                       overflow: TextOverflow.ellipsis,
                                       style: TextStyle(
-                                        color: Colors.white.withAlpha(185),
+                                        color: AppColors.elegantGold,
                                         fontSize: 10.sp,
                                       ),
                                     ),
