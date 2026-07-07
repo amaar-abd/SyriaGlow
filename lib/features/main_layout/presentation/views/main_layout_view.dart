@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:syria_glow/core/depandency_injection/service_locator.dart';
+import 'package:syria_glow/features/home/presentation/manager/favorite_cubit/favorite_cubit.dart';
 import 'package:syria_glow/features/home/presentation/manager/user_location_cubit/user_location_cubit.dart';
 import 'package:syria_glow/features/main_layout/presentation/widgets/main_layout_view_body.dart';
 import 'package:syria_glow/features/notifications/presentation/manager/notification_cubit/notifications_cubit.dart';
@@ -20,6 +21,9 @@ class MainLayoutView extends StatelessWidget {
         ),
         BlocProvider(
           create: (context) => sl<NotificationsCubit>()..streamNotifications(),
+        ),
+        BlocProvider.value(
+          value: sl<FavoriteCubit>()..fetchFavorites(),
         ),
       ],
       child: const MainLayoutViewBody(),

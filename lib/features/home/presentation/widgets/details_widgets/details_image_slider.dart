@@ -89,7 +89,7 @@ class _DetailsImageSliderState extends State<DetailsImageSlider> {
       top: MediaQuery.of(context).padding.top + 8.h, 
       left: 8.w,
       right: 8.w,
-      child: const DetailsAppBar(), 
+      child:  DetailsAppBar(landmarkId: widget.landmark.id.toString(),), 
     ),
             if (images.length > 1)
               Positioned(
