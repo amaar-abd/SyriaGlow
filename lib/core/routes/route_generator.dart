@@ -10,6 +10,7 @@ import 'package:syria_glow/features/auth/presentation/views/forgote_password/suc
 import 'package:syria_glow/features/auth/presentation/views/login_view.dart';
 import 'package:syria_glow/features/auth/presentation/views/signup_view.dart';
 import 'package:syria_glow/features/home/data/models/landmark_model.dart';
+import 'package:syria_glow/features/home/presentation/manager/favorite_cubit/favorite_cubit.dart';
 import 'package:syria_glow/features/home/presentation/manager/user_location_cubit/user_location_cubit.dart';
 import 'package:syria_glow/features/home/presentation/views/all_categories_view.dart';
 import 'package:syria_glow/features/home/presentation/views/home_details_view.dart';
@@ -18,6 +19,7 @@ import 'package:syria_glow/features/home/presentation/views/map_location_view.da
 import 'package:syria_glow/features/notifications/presentation/views/notifications_view.dart';
 import 'package:syria_glow/features/main_layout/presentation/views/main_layout_view.dart';
 import 'package:syria_glow/features/onboarding/presentation/views/onboarding_view.dart';
+import 'package:syria_glow/features/profile/presentation/views/favorite_view.dart';
 import 'package:syria_glow/features/splash/presentation/views/splash_view.dart';
 
 class RouteGenerator {
@@ -65,7 +67,9 @@ class RouteGenerator {
       case AppRoutes.homeDetailsView:
         final args = settings.arguments;
         return MaterialPageRoute(
-          builder: (context) => HomeDetailsView(landmark: args as Landmark),
+          builder: (context) => BlocProvider.value(
+            value: sl.get<FavoriteCubit>(),
+            child: HomeDetailsView(landmark: args as Landmark)),
         );
       case AppRoutes.categoryView:
         final args = settings.arguments as Map;
@@ -91,6 +95,11 @@ class RouteGenerator {
         return MaterialPageRoute(
           builder: (context) => const AllCategoriesView(),
         );
+      case AppRoutes.favoriteView:
+        return MaterialPageRoute(builder: (context) => BlocProvider.value(
+          value: sl.get<FavoriteCubit>(),
+          child: const FavoriteView()));
+
       default:
         return MaterialPageRoute(
           builder: (context) => Scaffold(

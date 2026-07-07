@@ -13,4 +13,5 @@ class AppRoutes {
   static const String categoryView = 'CategoryView';
   static const String notificationsView = 'NotificationsView';
   static const String allCategoriesView = 'AllCategoriesView';
+  static const String favoriteView = 'FavoriteView';
 }
