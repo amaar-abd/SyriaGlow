@@ -10,16 +10,12 @@ class ApiService {
     Map<String, dynamic>? queryParameters,
     Map<String, dynamic>? headers,
   }) async {
-    try {
-      final response = await dio.get(
-        path,
-        queryParameters: queryParameters,
-        options: Options(headers: headers),
-      );
-      return response.data;
-    } on DioException {
-      rethrow;
-    }
+    final response = await dio.get(
+      path,
+      queryParameters: queryParameters,
+      options: Options(headers: headers),
+    );
+    return response.data;
   }
 
   Future<dynamic> post(
@@ -28,16 +24,42 @@ class ApiService {
     Map<String, dynamic>? queryParameters,
     Map<String, dynamic>? headers,
   }) async {
-    try {
-      final response = await dio.post(
-        path,
-        data: body,
-        queryParameters: queryParameters,
-        options: Options(headers: headers),
-      );
-      return response.data;
-    } on DioException {
-      rethrow;
-    }
+    final response = await dio.post(
+      path,
+      data: body,
+      queryParameters: queryParameters,
+      options: Options(headers: headers),
+    );
+    return response.data;
+  }
+
+  Future<dynamic> put(
+    String path, {
+    Object? body,
+    Map<String, dynamic>? headers,
+    Map<String, dynamic>? queryParameters,
+  }) async {
+    final response = await dio.put(
+      path,
+      data: body,
+      queryParameters: queryParameters,
+      options: Options(headers: headers),
+    );
+    return response.data;
+  }
+
+  Future<dynamic> delete(
+    String path, {
+    Object? body,
+    Map<String, dynamic>? headers,
+    Map<String, dynamic>? queryParameters,
+  }) async {
+    final response = await dio.delete(
+      path,
+      queryParameters: queryParameters,
+      data: body,
+      options: Options(headers: headers),
+    );
+    return response.data;
   }
 }
