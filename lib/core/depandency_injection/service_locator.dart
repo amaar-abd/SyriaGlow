@@ -26,13 +26,18 @@ import 'package:syria_glow/features/explore/data/data_source/explore_remote_data
 import 'package:syria_glow/features/explore/data/repo/explore_repository_impl.dart';
 import 'package:syria_glow/features/explore/domain/repo/explore_repository.dart';
 import 'package:syria_glow/features/explore/presentation/manager/explore_cubit/explore_cubit.dart';
+import 'package:syria_glow/features/home/data/data_sources/favorite_remote_data_source.dart';
+import 'package:syria_glow/features/home/data/data_sources/favorite_remote_data_source_impl.dart';
 import 'package:syria_glow/features/home/data/data_sources/home_remote_data_source.dart';
 import 'package:syria_glow/features/home/data/data_sources/home_remote_data_source_impl.dart';
 import 'package:syria_glow/features/home/data/data_sources/location_local_data_source.dart';
+import 'package:syria_glow/features/home/data/repos/favorite_repository_impl.dart';
 import 'package:syria_glow/features/home/data/repos/home_repository_impl.dart';
+import 'package:syria_glow/features/home/domain/repos/favorite_repository.dart';
 import 'package:syria_glow/features/home/domain/repos/home_repository.dart';
 import 'package:syria_glow/features/home/domain/use_cases/get_home_data_by_category_use_case.dart';
 import 'package:syria_glow/features/home/domain/use_cases/get_home_data_use_case.dart';
+import 'package:syria_glow/features/home/presentation/manager/favorite_cubit/favorite_cubit.dart';
 import 'package:syria_glow/features/home/presentation/manager/home_category_cubit/category_cubit.dart';
 import 'package:syria_glow/features/home/presentation/manager/home_cubit/home_cubit.dart';
 import 'package:syria_glow/features/home/presentation/manager/user_location_cubit/user_location_cubit.dart';
@@ -136,4 +141,13 @@ Future <void> setupServiceLocator() async {
     () => ExploreRepositoryImpl(exploreRemoteDataSource: sl()),
   );
   sl.registerLazySingleton<ExploreCubit>(() => ExploreCubit(sl()));
+
+  sl.registerLazySingleton<FavoriteRemoteDataSource>(
+    () => FavoriteRemoteDataSourceImpl(apiService: sl()),
+  );
+  sl.registerLazySingleton<FavoriteRepository>(
+    () => FavoriteRepositoryImpl(favoriteRemoteDataSource: sl()),
+  );
+  sl.registerLazySingleton<FavoriteCubit>(() => FavoriteCubit(sl()));
+
 }
