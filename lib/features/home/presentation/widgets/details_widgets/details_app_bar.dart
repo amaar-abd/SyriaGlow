@@ -1,11 +1,13 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:syria_glow/core/theme/app_colors.dart';
+import 'package:syria_glow/features/home/presentation/manager/favorite_cubit/favorite_cubit.dart';
 import 'package:syria_glow/features/home/presentation/widgets/details_widgets/details_app_bar_circle_button.dart';
 
 class DetailsAppBar extends StatelessWidget {
-  const DetailsAppBar({super.key});
-
+  const DetailsAppBar({super.key, required this.landmarkId});
+  final String landmarkId;
   @override
   Widget build(BuildContext context) {
     return Padding(
@@ -17,11 +19,19 @@ class DetailsAppBar extends StatelessWidget {
             icon: Icons.arrow_back,
             onPressed: () => Navigator.pop(context),
           ),
-          DetailsAppBarCircleButton(
-            icon: Icons.favorite_border_rounded,
-            iconColor: AppColors.elegantGold,
-            onPressed: () {
-              //favoret logic
+          BlocBuilder<FavoriteCubit, FavoriteState>(
+            builder: (context, state) {
+              final favoriteCubit = context.read<FavoriteCubit>();
+              final isFavorite = favoriteCubit.isLandmarkFavorite(landmarkId);
+              return DetailsAppBarCircleButton(
+                icon: isFavorite
+                    ? Icons.favorite_rounded
+                    : Icons.favorite_border_rounded,
+                iconColor: isFavorite ? Colors.red : AppColors.elegantGold,
+                onPressed: () {
+                  favoriteCubit.toggleFavorite(landmarkId: landmarkId);
+                },
+              );
             },
           ),
         ],
