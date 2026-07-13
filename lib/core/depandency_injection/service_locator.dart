@@ -45,6 +45,10 @@ import 'package:syria_glow/features/notifications/data/data_source/notifications
 import 'package:syria_glow/features/notifications/data/repo/notifications_repository_impl.dart';
 import 'package:syria_glow/features/notifications/domain/repos/notifications_repository.dart';
 import 'package:syria_glow/features/notifications/presentation/manager/notification_cubit/notifications_cubit.dart';
+import 'package:syria_glow/features/profile/data/data_source/profile_remote_data_source.dart';
+import 'package:syria_glow/features/profile/data/repos/profile_repository_impl.dart';
+import 'package:syria_glow/features/profile/domain/repos/profile_repository.dart';
+import 'package:syria_glow/features/profile/presentation/manager/profile_cubit/profile_cubit.dart';
 
 final GetIt sl = GetIt.instance;
 
@@ -91,7 +95,7 @@ Future <void> setupServiceLocator() async {
     () => ForgotPasswordCubit(sl(), sl(), sl()),
   );
 
-  sl.registerFactory<RoutingCubit>(() => RoutingCubit());
+  sl.registerLazySingleton<RoutingCubit>(() => RoutingCubit());
 
   sl.registerLazySingleton<LocationLocalDataSource>(
     () => LocationLocalDataSourceImpl(),
@@ -149,5 +153,13 @@ Future <void> setupServiceLocator() async {
     () => FavoriteRepositoryImpl(favoriteRemoteDataSource: sl()),
   );
   sl.registerLazySingleton<FavoriteCubit>(() => FavoriteCubit(sl()));
+  
 
+   sl.registerLazySingleton<ProfileRemoteDataSource>(
+    () => ProfileRemoteDataSourceImpl(apiService: sl()),
+  );
+  sl.registerLazySingleton<ProfileRepository>(
+    () => ProfileRepositoryImpl(profileRemoteDataSource: sl()),
+  );
+  sl.registerLazySingleton<ProfileCubit>(() => ProfileCubit(sl()));
 }
