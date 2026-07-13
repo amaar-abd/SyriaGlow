@@ -4,8 +4,8 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:syria_glow/core/theme/app_colors.dart';
 import 'package:syria_glow/features/home/data/models/landmark_model.dart';
 import 'package:syria_glow/features/home/presentation/manager/favorite_cubit/favorite_cubit.dart';
-import 'package:syria_glow/features/profile/presentation/views/widgets/empty_favorites_widget.dart';
-import 'package:syria_glow/features/profile/presentation/views/widgets/favorite_landmark_item.dart';
+import 'package:syria_glow/features/profile/presentation/widgets/favorite_widgets/empty_favorites_widget.dart';
+import 'package:syria_glow/features/profile/presentation/widgets/favorite_widgets/favorite_landmark_item.dart';
 
 class FavoriteViewBody extends StatelessWidget {
   const FavoriteViewBody({super.key});
