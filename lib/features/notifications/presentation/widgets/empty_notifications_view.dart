@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:syria_glow/core/extensions/context_extensions.dart';
 import 'package:syria_glow/core/theme/app_colors.dart';
 
 class EmptyNotificationsView extends StatelessWidget {
@@ -27,7 +28,7 @@ class EmptyNotificationsView extends StatelessWidget {
             ),
             SizedBox(height: 24.h),
             Text(
-              'لا توجد إشعارات حالياً',
+              context.l10n.no_notifications,
               textAlign: TextAlign.center,
               style: Theme.of(context).textTheme.displayMedium?.copyWith(
                 color: AppColors.primaryGreen,
@@ -37,7 +38,7 @@ class EmptyNotificationsView extends StatelessWidget {
             ),
             SizedBox(height: 10.h),
             Text(
-              'هنا سنرسل لك أحدث الفعاليات، وتوصيات الأماكن والأنشطة السياحية المميزة فور توفرها.',
+             context.l10n.notifications_empty_desc,
               textAlign: TextAlign.center,
               style: Theme.of(context).textTheme.bodyMedium?.copyWith(
                 color: AppColors.textGray,
