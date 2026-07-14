@@ -8,7 +8,8 @@ import 'package:syria_glow/core/routes/app_routes.dart';
 import 'package:syria_glow/core/theme/app_colors.dart';
 import 'package:syria_glow/features/home/presentation/manager/home_cubit/home_cubit.dart';
 import 'package:syria_glow/features/home/presentation/widgets/home_widgets/home_view_body.dart';
-import 'package:syria_glow/features/main_layout/presentation/widgets/location_info_widget.dart';
+import 'package:syria_glow/features/home/presentation/widgets/home_widgets/initial_user_icon.dart';
+import 'package:syria_glow/features/home/presentation/widgets/home_widgets/location_info_widget.dart';
 import 'package:syria_glow/features/notifications/presentation/manager/notification_cubit/notifications_cubit.dart';
 import 'package:syria_glow/features/profile/presentation/manager/profile_cubit/profile_cubit.dart';
 
@@ -44,7 +45,7 @@ class HomeView extends StatelessWidget {
                               padding: EdgeInsets.all(8.r),
                               child: CircularProgressIndicator(
                                 color: AppColors.primaryGreen,
-                                strokeWidth: 3.w,
+                                strokeWidth: 2,
                               ),
                             )
                           : state.profile.imageUrl != null
@@ -60,37 +61,17 @@ class HomeView extends StatelessWidget {
                                   child: ClipOval(
                                     child: CircularProgressIndicator(
                                       color: AppColors.primaryGreen,
-                                      strokeWidth: 3.w,
+                                      strokeWidth: 2,
                                     ),
                                   ),
                                 ),
                               ),
                             )
-                          : DecoratedBox(
-                            decoration: BoxDecoration(
-                color: AppColors.primaryGreen.withAlpha(20),
-                borderRadius: BorderRadius.circular(30),
-              ),
-                            child: Icon(
-                                Icons.person,
-                                size: 22.r,
-                                color: AppColors.primaryGreen,
-                              ),
-                          ),
+                          : const InitialUserIcon()
                     ),
                   );
                 }
-                return DecoratedBox(
-                  decoration: BoxDecoration(
-                color: AppColors.primaryGreen.withAlpha(20),
-                borderRadius: BorderRadius.circular(30),
-              ),
-                  child: Icon(
-                    Icons.person,
-                    size: 22.r,
-                    color: AppColors.primaryGreen,
-                  ),
-                );
+                return  const InitialUserIcon();
               },
             ),
             SizedBox(width: 10.w),

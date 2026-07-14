@@ -5,6 +5,7 @@ import 'package:syria_glow/features/home/presentation/manager/favorite_cubit/fav
 import 'package:syria_glow/features/home/presentation/manager/user_location_cubit/user_location_cubit.dart';
 import 'package:syria_glow/features/main_layout/presentation/widgets/main_layout_view_body.dart';
 import 'package:syria_glow/features/notifications/presentation/manager/notification_cubit/notifications_cubit.dart';
+import 'package:syria_glow/features/profile/presentation/manager/profile_cubit/profile_cubit.dart';
 
 class MainLayoutView extends StatelessWidget {
   const MainLayoutView({super.key});
@@ -25,6 +26,7 @@ class MainLayoutView extends StatelessWidget {
         BlocProvider.value(
           value: sl<FavoriteCubit>()..fetchFavorites(),
         ),
+        BlocProvider.value(value:   sl<ProfileCubit>()),
       ],
       child: const MainLayoutViewBody(),
     );
