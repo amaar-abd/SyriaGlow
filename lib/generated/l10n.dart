@@ -578,6 +578,171 @@ class S {
   String get nav_profile {
     return Intl.message('Profile', name: 'nav_profile', desc: '', args: []);
   }
+
+  /// `Profile`
+  String get profile {
+    return Intl.message('Profile', name: 'profile', desc: '', args: []);
+  }
+
+  /// `Loading name...`
+  String get loading_name {
+    return Intl.message(
+      'Loading name...',
+      name: 'loading_name',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `user@email.com`
+  String get loading_email {
+    return Intl.message(
+      'user@email.com',
+      name: 'loading_email',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Favorites`
+  String get favorite {
+    return Intl.message('Favorites', name: 'favorite', desc: '', args: []);
+  }
+
+  /// `Notifications`
+  String get notifications {
+    return Intl.message(
+      'Notifications',
+      name: 'notifications',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `No notifications at the moment`
+  String get no_notifications {
+    return Intl.message(
+      'No notifications at the moment',
+      name: 'no_notifications',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Here, we will send you the latest events, recommended places, and top tourist activities as soon as they become available.`
+  String get notifications_empty_desc {
+    return Intl.message(
+      'Here, we will send you the latest events, recommended places, and top tourist activities as soon as they become available.',
+      name: 'notifications_empty_desc',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Change Language`
+  String get change_language {
+    return Intl.message(
+      'Change Language',
+      name: 'change_language',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `العربية`
+  String get arabic {
+    return Intl.message('العربية', name: 'arabic', desc: '', args: []);
+  }
+
+  /// `English`
+  String get english {
+    return Intl.message('English', name: 'english', desc: '', args: []);
+  }
+
+  /// `About Us`
+  String get about_us {
+    return Intl.message('About Us', name: 'about_us', desc: '', args: []);
+  }
+
+  /// `Logout`
+  String get logout {
+    return Intl.message('Logout', name: 'logout', desc: '', args: []);
+  }
+
+  /// `Your favorites list is empty`
+  String get favorites_empty_title {
+    return Intl.message(
+      'Your favorites list is empty',
+      name: 'favorites_empty_title',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Start exploring tourist attractions and add what you like here`
+  String get favorites_empty_subtitle {
+    return Intl.message(
+      'Start exploring tourist attractions and add what you like here',
+      name: 'favorites_empty_subtitle',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Profile Picture`
+  String get profile_image_title {
+    return Intl.message(
+      'Profile Picture',
+      name: 'profile_image_title',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Choose from Gallery`
+  String get choose_from_gallery {
+    return Intl.message(
+      'Choose from Gallery',
+      name: 'choose_from_gallery',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Take a Photo with Camera`
+  String get take_photo_camera {
+    return Intl.message(
+      'Take a Photo with Camera',
+      name: 'take_photo_camera',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Logout`
+  String get logout_title {
+    return Intl.message('Logout', name: 'logout_title', desc: '', args: []);
+  }
+
+  /// `Are you sure you want to log out of your account?`
+  String get logout_confirmation {
+    return Intl.message(
+      'Are you sure you want to log out of your account?',
+      name: 'logout_confirmation',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Cancel`
+  String get cancel {
+    return Intl.message('Cancel', name: 'cancel', desc: '', args: []);
+  }
+
+  /// `Logout`
+  String get logout_button {
+    return Intl.message('Logout', name: 'logout_button', desc: '', args: []);
+  }
 }
 
 class AppLocalizationDelegate extends LocalizationsDelegate<S> {

@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:syria_glow/core/extensions/context_extensions.dart';
 import 'package:syria_glow/core/theme/app_colors.dart';
 
 class EmptyFavoritesWidget extends StatelessWidget {
@@ -25,7 +26,7 @@ class EmptyFavoritesWidget extends StatelessWidget {
           ),
           SizedBox(height: 16.h),
           Text(
-            'قائمتك المفضلة فارغة',
+            context.l10n.favorites_empty_title,
             style: TextTheme.of(context).displayMedium?.copyWith(
               color: AppColors.primaryGreen,
               fontWeight: FontWeight.bold,
@@ -34,7 +35,7 @@ class EmptyFavoritesWidget extends StatelessWidget {
           ),
           SizedBox(height: 8.h),
           Text(
-            ' باستكشاف المعالم السياحية وأضف ما يعجبك هنا',
+            context.l10n.favorites_empty_subtitle,
             textAlign: TextAlign.center,
             style: TextTheme.of(context).bodyMedium?.copyWith(
               color: AppColors.textGray,

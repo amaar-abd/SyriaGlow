@@ -24,6 +24,7 @@ class MessageLookup extends MessageLookupByLibrary {
 
   final messages = _notInlinedMessages(_notInlinedMessages);
   static Map<String, Function> _notInlinedMessages(_) => <String, Function>{
+    "about_us": MessageLookupByLibrary.simpleMessage("من نحن"),
     "acceptTermsAndConditionsError": MessageLookupByLibrary.simpleMessage(
       "الرجاء الموافقة على الشروط والأحكام للمتابعة",
     ),
@@ -31,7 +32,13 @@ class MessageLookup extends MessageLookupByLibrary {
     "alreadyHaveAccount": MessageLookupByLibrary.simpleMessage(
       "لديك حساب بالفعل ؟ ",
     ),
+    "arabic": MessageLookupByLibrary.simpleMessage("العربية"),
     "backToLogin": MessageLookupByLibrary.simpleMessage("العودة لتسجيل الدخول"),
+    "cancel": MessageLookupByLibrary.simpleMessage("إلغاء"),
+    "change_language": MessageLookupByLibrary.simpleMessage("تغيير اللغة"),
+    "choose_from_gallery": MessageLookupByLibrary.simpleMessage(
+      "اختيار من المعرض",
+    ),
     "confirmCode": MessageLookupByLibrary.simpleMessage("تأكيد الرمز"),
     "continueAsGuest": MessageLookupByLibrary.simpleMessage("المتابعة كضيف"),
     "culturalHeritage": MessageLookupByLibrary.simpleMessage("التراث الحضاري"),
@@ -42,8 +49,16 @@ class MessageLookup extends MessageLookupByLibrary {
     "dontHaveAccount": MessageLookupByLibrary.simpleMessage("لا تمتلك حساب ؟ "),
     "emailHint": MessageLookupByLibrary.simpleMessage("أدخل بريدك الإلكتروني"),
     "emailTitle": MessageLookupByLibrary.simpleMessage("البريد الإلكتروني"),
+    "english": MessageLookupByLibrary.simpleMessage("English"),
     "enterFullCode": MessageLookupByLibrary.simpleMessage(
       "الرجاء إدخال الرمز كامل",
+    ),
+    "favorite": MessageLookupByLibrary.simpleMessage("المفضلة"),
+    "favorites_empty_subtitle": MessageLookupByLibrary.simpleMessage(
+      "ابدأ باستكشاف المعالم السياحية وأضف ما يعجبك هنا",
+    ),
+    "favorites_empty_title": MessageLookupByLibrary.simpleMessage(
+      "قائمتك المفضلة فارغة",
     ),
     "forgotPassword": MessageLookupByLibrary.simpleMessage(
       "هل نسيت كلمة المرور ؟",
@@ -58,6 +73,8 @@ class MessageLookup extends MessageLookupByLibrary {
     "invalidEmail": MessageLookupByLibrary.simpleMessage(
       "الرجاء إدخال بريد إلكتروني صحيح",
     ),
+    "loading_email": MessageLookupByLibrary.simpleMessage("user@email.com"),
+    "loading_name": MessageLookupByLibrary.simpleMessage("تحميل الاسم..."),
     "loginButton": MessageLookupByLibrary.simpleMessage("تسجيل الدخول"),
     "loginNowDesc": MessageLookupByLibrary.simpleMessage(
       "يمكنك الآن تسجيل الدخول بكلمة المرور الجديدة.",
@@ -67,6 +84,12 @@ class MessageLookup extends MessageLookupByLibrary {
       "استكشف عبق التاريخ بلمسة عصرية",
     ),
     "loginText": MessageLookupByLibrary.simpleMessage("تسجيل الدخول"),
+    "logout": MessageLookupByLibrary.simpleMessage("تسجيل الخروج"),
+    "logout_button": MessageLookupByLibrary.simpleMessage("تسجيل الخروج"),
+    "logout_confirmation": MessageLookupByLibrary.simpleMessage(
+      "هل تريد تسجيل الخروج من حسابك ؟",
+    ),
+    "logout_title": MessageLookupByLibrary.simpleMessage("تسجيل الخروج"),
     "mostVisitedPlaces": MessageLookupByLibrary.simpleMessage(
       "الأماكن الأكثر زيارة",
     ),
@@ -80,6 +103,13 @@ class MessageLookup extends MessageLookupByLibrary {
       "كلمة المرور الجديدة",
     ),
     "nextButton": MessageLookupByLibrary.simpleMessage("التالي"),
+    "no_notifications": MessageLookupByLibrary.simpleMessage(
+      "لا توجد إشعارات حالياً",
+    ),
+    "notifications": MessageLookupByLibrary.simpleMessage("الإشعارات"),
+    "notifications_empty_desc": MessageLookupByLibrary.simpleMessage(
+      "هنا سنرسل لك أحدث الفعاليات، وتوصيات الأماكن والأنشطة السياحية المميزة فور توفرها.",
+    ),
     "onboardingDesc1": MessageLookupByLibrary.simpleMessage(
       "اكتشف أسرار الماضي في كل زاوية، من الأسواق القديمة إلى القلاع الحصينة، حيث يروي كل حجر قصة حضارة عظيمة.",
     ),
@@ -110,6 +140,10 @@ class MessageLookup extends MessageLookupByLibrary {
       "كلمتا المرور غير متطابقتين",
     ),
     "privacyPolicy": MessageLookupByLibrary.simpleMessage("سياسة الخصوصية"),
+    "profile": MessageLookupByLibrary.simpleMessage("الملف الشخصي"),
+    "profile_image_title": MessageLookupByLibrary.simpleMessage(
+      "صورة الملف الشخصي",
+    ),
     "religious": MessageLookupByLibrary.simpleMessage("ديني"),
     "requiredField": m0,
     "resendCode": MessageLookupByLibrary.simpleMessage("إعادة إرسال"),
@@ -126,6 +160,9 @@ class MessageLookup extends MessageLookupByLibrary {
     "signUpButton": MessageLookupByLibrary.simpleMessage("إنشاء حساب"),
     "signUpNow": MessageLookupByLibrary.simpleMessage("قم بإنشاء حساب"),
     "startJourneyButton": MessageLookupByLibrary.simpleMessage("ابدأ الرحلة"),
+    "take_photo_camera": MessageLookupByLibrary.simpleMessage(
+      "التقاط صورة بالكاميرا",
+    ),
     "termsOfService": MessageLookupByLibrary.simpleMessage("شروط الخدمة"),
     "updatePasswordBtn": MessageLookupByLibrary.simpleMessage(
       "تحديث كلمة المرور",

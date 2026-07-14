@@ -24,6 +24,7 @@ class MessageLookup extends MessageLookupByLibrary {
 
   final messages = _notInlinedMessages(_notInlinedMessages);
   static Map<String, Function> _notInlinedMessages(_) => <String, Function>{
+    "about_us": MessageLookupByLibrary.simpleMessage("About Us"),
     "acceptTermsAndConditionsError": MessageLookupByLibrary.simpleMessage(
       "Please accept the terms and conditions ",
     ),
@@ -31,7 +32,13 @@ class MessageLookup extends MessageLookupByLibrary {
     "alreadyHaveAccount": MessageLookupByLibrary.simpleMessage(
       "Already have an account? ",
     ),
+    "arabic": MessageLookupByLibrary.simpleMessage("العربية"),
     "backToLogin": MessageLookupByLibrary.simpleMessage("Back to Login"),
+    "cancel": MessageLookupByLibrary.simpleMessage("Cancel"),
+    "change_language": MessageLookupByLibrary.simpleMessage("Change Language"),
+    "choose_from_gallery": MessageLookupByLibrary.simpleMessage(
+      "Choose from Gallery",
+    ),
     "confirmCode": MessageLookupByLibrary.simpleMessage("confirmCode"),
     "continueAsGuest": MessageLookupByLibrary.simpleMessage(
       "Continue as a guest",
@@ -50,8 +57,16 @@ class MessageLookup extends MessageLookupByLibrary {
     ),
     "emailHint": MessageLookupByLibrary.simpleMessage("Enter your email"),
     "emailTitle": MessageLookupByLibrary.simpleMessage("Email Address"),
+    "english": MessageLookupByLibrary.simpleMessage("English"),
     "enterFullCode": MessageLookupByLibrary.simpleMessage(
       "Please Enter The Full Code",
+    ),
+    "favorite": MessageLookupByLibrary.simpleMessage("Favorites"),
+    "favorites_empty_subtitle": MessageLookupByLibrary.simpleMessage(
+      "Start exploring tourist attractions and add what you like here",
+    ),
+    "favorites_empty_title": MessageLookupByLibrary.simpleMessage(
+      "Your favorites list is empty",
     ),
     "forgotPassword": MessageLookupByLibrary.simpleMessage(
       "Forgot your password?",
@@ -68,6 +83,8 @@ class MessageLookup extends MessageLookupByLibrary {
     "invalidEmail": MessageLookupByLibrary.simpleMessage(
       "Please enter a valid email address",
     ),
+    "loading_email": MessageLookupByLibrary.simpleMessage("user@email.com"),
+    "loading_name": MessageLookupByLibrary.simpleMessage("Loading name..."),
     "loginButton": MessageLookupByLibrary.simpleMessage("Login"),
     "loginNowDesc": MessageLookupByLibrary.simpleMessage(
       "You can now log in with your new password",
@@ -77,6 +94,12 @@ class MessageLookup extends MessageLookupByLibrary {
       "Explore the fragrance of history with a modern touch",
     ),
     "loginText": MessageLookupByLibrary.simpleMessage("Login"),
+    "logout": MessageLookupByLibrary.simpleMessage("Logout"),
+    "logout_button": MessageLookupByLibrary.simpleMessage("Logout"),
+    "logout_confirmation": MessageLookupByLibrary.simpleMessage(
+      "Are you sure you want to log out of your account?",
+    ),
+    "logout_title": MessageLookupByLibrary.simpleMessage("Logout"),
     "mostVisitedPlaces": MessageLookupByLibrary.simpleMessage(
       "Most Visited Places",
     ),
@@ -88,6 +111,13 @@ class MessageLookup extends MessageLookupByLibrary {
     "nav_profile": MessageLookupByLibrary.simpleMessage("Profile"),
     "newPasswordLabel": MessageLookupByLibrary.simpleMessage("New Password"),
     "nextButton": MessageLookupByLibrary.simpleMessage("Next"),
+    "no_notifications": MessageLookupByLibrary.simpleMessage(
+      "No notifications at the moment",
+    ),
+    "notifications": MessageLookupByLibrary.simpleMessage("Notifications"),
+    "notifications_empty_desc": MessageLookupByLibrary.simpleMessage(
+      "Here, we will send you the latest events, recommended places, and top tourist activities as soon as they become available.",
+    ),
     "onboardingDesc1": MessageLookupByLibrary.simpleMessage(
       "Discover ancient markets, majestic castles, and the secrets of a great civilization in every corner.",
     ),
@@ -118,6 +148,10 @@ class MessageLookup extends MessageLookupByLibrary {
       "Passwords do not match",
     ),
     "privacyPolicy": MessageLookupByLibrary.simpleMessage("Privacy Policy"),
+    "profile": MessageLookupByLibrary.simpleMessage("Profile"),
+    "profile_image_title": MessageLookupByLibrary.simpleMessage(
+      "Profile Picture",
+    ),
     "religious": MessageLookupByLibrary.simpleMessage("Religious"),
     "requiredField": m0,
     "resendCode": MessageLookupByLibrary.simpleMessage("Resend"),
@@ -134,6 +168,9 @@ class MessageLookup extends MessageLookupByLibrary {
     "signUpButton": MessageLookupByLibrary.simpleMessage("Sign Up"),
     "signUpNow": MessageLookupByLibrary.simpleMessage("Create an account"),
     "startJourneyButton": MessageLookupByLibrary.simpleMessage("Start Journey"),
+    "take_photo_camera": MessageLookupByLibrary.simpleMessage(
+      "Take a Photo with Camera",
+    ),
     "termsOfService": MessageLookupByLibrary.simpleMessage("Terms of Service"),
     "updatePasswordBtn": MessageLookupByLibrary.simpleMessage(
       "Update Password",
