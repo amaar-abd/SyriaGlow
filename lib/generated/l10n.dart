@@ -509,6 +509,16 @@ class S {
     );
   }
 
+  /// `About the place`
+  String get aboutPlace {
+    return Intl.message(
+      'About the place',
+      name: 'aboutPlace',
+      desc: '',
+      args: [],
+    );
+  }
+
   /// `Most Visited Places`
   String get mostVisitedPlaces {
     return Intl.message(
@@ -582,6 +592,106 @@ class S {
   /// `Profile`
   String get profile {
     return Intl.message('Profile', name: 'profile', desc: '', args: []);
+  }
+
+  /// `View on in-app map`
+  String get showOnInAppMap {
+    return Intl.message(
+      'View on in-app map',
+      name: 'showOnInAppMap',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Direct route navigation`
+  String get directRouteGuidance {
+    return Intl.message(
+      'Direct route navigation',
+      name: 'directRouteGuidance',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `There are currently no landmarks in this category`
+  String get noLandmarksInCategory {
+    return Intl.message(
+      'There are currently no landmarks in this category',
+      name: 'noLandmarksInCategory',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Search for places, events, or exhibitions`
+  String get searchPlaceholder {
+    return Intl.message(
+      'Search for places, events, or exhibitions',
+      name: 'searchPlaceholder',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Trending exhibitions and events`
+  String get trendingEventsAndExhibitions {
+    return Intl.message(
+      'Trending exhibitions and events',
+      name: 'trendingEventsAndExhibitions',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Sorry, no results found`
+  String get noResultsFound {
+    return Intl.message(
+      'Sorry, no results found',
+      name: 'noResultsFound',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Make sure the words are spelled correctly`
+  String get checkSpelling {
+    return Intl.message(
+      'Make sure the words are spelled correctly',
+      name: 'checkSpelling',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `View current events`
+  String get showCurrentEvents {
+    return Intl.message(
+      'View current events',
+      name: 'showCurrentEvents',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Distance`
+  String get distance {
+    return Intl.message('Distance', name: 'distance', desc: '', args: []);
+  }
+
+  /// `Estimated time`
+  String get estimatedTime {
+    return Intl.message(
+      'Estimated time',
+      name: 'estimatedTime',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Details`
+  String get details {
+    return Intl.message('Details', name: 'details', desc: '', args: []);
   }
 
   /// `Loading name...`

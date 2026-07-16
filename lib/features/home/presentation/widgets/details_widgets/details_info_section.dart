@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:syria_glow/core/extensions/context_extensions.dart';
+import 'package:syria_glow/core/extensions/landmark_localization_extensions.dart';
 import 'package:syria_glow/core/routes/app_routes.dart';
 import 'package:syria_glow/core/theme/app_colors.dart';
 import 'package:syria_glow/features/home/data/models/landmark_model.dart';
@@ -18,10 +20,10 @@ class DetailsInfoSection extends StatelessWidget {
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          _buildCategory(textTheme),
+          _buildCategory(textTheme,context),
           SizedBox(height: 12.h),
           Text(
-            landmark.nameAr,
+            landmark.name(context),
             style: textTheme.displayMedium?.copyWith(
               color: AppColors.primaryGreen,
               fontWeight: FontWeight.bold,
@@ -33,7 +35,7 @@ class DetailsInfoSection extends StatelessWidget {
           _buildInfoCard(
             textTheme: textTheme,
             icon: Icons.location_on_rounded,
-            text: landmark.address,
+            text: landmark.addr(context),
           ),
           SizedBox(height: 12.h),
 
@@ -42,7 +44,7 @@ class DetailsInfoSection extends StatelessWidget {
           Divider(color: Colors.grey.shade200),
           SizedBox(height: 20.h),
           Text(
-            "عن المكان",
+            context.l10n.aboutPlace,
             style: textTheme.displayMedium?.copyWith(
               color: AppColors.primaryGreen,
               fontWeight: FontWeight.bold,
@@ -51,7 +53,7 @@ class DetailsInfoSection extends StatelessWidget {
           SizedBox(height: 10.h),
 
           Text(
-            landmark.descAr,
+            landmark.description(context),
             style: textTheme.bodyMedium?.copyWith(
               height: 1.8,
               color: AppColors.textDark,
@@ -68,7 +70,7 @@ class DetailsInfoSection extends StatelessWidget {
     );
   }
 
-  Widget _buildCategory(TextTheme textTheme) {
+  Widget _buildCategory(TextTheme textTheme,BuildContext context) {
     return Container(
       padding: EdgeInsets.symmetric(horizontal: 12.w, vertical: 6.h),
       decoration: BoxDecoration(
@@ -82,7 +84,7 @@ class DetailsInfoSection extends StatelessWidget {
         border: Border.all(color: AppColors.elegantGold.withAlpha(102)),
       ),
       child: Text(
-        landmark.category.nameAr,
+        landmark.category.name(context),
         style: textTheme.bodySmall?.copyWith(
           color: AppColors.primaryGreen,
           fontWeight: FontWeight.bold,
@@ -177,7 +179,7 @@ class DetailsInfoSection extends StatelessWidget {
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
                       Text(
-                        "توجيه لمسار الطريق المباشر",
+                       context.l10n.directRouteGuidance,
                         style: TextStyle(
                           color: AppColors.primaryGreen,
                           fontSize: 15.sp,
@@ -186,7 +188,7 @@ class DetailsInfoSection extends StatelessWidget {
                       ),
                       SizedBox(height: 4.h),
                       Text(
-                        "عرض على خريطة التطبيق الداخلية",
+                        context.l10n.showOnInAppMap,
                         style: textTheme.labelSmall?.copyWith(
                           color: AppColors.textGray,
                         ),

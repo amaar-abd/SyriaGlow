@@ -24,6 +24,7 @@ class MessageLookup extends MessageLookupByLibrary {
 
   final messages = _notInlinedMessages(_notInlinedMessages);
   static Map<String, Function> _notInlinedMessages(_) => <String, Function>{
+    "aboutPlace": MessageLookupByLibrary.simpleMessage("عن المكان"),
     "about_us": MessageLookupByLibrary.simpleMessage("من نحن"),
     "acceptTermsAndConditionsError": MessageLookupByLibrary.simpleMessage(
       "الرجاء الموافقة على الشروط والأحكام للمتابعة",
@@ -36,16 +37,24 @@ class MessageLookup extends MessageLookupByLibrary {
     "backToLogin": MessageLookupByLibrary.simpleMessage("العودة لتسجيل الدخول"),
     "cancel": MessageLookupByLibrary.simpleMessage("إلغاء"),
     "change_language": MessageLookupByLibrary.simpleMessage("تغيير اللغة"),
+    "checkSpelling": MessageLookupByLibrary.simpleMessage(
+      "تأكد من كتابة الكلمة بشكل صحيح",
+    ),
     "choose_from_gallery": MessageLookupByLibrary.simpleMessage(
       "اختيار من المعرض",
     ),
     "confirmCode": MessageLookupByLibrary.simpleMessage("تأكيد الرمز"),
     "continueAsGuest": MessageLookupByLibrary.simpleMessage("المتابعة كضيف"),
     "culturalHeritage": MessageLookupByLibrary.simpleMessage("التراث الحضاري"),
+    "details": MessageLookupByLibrary.simpleMessage("التفاصيل"),
     "didntReceiveCode": MessageLookupByLibrary.simpleMessage("لم يصلك الرمز؟"),
+    "directRouteGuidance": MessageLookupByLibrary.simpleMessage(
+      "توجيه لمسار الطريق المباشر",
+    ),
     "discoverByCategory": MessageLookupByLibrary.simpleMessage(
       "اكتشف حسب التصنيف",
     ),
+    "distance": MessageLookupByLibrary.simpleMessage("المسافة"),
     "dontHaveAccount": MessageLookupByLibrary.simpleMessage("لا تمتلك حساب ؟ "),
     "emailHint": MessageLookupByLibrary.simpleMessage("أدخل بريدك الإلكتروني"),
     "emailTitle": MessageLookupByLibrary.simpleMessage("البريد الإلكتروني"),
@@ -53,6 +62,7 @@ class MessageLookup extends MessageLookupByLibrary {
     "enterFullCode": MessageLookupByLibrary.simpleMessage(
       "الرجاء إدخال الرمز كامل",
     ),
+    "estimatedTime": MessageLookupByLibrary.simpleMessage("الوقت المقدر"),
     "favorite": MessageLookupByLibrary.simpleMessage("المفضلة"),
     "favorites_empty_subtitle": MessageLookupByLibrary.simpleMessage(
       "ابدأ باستكشاف المعالم السياحية وأضف ما يعجبك هنا",
@@ -103,6 +113,12 @@ class MessageLookup extends MessageLookupByLibrary {
       "كلمة المرور الجديدة",
     ),
     "nextButton": MessageLookupByLibrary.simpleMessage("التالي"),
+    "noLandmarksInCategory": MessageLookupByLibrary.simpleMessage(
+      "لا توجد معالم في هذا التصنيف حالياً",
+    ),
+    "noResultsFound": MessageLookupByLibrary.simpleMessage(
+      "عذراً، لم نجد نتائج",
+    ),
     "no_notifications": MessageLookupByLibrary.simpleMessage(
       "لا توجد إشعارات حالياً",
     ),
@@ -154,8 +170,17 @@ class MessageLookup extends MessageLookupByLibrary {
       "تعيين كلمة مرور جديدة",
     ),
     "restaurants": MessageLookupByLibrary.simpleMessage("مطاعم"),
+    "searchPlaceholder": MessageLookupByLibrary.simpleMessage(
+      "ابحث عن أماكن، فعاليات أو معارض",
+    ),
     "sendVerificationCode": MessageLookupByLibrary.simpleMessage(
       "إرسال رمز التحقق",
+    ),
+    "showCurrentEvents": MessageLookupByLibrary.simpleMessage(
+      "عرض الفعاليات الحالية",
+    ),
+    "showOnInAppMap": MessageLookupByLibrary.simpleMessage(
+      "عرض على خريطة التطبيق الداخلية",
     ),
     "signUpButton": MessageLookupByLibrary.simpleMessage("إنشاء حساب"),
     "signUpNow": MessageLookupByLibrary.simpleMessage("قم بإنشاء حساب"),
@@ -164,6 +189,9 @@ class MessageLookup extends MessageLookupByLibrary {
       "التقاط صورة بالكاميرا",
     ),
     "termsOfService": MessageLookupByLibrary.simpleMessage("شروط الخدمة"),
+    "trendingEventsAndExhibitions": MessageLookupByLibrary.simpleMessage(
+      "المعارض والفعاليات الرائجة",
+    ),
     "updatePasswordBtn": MessageLookupByLibrary.simpleMessage(
       "تحديث كلمة المرور",
     ),

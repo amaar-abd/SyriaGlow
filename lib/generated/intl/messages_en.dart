@@ -24,6 +24,7 @@ class MessageLookup extends MessageLookupByLibrary {
 
   final messages = _notInlinedMessages(_notInlinedMessages);
   static Map<String, Function> _notInlinedMessages(_) => <String, Function>{
+    "aboutPlace": MessageLookupByLibrary.simpleMessage("About the place"),
     "about_us": MessageLookupByLibrary.simpleMessage("About Us"),
     "acceptTermsAndConditionsError": MessageLookupByLibrary.simpleMessage(
       "Please accept the terms and conditions ",
@@ -36,6 +37,9 @@ class MessageLookup extends MessageLookupByLibrary {
     "backToLogin": MessageLookupByLibrary.simpleMessage("Back to Login"),
     "cancel": MessageLookupByLibrary.simpleMessage("Cancel"),
     "change_language": MessageLookupByLibrary.simpleMessage("Change Language"),
+    "checkSpelling": MessageLookupByLibrary.simpleMessage(
+      "Make sure the words are spelled correctly",
+    ),
     "choose_from_gallery": MessageLookupByLibrary.simpleMessage(
       "Choose from Gallery",
     ),
@@ -46,12 +50,17 @@ class MessageLookup extends MessageLookupByLibrary {
     "culturalHeritage": MessageLookupByLibrary.simpleMessage(
       "Cultural Heritage",
     ),
+    "details": MessageLookupByLibrary.simpleMessage("Details"),
     "didntReceiveCode": MessageLookupByLibrary.simpleMessage(
       "Didn\'t receive the code?",
+    ),
+    "directRouteGuidance": MessageLookupByLibrary.simpleMessage(
+      "Direct route navigation",
     ),
     "discoverByCategory": MessageLookupByLibrary.simpleMessage(
       "Discover by Category",
     ),
+    "distance": MessageLookupByLibrary.simpleMessage("Distance"),
     "dontHaveAccount": MessageLookupByLibrary.simpleMessage(
       "Don\'t have an account? ",
     ),
@@ -61,6 +70,7 @@ class MessageLookup extends MessageLookupByLibrary {
     "enterFullCode": MessageLookupByLibrary.simpleMessage(
       "Please Enter The Full Code",
     ),
+    "estimatedTime": MessageLookupByLibrary.simpleMessage("Estimated time"),
     "favorite": MessageLookupByLibrary.simpleMessage("Favorites"),
     "favorites_empty_subtitle": MessageLookupByLibrary.simpleMessage(
       "Start exploring tourist attractions and add what you like here",
@@ -111,6 +121,12 @@ class MessageLookup extends MessageLookupByLibrary {
     "nav_profile": MessageLookupByLibrary.simpleMessage("Profile"),
     "newPasswordLabel": MessageLookupByLibrary.simpleMessage("New Password"),
     "nextButton": MessageLookupByLibrary.simpleMessage("Next"),
+    "noLandmarksInCategory": MessageLookupByLibrary.simpleMessage(
+      "There are currently no landmarks in this category",
+    ),
+    "noResultsFound": MessageLookupByLibrary.simpleMessage(
+      "Sorry, no results found",
+    ),
     "no_notifications": MessageLookupByLibrary.simpleMessage(
       "No notifications at the moment",
     ),
@@ -162,8 +178,17 @@ class MessageLookup extends MessageLookupByLibrary {
       "Reset New Password",
     ),
     "restaurants": MessageLookupByLibrary.simpleMessage("Restaurants"),
+    "searchPlaceholder": MessageLookupByLibrary.simpleMessage(
+      "Search for places, events, or exhibitions",
+    ),
     "sendVerificationCode": MessageLookupByLibrary.simpleMessage(
       "Send Verification Code",
+    ),
+    "showCurrentEvents": MessageLookupByLibrary.simpleMessage(
+      "View current events",
+    ),
+    "showOnInAppMap": MessageLookupByLibrary.simpleMessage(
+      "View on in-app map",
     ),
     "signUpButton": MessageLookupByLibrary.simpleMessage("Sign Up"),
     "signUpNow": MessageLookupByLibrary.simpleMessage("Create an account"),
@@ -172,6 +197,9 @@ class MessageLookup extends MessageLookupByLibrary {
       "Take a Photo with Camera",
     ),
     "termsOfService": MessageLookupByLibrary.simpleMessage("Terms of Service"),
+    "trendingEventsAndExhibitions": MessageLookupByLibrary.simpleMessage(
+      "Trending exhibitions and events",
+    ),
     "updatePasswordBtn": MessageLookupByLibrary.simpleMessage(
       "Update Password",
     ),
