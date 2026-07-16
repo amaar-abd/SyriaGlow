@@ -2,6 +2,7 @@ import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:syria_glow/core/extensions/context_extensions.dart';
+import 'package:syria_glow/core/extensions/landmark_localization_extensions.dart';
 import 'package:syria_glow/core/theme/app_colors.dart';
 import 'package:syria_glow/features/home/data/models/landmark_model.dart';
 
@@ -92,7 +93,7 @@ class PopularItem extends StatelessWidget {
                         borderRadius: BorderRadius.circular(6.r),
                       ),
                       child: Text(
-                        landmark.category.nameAr,
+                        landmark.category.name(context),
                         style: textTheme.labelSmall?.copyWith(
                           color: AppColors.textDark,
                           fontWeight: FontWeight.bold,
@@ -101,7 +102,7 @@ class PopularItem extends StatelessWidget {
                     ),
                     SizedBox(height: 6.h),
                     Text(
-                      landmark.nameAr,
+                      landmark.name(context),
                       style: textTheme.bodyLarge?.copyWith(
                         color: AppColors.surfaceWhite,
                       ),
@@ -119,7 +120,7 @@ class PopularItem extends StatelessWidget {
                         SizedBox(width: 4.w),
                         Expanded(
                           child: Text(
-                            landmark.address,
+                            landmark.addr(context),
                             style: textTheme.bodySmall?.copyWith(
                               color: AppColors.goldSoft.withAlpha(230),
                               fontWeight: FontWeight.w500,
