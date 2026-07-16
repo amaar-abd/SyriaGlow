@@ -4,6 +4,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:google_maps_flutter/google_maps_flutter.dart';
+import 'package:syria_glow/core/extensions/landmark_localization_extensions.dart';
 import 'package:syria_glow/core/theme/app_colors.dart';
 import 'package:syria_glow/features/home/data/models/landmark_model.dart';
 import 'package:syria_glow/features/home/presentation/manager/user_location_cubit/user_location_cubit.dart';
@@ -52,7 +53,7 @@ class _MapLocationViewBodyState extends State<MapLocationViewBody> {
     return Scaffold(
       appBar: AppBar(
         title: Text(
-          widget.landmark.nameAr,
+          widget.landmark.name(context),
           style: TextTheme.of(context).bodyMedium?.copyWith(
             color: AppColors.backgroundLight,
             fontWeight: FontWeight.w600,

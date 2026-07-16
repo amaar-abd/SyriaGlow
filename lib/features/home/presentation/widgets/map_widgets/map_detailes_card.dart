@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:syria_glow/core/extensions/context_extensions.dart';
 import 'package:syria_glow/core/theme/app_colors.dart';
 
 class MapDetailesCard extends StatelessWidget {
@@ -42,7 +43,7 @@ class MapDetailesCard extends StatelessWidget {
                 mainAxisSize: MainAxisSize.min,
                 children: [
                   Text(
-                    'الوقت المقدر',
+                   context.l10n.estimatedTime,
                     style: TextStyle(
                       color: AppColors.primaryGreen,
                       fontSize: 16,
@@ -75,7 +76,7 @@ class MapDetailesCard extends StatelessWidget {
                 mainAxisSize: MainAxisSize.min,
                 children: [
                   Text(
-                    'المسافة',
+                    context.l10n.distance,
                     style: TextStyle(
                       color: AppColors.primaryGreen,
                       fontSize: 16,

@@ -2,6 +2,8 @@ import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:syria_glow/core/extensions/context_extensions.dart';
+import 'package:syria_glow/core/extensions/landmark_localization_extensions.dart';
 import 'package:syria_glow/core/routes/app_routes.dart';
 import 'package:syria_glow/core/theme/app_colors.dart';
 import 'package:syria_glow/features/home/presentation/manager/home_category_cubit/category_cubit.dart';
@@ -53,7 +55,7 @@ class CategoryViewBody extends StatelessWidget {
                   Icon(Icons.map_outlined, color: Colors.grey, size: 50.r),
                   SizedBox(height: 12.h),
                   Text(
-                    "لا توجد معالم في هذا التصنيف حالياً",
+                   context.l10n.noLandmarksInCategory,
                     style: TextStyle(color: Colors.grey, fontSize: 15.sp),
                   ),
                 ],
@@ -139,7 +141,7 @@ class CategoryViewBody extends StatelessWidget {
                             crossAxisAlignment: CrossAxisAlignment.start,
                             children: [
                               Text(
-                                landmark.nameAr,
+                                landmark.name(context),
                                 maxLines: 1,
                                 overflow: TextOverflow.ellipsis,
                                 style: TextStyle(
@@ -159,7 +161,7 @@ class CategoryViewBody extends StatelessWidget {
                                   SizedBox(width: 3.w),
                                   Expanded(
                                     child: Text(
-                                      landmark.address,
+                                      landmark.addr(context),
                                       maxLines: 1,
                                       overflow: TextOverflow.ellipsis,
                                       style: TextStyle(
