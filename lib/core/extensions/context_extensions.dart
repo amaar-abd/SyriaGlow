@@ -37,11 +37,11 @@ extension ContextExtensions on BuildContext {
 
   String getFormattedTime(DateTime dateTime) {
     final now = DateTime.now();
-
+    final String locale = Localizations.localeOf(this).languageCode;
     if (dateTime.year == now.year &&dateTime.month == now.month && dateTime.day == now.day) {
-      return DateFormat.jm('ar').format(dateTime);
+      return DateFormat.jm(locale).format(dateTime);
     }
-    return DateFormat.MMMd('ar').format(dateTime);
+    return DateFormat.MMMd(locale).format(dateTime);
   }
 
 }
