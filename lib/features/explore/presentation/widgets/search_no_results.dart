@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+import 'package:syria_glow/core/extensions/context_extensions.dart';
 import 'package:syria_glow/core/theme/app_colors.dart';
 
 class SearchNoResults extends StatelessWidget {
@@ -28,7 +29,7 @@ class SearchNoResults extends StatelessWidget {
           ),
           SizedBox(height: 20.h),
           Text(
-            'عذراً، لم نجد نتائج',
+            context.l10n.noResultsFound,
             style: TextTheme.of(context).displayMedium?.copyWith(
               color: AppColors.primaryGreen,
               fontWeight: FontWeight.bold,
@@ -37,7 +38,7 @@ class SearchNoResults extends StatelessWidget {
           ),
           SizedBox(height: 8.h),
           Text(
-            'تأكد من كتابة الكلمة بشكل صحيح',
+            context.l10n.checkSpelling,
             textAlign: TextAlign.center,
             style: TextTheme.of(
               context,
@@ -61,7 +62,7 @@ class SearchNoResults extends StatelessWidget {
               size: 14.r,
             ),
             label: Text(
-              'عرض الفعاليات الحالية',
+              context.l10n.showCurrentEvents,
               style: TextTheme.of(context).bodySmall?.copyWith(color: AppColors.elegantGold)
             ),
           ),

@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:syria_glow/core/extensions/context_extensions.dart';
 import 'package:syria_glow/core/theme/app_colors.dart';
 import 'package:syria_glow/features/explore/presentation/manager/explore_cubit/explore_cubit.dart';
 import 'package:syria_glow/features/explore/presentation/manager/explore_cubit/explore_state.dart';
@@ -74,7 +75,7 @@ class _ExploreViewBodyState extends State<ExploreViewBody> {
                   context.read<ExploreCubit>().search(query: value);
                 }
               },
-              hintText: 'ابحث عن اماكن, فعاليات او معارض',
+              hintText: context.l10n.searchPlaceholder,
               controller: _searchController,
             ),
           ),
@@ -157,7 +158,7 @@ class _ExploreViewBodyState extends State<ExploreViewBody> {
                           vertical: 12.h,
                         ),
                         child: Text(
-                          'المعارض والفعاليات الرائجة',
+                          context.l10n.trendingEventsAndExhibitions,
                           style: TextTheme.of(context).bodyMedium?.copyWith(
                             fontWeight: FontWeight.bold,
                             color: AppColors.textDark,

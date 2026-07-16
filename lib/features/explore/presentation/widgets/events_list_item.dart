@@ -2,6 +2,7 @@ import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+import 'package:syria_glow/core/extensions/context_extensions.dart';
 import 'package:syria_glow/core/theme/app_colors.dart';
 import 'package:syria_glow/features/home/data/models/landmark_model.dart';
 
@@ -122,7 +123,7 @@ class EventListItem extends StatelessWidget {
                           ),
                           child: Center(
                             child: Text(
-                              'التفاصيل',
+                              context.l10n.details,
                               style: TextStyle(
                                 color: AppColors.primaryGreen,
                                 fontSize: 10.sp,

@@ -2,6 +2,7 @@ import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+import 'package:syria_glow/core/extensions/landmark_localization_extensions.dart';
 import 'package:syria_glow/core/theme/app_colors.dart';
 import 'package:syria_glow/features/home/data/models/landmark_model.dart';
 
@@ -15,6 +16,7 @@ class SearchResultsItem extends StatelessWidget {
   final void Function()? onTap;
   @override
   Widget build(BuildContext context) {
+    final isArabic = Localizations.localeOf(context).languageCode == 'ar';
     final textTheme = Theme.of(context).textTheme;
     final imageUrl = landmark.images.isNotEmpty
         ? landmark.images.first.image
@@ -69,7 +71,7 @@ class SearchResultsItem extends StatelessWidget {
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
                     Text(
-                      landmark.nameAr,
+                      landmark.name(context),
                       maxLines: 1,
                       overflow: TextOverflow.ellipsis,
                       style: textTheme.bodyMedium?.copyWith(
@@ -79,7 +81,7 @@ class SearchResultsItem extends StatelessWidget {
                     ),
                     SizedBox(height: 4.h),
                     Text(
-                      landmark.address,
+                      landmark.addr(context),
                       maxLines: 1,
                       overflow: TextOverflow.ellipsis,
                       style: textTheme.bodySmall?.copyWith(
@@ -93,7 +95,7 @@ class SearchResultsItem extends StatelessWidget {
               ),
 
               FaIcon(
-                FontAwesomeIcons.chevronLeft,
+               isArabic? FontAwesomeIcons.chevronLeft : FontAwesomeIcons.chevronRight,
                 color: AppColors.textDark.withAlpha(200),
                 size: 14.r,
               ),
