@@ -94,5 +94,17 @@
   "logout_title": "Logout",
   "logout_confirmation": "Are you sure you want to log out of your account?",
   "cancel": "Cancel",
-  "logout_button": "Logout"
+  "logout_button": "Logout",
+  "assistant_tools_title": "Useful tools for your journey in Syria",
+  "currency_converter_title": "Currency Converter",
+  "currency_converter_subtitle": "Calculate foreign currency values against Syrian Pounds directly.",
+  "weather_title": "Weather Conditions",
+  "weather_subtitle": "Select your governorate from 14 Syrian governorates to check current weather and tips.",
+  "emergency_numbers_title": "Emergency Numbers",
+  "emergency_numbers_subtitle": "Quick and direct speed dial directory for rescue and emergency services with one tap.",
+  "amount_foreign_currency": "Amount in foreign currency",
+  "amount_syp": "Amount in SYP",
+  "approx_value_syp": "Approximate value in SYP",
+  "approx_value_in": "Approximate value in ",
+  "syp": "SYP"
 }

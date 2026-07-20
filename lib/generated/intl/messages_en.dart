@@ -33,7 +33,20 @@ class MessageLookup extends MessageLookupByLibrary {
     "alreadyHaveAccount": MessageLookupByLibrary.simpleMessage(
       "Already have an account? ",
     ),
+    "amount_foreign_currency": MessageLookupByLibrary.simpleMessage(
+      "Amount in foreign currency",
+    ),
+    "amount_syp": MessageLookupByLibrary.simpleMessage("Amount in SYP"),
+    "approx_value_in": MessageLookupByLibrary.simpleMessage(
+      "Approximate value in ",
+    ),
+    "approx_value_syp": MessageLookupByLibrary.simpleMessage(
+      "Approximate value in SYP",
+    ),
     "arabic": MessageLookupByLibrary.simpleMessage("العربية"),
+    "assistant_tools_title": MessageLookupByLibrary.simpleMessage(
+      "Useful tools for your journey in Syria",
+    ),
     "backToLogin": MessageLookupByLibrary.simpleMessage("Back to Login"),
     "cancel": MessageLookupByLibrary.simpleMessage("Cancel"),
     "change_language": MessageLookupByLibrary.simpleMessage("Change Language"),
@@ -49,6 +62,12 @@ class MessageLookup extends MessageLookupByLibrary {
     ),
     "culturalHeritage": MessageLookupByLibrary.simpleMessage(
       "Cultural Heritage",
+    ),
+    "currency_converter_subtitle": MessageLookupByLibrary.simpleMessage(
+      "Calculate foreign currency values against Syrian Pounds directly.",
+    ),
+    "currency_converter_title": MessageLookupByLibrary.simpleMessage(
+      "Currency Converter",
     ),
     "details": MessageLookupByLibrary.simpleMessage("Details"),
     "didntReceiveCode": MessageLookupByLibrary.simpleMessage(
@@ -66,6 +85,12 @@ class MessageLookup extends MessageLookupByLibrary {
     ),
     "emailHint": MessageLookupByLibrary.simpleMessage("Enter your email"),
     "emailTitle": MessageLookupByLibrary.simpleMessage("Email Address"),
+    "emergency_numbers_subtitle": MessageLookupByLibrary.simpleMessage(
+      "Quick and direct speed dial directory for rescue and emergency services with one tap.",
+    ),
+    "emergency_numbers_title": MessageLookupByLibrary.simpleMessage(
+      "Emergency Numbers",
+    ),
     "english": MessageLookupByLibrary.simpleMessage("English"),
     "enterFullCode": MessageLookupByLibrary.simpleMessage(
       "Please Enter The Full Code",
@@ -193,6 +218,7 @@ class MessageLookup extends MessageLookupByLibrary {
     "signUpButton": MessageLookupByLibrary.simpleMessage("Sign Up"),
     "signUpNow": MessageLookupByLibrary.simpleMessage("Create an account"),
     "startJourneyButton": MessageLookupByLibrary.simpleMessage("Start Journey"),
+    "syp": MessageLookupByLibrary.simpleMessage("SYP"),
     "take_photo_camera": MessageLookupByLibrary.simpleMessage(
       "Take a Photo with Camera",
     ),
@@ -210,6 +236,10 @@ class MessageLookup extends MessageLookupByLibrary {
       "Verification Code",
     ),
     "viewAll": MessageLookupByLibrary.simpleMessage("View All"),
+    "weather_subtitle": MessageLookupByLibrary.simpleMessage(
+      "Select your governorate from 14 Syrian governorates to check current weather and tips.",
+    ),
+    "weather_title": MessageLookupByLibrary.simpleMessage("Weather Conditions"),
     "welcome": MessageLookupByLibrary.simpleMessage("Welcome "),
     "welcomeToSyria": MessageLookupByLibrary.simpleMessage("Welcome to Syria"),
   };

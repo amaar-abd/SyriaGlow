@@ -853,6 +853,121 @@ class S {
   String get logout_button {
     return Intl.message('Logout', name: 'logout_button', desc: '', args: []);
   }
+
+  /// `Useful tools for your journey in Syria`
+  String get assistant_tools_title {
+    return Intl.message(
+      'Useful tools for your journey in Syria',
+      name: 'assistant_tools_title',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Currency Converter`
+  String get currency_converter_title {
+    return Intl.message(
+      'Currency Converter',
+      name: 'currency_converter_title',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Calculate foreign currency values against Syrian Pounds directly.`
+  String get currency_converter_subtitle {
+    return Intl.message(
+      'Calculate foreign currency values against Syrian Pounds directly.',
+      name: 'currency_converter_subtitle',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Weather Conditions`
+  String get weather_title {
+    return Intl.message(
+      'Weather Conditions',
+      name: 'weather_title',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Select your governorate from 14 Syrian governorates to check current weather and tips.`
+  String get weather_subtitle {
+    return Intl.message(
+      'Select your governorate from 14 Syrian governorates to check current weather and tips.',
+      name: 'weather_subtitle',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Emergency Numbers`
+  String get emergency_numbers_title {
+    return Intl.message(
+      'Emergency Numbers',
+      name: 'emergency_numbers_title',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Quick and direct speed dial directory for rescue and emergency services with one tap.`
+  String get emergency_numbers_subtitle {
+    return Intl.message(
+      'Quick and direct speed dial directory for rescue and emergency services with one tap.',
+      name: 'emergency_numbers_subtitle',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Amount in foreign currency`
+  String get amount_foreign_currency {
+    return Intl.message(
+      'Amount in foreign currency',
+      name: 'amount_foreign_currency',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Amount in SYP`
+  String get amount_syp {
+    return Intl.message(
+      'Amount in SYP',
+      name: 'amount_syp',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Approximate value in SYP`
+  String get approx_value_syp {
+    return Intl.message(
+      'Approximate value in SYP',
+      name: 'approx_value_syp',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Approximate value in `
+  String get approx_value_in {
+    return Intl.message(
+      'Approximate value in ',
+      name: 'approx_value_in',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `SYP`
+  String get syp {
+    return Intl.message('SYP', name: 'syp', desc: '', args: []);
+  }
 }
 
 class AppLocalizationDelegate extends LocalizationsDelegate<S> {

@@ -94,5 +94,18 @@
   "logout_title": "تسجيل الخروج",
   "logout_confirmation": "هل تريد تسجيل الخروج من حسابك ؟",
   "cancel": "إلغاء",
-  "logout_button": "تسجيل الخروج"
+  "logout_button": "تسجيل الخروج",
+  "assistant_tools_title": "أدوات تهمك أثناء رحلتك في سوريا",
+  "currency_converter_title": "محول العملات",
+  "currency_converter_subtitle": "احسب قيمة العملات الأجنبية مقابل الليرة السورية مباشرة.",
+  "weather_title": "أحوال الطقس",
+  "weather_subtitle": "اختر محافظتك من بين 14 محافظة سورية واعرف الجو والنصائح الحالية.",
+  "emergency_numbers_title": "أرقام الطوارئ",
+  "emergency_numbers_subtitle": "دليل الاتصال السريع والمباشر لخدمات الإنقاذ والأمن بلمسة واحدة.",
+  "amount_foreign_currency": "المبلغ بالعملة الأجنبية",
+  "amount_syp": "المبلغ بالليرة السورية",
+  "approx_value_syp": "القيمة التقريبية بالليرة السورية",
+  "approx_value_in": "القيمة التقريبية بـ ",
+  "syp": "ل.س"
+
 }

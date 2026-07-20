@@ -33,7 +33,22 @@ class MessageLookup extends MessageLookupByLibrary {
     "alreadyHaveAccount": MessageLookupByLibrary.simpleMessage(
       "لديك حساب بالفعل ؟ ",
     ),
+    "amount_foreign_currency": MessageLookupByLibrary.simpleMessage(
+      "المبلغ بالعملة الأجنبية",
+    ),
+    "amount_syp": MessageLookupByLibrary.simpleMessage(
+      "المبلغ بالليرة السورية",
+    ),
+    "approx_value_in": MessageLookupByLibrary.simpleMessage(
+      "القيمة التقريبية بـ ",
+    ),
+    "approx_value_syp": MessageLookupByLibrary.simpleMessage(
+      "القيمة التقريبية بالليرة السورية",
+    ),
     "arabic": MessageLookupByLibrary.simpleMessage("العربية"),
+    "assistant_tools_title": MessageLookupByLibrary.simpleMessage(
+      "أدوات تهمك أثناء رحلتك في سوريا",
+    ),
     "backToLogin": MessageLookupByLibrary.simpleMessage("العودة لتسجيل الدخول"),
     "cancel": MessageLookupByLibrary.simpleMessage("إلغاء"),
     "change_language": MessageLookupByLibrary.simpleMessage("تغيير اللغة"),
@@ -46,6 +61,12 @@ class MessageLookup extends MessageLookupByLibrary {
     "confirmCode": MessageLookupByLibrary.simpleMessage("تأكيد الرمز"),
     "continueAsGuest": MessageLookupByLibrary.simpleMessage("المتابعة كضيف"),
     "culturalHeritage": MessageLookupByLibrary.simpleMessage("التراث الحضاري"),
+    "currency_converter_subtitle": MessageLookupByLibrary.simpleMessage(
+      "احسب قيمة العملات الأجنبية مقابل الليرة السورية مباشرة.",
+    ),
+    "currency_converter_title": MessageLookupByLibrary.simpleMessage(
+      "محول العملات",
+    ),
     "details": MessageLookupByLibrary.simpleMessage("التفاصيل"),
     "didntReceiveCode": MessageLookupByLibrary.simpleMessage("لم يصلك الرمز؟"),
     "directRouteGuidance": MessageLookupByLibrary.simpleMessage(
@@ -58,6 +79,12 @@ class MessageLookup extends MessageLookupByLibrary {
     "dontHaveAccount": MessageLookupByLibrary.simpleMessage("لا تمتلك حساب ؟ "),
     "emailHint": MessageLookupByLibrary.simpleMessage("أدخل بريدك الإلكتروني"),
     "emailTitle": MessageLookupByLibrary.simpleMessage("البريد الإلكتروني"),
+    "emergency_numbers_subtitle": MessageLookupByLibrary.simpleMessage(
+      "دليل الاتصال السريع والمباشر لخدمات الإنقاذ والأمن بلمسة واحدة.",
+    ),
+    "emergency_numbers_title": MessageLookupByLibrary.simpleMessage(
+      "أرقام الطوارئ",
+    ),
     "english": MessageLookupByLibrary.simpleMessage("English"),
     "enterFullCode": MessageLookupByLibrary.simpleMessage(
       "الرجاء إدخال الرمز كامل",
@@ -185,6 +212,7 @@ class MessageLookup extends MessageLookupByLibrary {
     "signUpButton": MessageLookupByLibrary.simpleMessage("إنشاء حساب"),
     "signUpNow": MessageLookupByLibrary.simpleMessage("قم بإنشاء حساب"),
     "startJourneyButton": MessageLookupByLibrary.simpleMessage("ابدأ الرحلة"),
+    "syp": MessageLookupByLibrary.simpleMessage("ل.س"),
     "take_photo_camera": MessageLookupByLibrary.simpleMessage(
       "التقاط صورة بالكاميرا",
     ),
@@ -200,6 +228,10 @@ class MessageLookup extends MessageLookupByLibrary {
     ),
     "verificationTitle": MessageLookupByLibrary.simpleMessage("رمز التحقق"),
     "viewAll": MessageLookupByLibrary.simpleMessage("عرض الكل"),
+    "weather_subtitle": MessageLookupByLibrary.simpleMessage(
+      "اختر محافظتك من بين 14 محافظة سورية واعرف الجو والنصائح الحالية.",
+    ),
+    "weather_title": MessageLookupByLibrary.simpleMessage("أحوال الطقس"),
     "welcome": MessageLookupByLibrary.simpleMessage("مرحباً "),
     "welcomeToSyria": MessageLookupByLibrary.simpleMessage("أهلاً بك في سوريا"),
   };
