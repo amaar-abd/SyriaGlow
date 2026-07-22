@@ -15,4 +15,5 @@ class AppRoutes {
   static const String allCategoriesView = 'AllCategoriesView';
   static const String favoriteView = 'FavoriteView';
   static const String currencyConverterView = 'CurrencyConverterView';
+  static const String emergencyView = 'EmergencyView';
 }
