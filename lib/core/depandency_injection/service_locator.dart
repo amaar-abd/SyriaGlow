@@ -9,6 +9,10 @@ import 'package:syria_glow/core/networking/dio_factory.dart';
 import 'package:syria_glow/core/services/notification_service.dart';
 import 'package:syria_glow/core/services/secure_storage_service.dart';
 import 'package:syria_glow/core/services/shared_preferences_service.dart';
+import 'package:syria_glow/features/assistant/data/datasources/weather_remote_data_source.dart';
+import 'package:syria_glow/features/assistant/data/repositories/weather_repository_impl.dart';
+import 'package:syria_glow/features/assistant/domain/repositories/weather_repository.dart';
+import 'package:syria_glow/features/assistant/presentation/manager/weather_cubit/weather_cubit.dart';
 import 'package:syria_glow/features/auth/data/datasources/auth_remote_data_source.dart';
 import 'package:syria_glow/features/auth/data/datasources/auth_remote_data_source_impl.dart';
 import 'package:syria_glow/features/auth/data/repos/auth_repository_impl.dart';
@@ -162,4 +166,10 @@ Future <void> setupServiceLocator() async {
     () => ProfileRepositoryImpl(profileRemoteDataSource: sl()),
   );
   sl.registerLazySingleton<ProfileCubit>(() => ProfileCubit(sl()));
+
+  sl.registerLazySingleton<WeatherRemoteDataSource>(() => WeatherRemoteDataSourceImpl(dio: Dio()));
+  sl.registerLazySingleton<WeatherRepository>(() => WeatherRepositoryImpl(weatherRemoteDataSource: sl()));
+  sl.registerFactory<WeatherCubit>(() => WeatherCubit(sl()));
+
+
 }
