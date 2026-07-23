@@ -45,6 +45,7 @@ app.*.map.json
 /android/app/release
 
 lib/core/networking/api_constants.dart
+lib/core/networking/weather_api_constants.dart
 
 # Firebase configuration files
 android/app/google-services.json
