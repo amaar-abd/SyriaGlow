@@ -81,7 +81,7 @@
   "notifications": "Notifications",
   "no_notifications": "No notifications at the moment",
   "notifications_empty_desc": "Here, we will send you the latest events, recommended places, and top tourist activities as soon as they become available.",
-  "change_language": "Change Language",
+  "change_language": "Language",
   "arabic": "العربية",
   "english": "English",
   "about_us": "About Us",
@@ -99,6 +99,7 @@
   "currency_converter_title": "Currency Converter",
   "currency_converter_subtitle": "Calculate foreign currency values against Syrian Pounds directly.",
   "weather_title": "Weather Conditions",
+  "weekly_forecast": "Upcoming Days Forecast",
   "weather_subtitle": "Select your governorate from 14 Syrian governorates to check current weather and tips.",
   "emergency_numbers_title": "Emergency Numbers",
   "emergency_numbers_subtitle": "Quick and direct speed dial directory for rescue and emergency services with one tap.",
@@ -106,5 +107,43 @@
   "amount_syp": "Amount in SYP",
   "approx_value_syp": "Approximate value in SYP",
   "approx_value_in": "Approximate value in ",
-  "syp": "SYP"
+  "syp": "SYP",
+  "humidity": "Humidity",
+  "wind": "Wind",
+  "kmh": "km/h",
+  "damascus": "Damascus",
+  "rif_dimashq": "Rif Dimashq",
+  "aleppo": "Aleppo",
+  "homs": "Homs",
+  "hama": "Hama",
+  "latakia": "Latakia",
+  "tartous": "Tartous",
+  "idlib": "Idlib",
+  "sweida": "Sweida",
+  "daraa": "Daraa",
+  "quneitra": "Quneitra",
+  "deir_ez_zor": "Deir ez-Zor",
+  "raqqa": "Raqqa",
+  "hasakah": "Hasakah",
+  "emergency_ambulance_title": "Emergency Ambulance Service",
+  "emergency_ambulance_desc": "For medical emergencies and critical cases",
+
+  "emergency_traffic_police_title": "Traffic Police",
+  "emergency_traffic_police_desc": "To report accidents and manage traffic flow",
+
+  "emergency_highway_patrol_title": "Highway Patrol",
+  "emergency_highway_patrol_desc": "For emergencies on intercity highways",
+
+  "emergency_fire_defense_title": "Fire & Civil Defense",
+  "emergency_fire_defense_desc": "For fires and major rescue operations",
+
+  "emergency_tourist_police_title": "Tourist Police",
+  "emergency_tourist_police_desc": "To assist, guide, and support tourists",
+
+  "emergency_tourism_complaints_title": "Ministry of Tourism Complaints",
+  "emergency_tourism_complaints_desc": "To receive feedback and visitor inquiries",
+
+  "emergency_public_police_title": "Criminal Security & Police",
+  "emergency_public_police_desc": "For general reports and security issues"
+
 }

@@ -30,6 +30,7 @@ class MessageLookup extends MessageLookupByLibrary {
       "الرجاء الموافقة على الشروط والأحكام للمتابعة",
     ),
     "airports": MessageLookupByLibrary.simpleMessage("مطارات"),
+    "aleppo": MessageLookupByLibrary.simpleMessage("حلب"),
     "alreadyHaveAccount": MessageLookupByLibrary.simpleMessage(
       "لديك حساب بالفعل ؟ ",
     ),
@@ -62,11 +63,14 @@ class MessageLookup extends MessageLookupByLibrary {
     "continueAsGuest": MessageLookupByLibrary.simpleMessage("المتابعة كضيف"),
     "culturalHeritage": MessageLookupByLibrary.simpleMessage("التراث الحضاري"),
     "currency_converter_subtitle": MessageLookupByLibrary.simpleMessage(
-      "احسب قيمة العملات الأجنبية مقابل الليرة السورية مباشرة.",
+      "احسب قيمة العملات الأجنبية مقابل الليرة السورية مباشرة",
     ),
     "currency_converter_title": MessageLookupByLibrary.simpleMessage(
       "محول العملات",
     ),
+    "damascus": MessageLookupByLibrary.simpleMessage("دمشق"),
+    "daraa": MessageLookupByLibrary.simpleMessage("درعا"),
+    "deir_ez_zor": MessageLookupByLibrary.simpleMessage("دير الزور"),
     "details": MessageLookupByLibrary.simpleMessage("التفاصيل"),
     "didntReceiveCode": MessageLookupByLibrary.simpleMessage("لم يصلك الرمز؟"),
     "directRouteGuidance": MessageLookupByLibrary.simpleMessage(
@@ -79,11 +83,53 @@ class MessageLookup extends MessageLookupByLibrary {
     "dontHaveAccount": MessageLookupByLibrary.simpleMessage("لا تمتلك حساب ؟ "),
     "emailHint": MessageLookupByLibrary.simpleMessage("أدخل بريدك الإلكتروني"),
     "emailTitle": MessageLookupByLibrary.simpleMessage("البريد الإلكتروني"),
+    "emergency_ambulance_desc": MessageLookupByLibrary.simpleMessage(
+      "للحالات الطبية الطارئة والحرجة",
+    ),
+    "emergency_ambulance_title": MessageLookupByLibrary.simpleMessage(
+      "منظومة الإسعاف السريع",
+    ),
+    "emergency_fire_defense_desc": MessageLookupByLibrary.simpleMessage(
+      "للحرائق وحالات الإنقاذ الكبرى",
+    ),
+    "emergency_fire_defense_title": MessageLookupByLibrary.simpleMessage(
+      "الإطفاء والدفاع المدني",
+    ),
+    "emergency_highway_patrol_desc": MessageLookupByLibrary.simpleMessage(
+      "للطوارئ على الطرق السريعة الخارجية",
+    ),
+    "emergency_highway_patrol_title": MessageLookupByLibrary.simpleMessage(
+      "أمن الطرقات",
+    ),
     "emergency_numbers_subtitle": MessageLookupByLibrary.simpleMessage(
-      "دليل الاتصال السريع والمباشر لخدمات الإنقاذ والأمن بلمسة واحدة.",
+      "دليل الاتصال السريع والمباشر لخدمات الإنقاذ والأمن",
     ),
     "emergency_numbers_title": MessageLookupByLibrary.simpleMessage(
       "أرقام الطوارئ",
+    ),
+    "emergency_public_police_desc": MessageLookupByLibrary.simpleMessage(
+      "للبلاغات العامة والمشاكل الأمنية",
+    ),
+    "emergency_public_police_title": MessageLookupByLibrary.simpleMessage(
+      "الأمن الجنائي والشرطة",
+    ),
+    "emergency_tourism_complaints_desc": MessageLookupByLibrary.simpleMessage(
+      "لتلقي ملاحظات الزوار والخدمات",
+    ),
+    "emergency_tourism_complaints_title": MessageLookupByLibrary.simpleMessage(
+      "شكاوى وزارة السياحة",
+    ),
+    "emergency_tourist_police_desc": MessageLookupByLibrary.simpleMessage(
+      "لمساعدة السياح والزوار والإرشاد",
+    ),
+    "emergency_tourist_police_title": MessageLookupByLibrary.simpleMessage(
+      "الشرطة السياحية",
+    ),
+    "emergency_traffic_police_desc": MessageLookupByLibrary.simpleMessage(
+      "للتبليغ عن الحوادث وتنظيم حركة السير",
+    ),
+    "emergency_traffic_police_title": MessageLookupByLibrary.simpleMessage(
+      "شرطة المرور",
     ),
     "english": MessageLookupByLibrary.simpleMessage("English"),
     "enterFullCode": MessageLookupByLibrary.simpleMessage(
@@ -105,11 +151,18 @@ class MessageLookup extends MessageLookupByLibrary {
     ),
     "fullNameHint": MessageLookupByLibrary.simpleMessage("أدخل اسمك الثلاثي"),
     "fullNameTitle": MessageLookupByLibrary.simpleMessage("الاسم الكامل"),
+    "hama": MessageLookupByLibrary.simpleMessage("حماة"),
+    "hasakah": MessageLookupByLibrary.simpleMessage("الحسكة"),
     "historicalPlaces": MessageLookupByLibrary.simpleMessage("أماكن أثرية"),
+    "homs": MessageLookupByLibrary.simpleMessage("حمص"),
     "hotels": MessageLookupByLibrary.simpleMessage("فنادق"),
+    "humidity": MessageLookupByLibrary.simpleMessage("الرطوبة"),
+    "idlib": MessageLookupByLibrary.simpleMessage("إدلب"),
     "invalidEmail": MessageLookupByLibrary.simpleMessage(
       "الرجاء إدخال بريد إلكتروني صحيح",
     ),
+    "kmh": MessageLookupByLibrary.simpleMessage("كم/سا"),
+    "latakia": MessageLookupByLibrary.simpleMessage("اللاذقية"),
     "loading_email": MessageLookupByLibrary.simpleMessage("user@email.com"),
     "loading_name": MessageLookupByLibrary.simpleMessage("تحميل الاسم..."),
     "loginButton": MessageLookupByLibrary.simpleMessage("تسجيل الدخول"),
@@ -187,6 +240,8 @@ class MessageLookup extends MessageLookupByLibrary {
     "profile_image_title": MessageLookupByLibrary.simpleMessage(
       "صورة الملف الشخصي",
     ),
+    "quneitra": MessageLookupByLibrary.simpleMessage("القنيطرة"),
+    "raqqa": MessageLookupByLibrary.simpleMessage("الرقة"),
     "religious": MessageLookupByLibrary.simpleMessage("ديني"),
     "requiredField": m0,
     "resendCode": MessageLookupByLibrary.simpleMessage("إعادة إرسال"),
@@ -197,6 +252,7 @@ class MessageLookup extends MessageLookupByLibrary {
       "تعيين كلمة مرور جديدة",
     ),
     "restaurants": MessageLookupByLibrary.simpleMessage("مطاعم"),
+    "rif_dimashq": MessageLookupByLibrary.simpleMessage("ريف دمشق"),
     "searchPlaceholder": MessageLookupByLibrary.simpleMessage(
       "ابحث عن أماكن، فعاليات أو معارض",
     ),
@@ -212,10 +268,12 @@ class MessageLookup extends MessageLookupByLibrary {
     "signUpButton": MessageLookupByLibrary.simpleMessage("إنشاء حساب"),
     "signUpNow": MessageLookupByLibrary.simpleMessage("قم بإنشاء حساب"),
     "startJourneyButton": MessageLookupByLibrary.simpleMessage("ابدأ الرحلة"),
+    "sweida": MessageLookupByLibrary.simpleMessage("السويداء"),
     "syp": MessageLookupByLibrary.simpleMessage("ل.س"),
     "take_photo_camera": MessageLookupByLibrary.simpleMessage(
       "التقاط صورة بالكاميرا",
     ),
+    "tartous": MessageLookupByLibrary.simpleMessage("طرطوس"),
     "termsOfService": MessageLookupByLibrary.simpleMessage("شروط الخدمة"),
     "trendingEventsAndExhibitions": MessageLookupByLibrary.simpleMessage(
       "المعارض والفعاليات الرائجة",
@@ -229,10 +287,14 @@ class MessageLookup extends MessageLookupByLibrary {
     "verificationTitle": MessageLookupByLibrary.simpleMessage("رمز التحقق"),
     "viewAll": MessageLookupByLibrary.simpleMessage("عرض الكل"),
     "weather_subtitle": MessageLookupByLibrary.simpleMessage(
-      "اختر محافظتك من بين 14 محافظة سورية واعرف الجو والنصائح الحالية.",
+      "اختر محافظتك من بين 14 محافظة سورية واعرف الجو والنصائح الحالية",
     ),
     "weather_title": MessageLookupByLibrary.simpleMessage("أحوال الطقس"),
+    "weekly_forecast": MessageLookupByLibrary.simpleMessage(
+      "توقعات الأيام القادمة",
+    ),
     "welcome": MessageLookupByLibrary.simpleMessage("مرحباً "),
     "welcomeToSyria": MessageLookupByLibrary.simpleMessage("أهلاً بك في سوريا"),
+    "wind": MessageLookupByLibrary.simpleMessage("الرياح"),
   };
 }

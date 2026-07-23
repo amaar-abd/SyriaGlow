@@ -749,10 +749,10 @@ class S {
     );
   }
 
-  /// `Change Language`
+  /// `Language`
   String get change_language {
     return Intl.message(
-      'Change Language',
+      'Language',
       name: 'change_language',
       desc: '',
       args: [],
@@ -894,6 +894,16 @@ class S {
     );
   }
 
+  /// `Upcoming Days Forecast`
+  String get weekly_forecast {
+    return Intl.message(
+      'Upcoming Days Forecast',
+      name: 'weekly_forecast',
+      desc: '',
+      args: [],
+    );
+  }
+
   /// `Select your governorate from 14 Syrian governorates to check current weather and tips.`
   String get weather_subtitle {
     return Intl.message(
@@ -967,6 +977,231 @@ class S {
   /// `SYP`
   String get syp {
     return Intl.message('SYP', name: 'syp', desc: '', args: []);
+  }
+
+  /// `Humidity`
+  String get humidity {
+    return Intl.message('Humidity', name: 'humidity', desc: '', args: []);
+  }
+
+  /// `Wind`
+  String get wind {
+    return Intl.message('Wind', name: 'wind', desc: '', args: []);
+  }
+
+  /// `km/h`
+  String get kmh {
+    return Intl.message('km/h', name: 'kmh', desc: '', args: []);
+  }
+
+  /// `Damascus`
+  String get damascus {
+    return Intl.message('Damascus', name: 'damascus', desc: '', args: []);
+  }
+
+  /// `Rif Dimashq`
+  String get rif_dimashq {
+    return Intl.message('Rif Dimashq', name: 'rif_dimashq', desc: '', args: []);
+  }
+
+  /// `Aleppo`
+  String get aleppo {
+    return Intl.message('Aleppo', name: 'aleppo', desc: '', args: []);
+  }
+
+  /// `Homs`
+  String get homs {
+    return Intl.message('Homs', name: 'homs', desc: '', args: []);
+  }
+
+  /// `Hama`
+  String get hama {
+    return Intl.message('Hama', name: 'hama', desc: '', args: []);
+  }
+
+  /// `Latakia`
+  String get latakia {
+    return Intl.message('Latakia', name: 'latakia', desc: '', args: []);
+  }
+
+  /// `Tartous`
+  String get tartous {
+    return Intl.message('Tartous', name: 'tartous', desc: '', args: []);
+  }
+
+  /// `Idlib`
+  String get idlib {
+    return Intl.message('Idlib', name: 'idlib', desc: '', args: []);
+  }
+
+  /// `Sweida`
+  String get sweida {
+    return Intl.message('Sweida', name: 'sweida', desc: '', args: []);
+  }
+
+  /// `Daraa`
+  String get daraa {
+    return Intl.message('Daraa', name: 'daraa', desc: '', args: []);
+  }
+
+  /// `Quneitra`
+  String get quneitra {
+    return Intl.message('Quneitra', name: 'quneitra', desc: '', args: []);
+  }
+
+  /// `Deir ez-Zor`
+  String get deir_ez_zor {
+    return Intl.message('Deir ez-Zor', name: 'deir_ez_zor', desc: '', args: []);
+  }
+
+  /// `Raqqa`
+  String get raqqa {
+    return Intl.message('Raqqa', name: 'raqqa', desc: '', args: []);
+  }
+
+  /// `Hasakah`
+  String get hasakah {
+    return Intl.message('Hasakah', name: 'hasakah', desc: '', args: []);
+  }
+
+  /// `Emergency Ambulance Service`
+  String get emergency_ambulance_title {
+    return Intl.message(
+      'Emergency Ambulance Service',
+      name: 'emergency_ambulance_title',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `For medical emergencies and critical cases`
+  String get emergency_ambulance_desc {
+    return Intl.message(
+      'For medical emergencies and critical cases',
+      name: 'emergency_ambulance_desc',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Traffic Police`
+  String get emergency_traffic_police_title {
+    return Intl.message(
+      'Traffic Police',
+      name: 'emergency_traffic_police_title',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `To report accidents and manage traffic flow`
+  String get emergency_traffic_police_desc {
+    return Intl.message(
+      'To report accidents and manage traffic flow',
+      name: 'emergency_traffic_police_desc',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Highway Patrol`
+  String get emergency_highway_patrol_title {
+    return Intl.message(
+      'Highway Patrol',
+      name: 'emergency_highway_patrol_title',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `For emergencies on intercity highways`
+  String get emergency_highway_patrol_desc {
+    return Intl.message(
+      'For emergencies on intercity highways',
+      name: 'emergency_highway_patrol_desc',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Fire & Civil Defense`
+  String get emergency_fire_defense_title {
+    return Intl.message(
+      'Fire & Civil Defense',
+      name: 'emergency_fire_defense_title',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `For fires and major rescue operations`
+  String get emergency_fire_defense_desc {
+    return Intl.message(
+      'For fires and major rescue operations',
+      name: 'emergency_fire_defense_desc',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Tourist Police`
+  String get emergency_tourist_police_title {
+    return Intl.message(
+      'Tourist Police',
+      name: 'emergency_tourist_police_title',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `To assist, guide, and support tourists`
+  String get emergency_tourist_police_desc {
+    return Intl.message(
+      'To assist, guide, and support tourists',
+      name: 'emergency_tourist_police_desc',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Ministry of Tourism Complaints`
+  String get emergency_tourism_complaints_title {
+    return Intl.message(
+      'Ministry of Tourism Complaints',
+      name: 'emergency_tourism_complaints_title',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `To receive feedback and visitor inquiries`
+  String get emergency_tourism_complaints_desc {
+    return Intl.message(
+      'To receive feedback and visitor inquiries',
+      name: 'emergency_tourism_complaints_desc',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Criminal Security & Police`
+  String get emergency_public_police_title {
+    return Intl.message(
+      'Criminal Security & Police',
+      name: 'emergency_public_police_title',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `For general reports and security issues`
+  String get emergency_public_police_desc {
+    return Intl.message(
+      'For general reports and security issues',
+      name: 'emergency_public_police_desc',
+      desc: '',
+      args: [],
+    );
   }
 }
 

@@ -30,6 +30,7 @@ class MessageLookup extends MessageLookupByLibrary {
       "Please accept the terms and conditions ",
     ),
     "airports": MessageLookupByLibrary.simpleMessage("Airports"),
+    "aleppo": MessageLookupByLibrary.simpleMessage("Aleppo"),
     "alreadyHaveAccount": MessageLookupByLibrary.simpleMessage(
       "Already have an account? ",
     ),
@@ -49,7 +50,7 @@ class MessageLookup extends MessageLookupByLibrary {
     ),
     "backToLogin": MessageLookupByLibrary.simpleMessage("Back to Login"),
     "cancel": MessageLookupByLibrary.simpleMessage("Cancel"),
-    "change_language": MessageLookupByLibrary.simpleMessage("Change Language"),
+    "change_language": MessageLookupByLibrary.simpleMessage("Language"),
     "checkSpelling": MessageLookupByLibrary.simpleMessage(
       "Make sure the words are spelled correctly",
     ),
@@ -69,6 +70,9 @@ class MessageLookup extends MessageLookupByLibrary {
     "currency_converter_title": MessageLookupByLibrary.simpleMessage(
       "Currency Converter",
     ),
+    "damascus": MessageLookupByLibrary.simpleMessage("Damascus"),
+    "daraa": MessageLookupByLibrary.simpleMessage("Daraa"),
+    "deir_ez_zor": MessageLookupByLibrary.simpleMessage("Deir ez-Zor"),
     "details": MessageLookupByLibrary.simpleMessage("Details"),
     "didntReceiveCode": MessageLookupByLibrary.simpleMessage(
       "Didn\'t receive the code?",
@@ -85,11 +89,53 @@ class MessageLookup extends MessageLookupByLibrary {
     ),
     "emailHint": MessageLookupByLibrary.simpleMessage("Enter your email"),
     "emailTitle": MessageLookupByLibrary.simpleMessage("Email Address"),
+    "emergency_ambulance_desc": MessageLookupByLibrary.simpleMessage(
+      "For medical emergencies and critical cases",
+    ),
+    "emergency_ambulance_title": MessageLookupByLibrary.simpleMessage(
+      "Emergency Ambulance Service",
+    ),
+    "emergency_fire_defense_desc": MessageLookupByLibrary.simpleMessage(
+      "For fires and major rescue operations",
+    ),
+    "emergency_fire_defense_title": MessageLookupByLibrary.simpleMessage(
+      "Fire & Civil Defense",
+    ),
+    "emergency_highway_patrol_desc": MessageLookupByLibrary.simpleMessage(
+      "For emergencies on intercity highways",
+    ),
+    "emergency_highway_patrol_title": MessageLookupByLibrary.simpleMessage(
+      "Highway Patrol",
+    ),
     "emergency_numbers_subtitle": MessageLookupByLibrary.simpleMessage(
       "Quick and direct speed dial directory for rescue and emergency services with one tap.",
     ),
     "emergency_numbers_title": MessageLookupByLibrary.simpleMessage(
       "Emergency Numbers",
+    ),
+    "emergency_public_police_desc": MessageLookupByLibrary.simpleMessage(
+      "For general reports and security issues",
+    ),
+    "emergency_public_police_title": MessageLookupByLibrary.simpleMessage(
+      "Criminal Security & Police",
+    ),
+    "emergency_tourism_complaints_desc": MessageLookupByLibrary.simpleMessage(
+      "To receive feedback and visitor inquiries",
+    ),
+    "emergency_tourism_complaints_title": MessageLookupByLibrary.simpleMessage(
+      "Ministry of Tourism Complaints",
+    ),
+    "emergency_tourist_police_desc": MessageLookupByLibrary.simpleMessage(
+      "To assist, guide, and support tourists",
+    ),
+    "emergency_tourist_police_title": MessageLookupByLibrary.simpleMessage(
+      "Tourist Police",
+    ),
+    "emergency_traffic_police_desc": MessageLookupByLibrary.simpleMessage(
+      "To report accidents and manage traffic flow",
+    ),
+    "emergency_traffic_police_title": MessageLookupByLibrary.simpleMessage(
+      "Traffic Police",
     ),
     "english": MessageLookupByLibrary.simpleMessage("English"),
     "enterFullCode": MessageLookupByLibrary.simpleMessage(
@@ -113,11 +159,18 @@ class MessageLookup extends MessageLookupByLibrary {
       "Enter your triple name",
     ),
     "fullNameTitle": MessageLookupByLibrary.simpleMessage("Full Name"),
+    "hama": MessageLookupByLibrary.simpleMessage("Hama"),
+    "hasakah": MessageLookupByLibrary.simpleMessage("Hasakah"),
     "historicalPlaces": MessageLookupByLibrary.simpleMessage("Historical "),
+    "homs": MessageLookupByLibrary.simpleMessage("Homs"),
     "hotels": MessageLookupByLibrary.simpleMessage("Hotels"),
+    "humidity": MessageLookupByLibrary.simpleMessage("Humidity"),
+    "idlib": MessageLookupByLibrary.simpleMessage("Idlib"),
     "invalidEmail": MessageLookupByLibrary.simpleMessage(
       "Please enter a valid email address",
     ),
+    "kmh": MessageLookupByLibrary.simpleMessage("km/h"),
+    "latakia": MessageLookupByLibrary.simpleMessage("Latakia"),
     "loading_email": MessageLookupByLibrary.simpleMessage("user@email.com"),
     "loading_name": MessageLookupByLibrary.simpleMessage("Loading name..."),
     "loginButton": MessageLookupByLibrary.simpleMessage("Login"),
@@ -193,6 +246,8 @@ class MessageLookup extends MessageLookupByLibrary {
     "profile_image_title": MessageLookupByLibrary.simpleMessage(
       "Profile Picture",
     ),
+    "quneitra": MessageLookupByLibrary.simpleMessage("Quneitra"),
+    "raqqa": MessageLookupByLibrary.simpleMessage("Raqqa"),
     "religious": MessageLookupByLibrary.simpleMessage("Religious"),
     "requiredField": m0,
     "resendCode": MessageLookupByLibrary.simpleMessage("Resend"),
@@ -203,6 +258,7 @@ class MessageLookup extends MessageLookupByLibrary {
       "Reset New Password",
     ),
     "restaurants": MessageLookupByLibrary.simpleMessage("Restaurants"),
+    "rif_dimashq": MessageLookupByLibrary.simpleMessage("Rif Dimashq"),
     "searchPlaceholder": MessageLookupByLibrary.simpleMessage(
       "Search for places, events, or exhibitions",
     ),
@@ -218,10 +274,12 @@ class MessageLookup extends MessageLookupByLibrary {
     "signUpButton": MessageLookupByLibrary.simpleMessage("Sign Up"),
     "signUpNow": MessageLookupByLibrary.simpleMessage("Create an account"),
     "startJourneyButton": MessageLookupByLibrary.simpleMessage("Start Journey"),
+    "sweida": MessageLookupByLibrary.simpleMessage("Sweida"),
     "syp": MessageLookupByLibrary.simpleMessage("SYP"),
     "take_photo_camera": MessageLookupByLibrary.simpleMessage(
       "Take a Photo with Camera",
     ),
+    "tartous": MessageLookupByLibrary.simpleMessage("Tartous"),
     "termsOfService": MessageLookupByLibrary.simpleMessage("Terms of Service"),
     "trendingEventsAndExhibitions": MessageLookupByLibrary.simpleMessage(
       "Trending exhibitions and events",
@@ -240,7 +298,11 @@ class MessageLookup extends MessageLookupByLibrary {
       "Select your governorate from 14 Syrian governorates to check current weather and tips.",
     ),
     "weather_title": MessageLookupByLibrary.simpleMessage("Weather Conditions"),
+    "weekly_forecast": MessageLookupByLibrary.simpleMessage(
+      "Upcoming Days Forecast",
+    ),
     "welcome": MessageLookupByLibrary.simpleMessage("Welcome "),
     "welcomeToSyria": MessageLookupByLibrary.simpleMessage("Welcome to Syria"),
+    "wind": MessageLookupByLibrary.simpleMessage("Wind"),
   };
 }
