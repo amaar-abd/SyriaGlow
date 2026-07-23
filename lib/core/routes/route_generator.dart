@@ -3,7 +3,8 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:syria_glow/core/depandency_injection/service_locator.dart';
 import 'package:syria_glow/core/routes/app_routes.dart';
 import 'package:syria_glow/features/assistant/presentation/views/currency_converter_view.dart';
-import 'package:syria_glow/features/assistant/presentation/widgets/emergency_view.dart';
+import 'package:syria_glow/features/assistant/presentation/views/emergency_view.dart';
+import 'package:syria_glow/features/assistant/presentation/views/weather_view.dart';
 import 'package:syria_glow/features/auth/presentation/manager/forgot_password_cubit/forgot_password_cubit.dart';
 import 'package:syria_glow/features/auth/presentation/views/forgote_password/forgote_password_view.dart';
 import 'package:syria_glow/features/auth/presentation/views/forgote_password/otp_verification_view.dart';
@@ -108,6 +109,10 @@ class RouteGenerator {
       case AppRoutes.emergencyView:
         return MaterialPageRoute(
           builder: (context) => const EmergencyView(),
+        );
+      case AppRoutes.weatherView:
+        return MaterialPageRoute(
+          builder: (context) => const WeatherView(),
         );
 
       default:
