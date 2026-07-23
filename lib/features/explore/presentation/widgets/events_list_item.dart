@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:syria_glow/core/extensions/context_extensions.dart';
+import 'package:syria_glow/core/extensions/landmark_localization_extensions.dart';
 import 'package:syria_glow/core/theme/app_colors.dart';
 import 'package:syria_glow/features/home/data/models/landmark_model.dart';
 
@@ -75,7 +76,7 @@ class EventListItem extends StatelessWidget {
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
                         Text(
-                          landmark.nameAr,
+                          landmark.name(context),
                           style: TextStyle(
                             color: AppColors.textDark,
                             fontSize: 12.sp,
@@ -95,7 +96,7 @@ class EventListItem extends StatelessWidget {
                             SizedBox(width: 4.w),
                             Expanded(
                               child: Text(
-                                landmark.address,
+                                landmark.addr(context),
                                 style: TextStyle(
                                   color: Colors.grey[600],
                                   fontSize: 10.sp,

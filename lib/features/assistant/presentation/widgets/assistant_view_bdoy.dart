@@ -4,7 +4,6 @@ import 'package:syria_glow/core/extensions/context_extensions.dart';
 import 'package:syria_glow/core/routes/app_routes.dart';
 import 'package:syria_glow/core/theme/app_colors.dart';
 import 'package:syria_glow/features/assistant/presentation/widgets/build_feature_card.dart';
-import 'package:syria_glow/features/assistant/presentation/widgets/weather_screen.dart';
 
 class AssistantViewBdoy extends StatelessWidget {
   const AssistantViewBdoy({super.key});
@@ -42,11 +41,8 @@ class AssistantViewBdoy extends StatelessWidget {
             color: AppColors.primaryGreen.withAlpha(100),
             iconColor: Colors.blue.shade700,
             onTap: () {
-              // Navigator.of(context).pushNamed(AppRoutes);
-              Navigator.push(
-                context,
-                MaterialPageRoute(builder: (context) => const WeatherScreen()),
-              );
+              Navigator.of(context).pushNamed(AppRoutes.weatherView);
+             
             },
           ),
           SizedBox(height: 16.h),
