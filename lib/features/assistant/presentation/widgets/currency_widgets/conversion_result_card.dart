@@ -64,13 +64,28 @@ class ConversionResultCard extends StatelessWidget {
               ),
               if (!isToSyp)
                 DropdownButton<String>(
-                  dropdownColor: const Color(0xFF022622),
+                  borderRadius: BorderRadius.circular(16.r),
+                  dropdownColor: AppColors.surfaceWhite,
                   icon: const Icon(
                     Icons.arrow_drop_down,
                     color: AppColors.goldSoft,
                   ),
                   value: selectedCurrency,
                   underline: const SizedBox(),
+                  selectedItemBuilder: (BuildContext context) {
+                    return exchangeRates.keys.map((curr) {
+                      return Center(
+                        child: Text(
+                          curr,
+                          style: TextStyle(
+                            color: AppColors.goldSoft,
+                            fontWeight: FontWeight.bold,
+                            fontSize: 14.sp,
+                          ),
+                        ),
+                      );
+                    }).toList();
+                  },
                   items: exchangeRates.keys.map((curr) {
                     return DropdownMenuItem<String>(
                       value: curr,
@@ -84,7 +99,7 @@ class ConversionResultCard extends StatelessWidget {
                           Text(
                             curr,
                             style: TextStyle(
-                              color: AppColors.goldSoft,
+                              color: AppColors.textDark,
                               fontWeight: FontWeight.bold,
                               fontSize: 14.sp,
                             ),
@@ -125,7 +140,7 @@ class ConversionResultCard extends StatelessWidget {
                     ],
                   )
                 : Text(
-                    '${NumberFormat('#,##0.00').format(result)} $selectedCurrency ${currencyFlags[selectedCurrency]}',
+                    '${NumberFormat('#,##0').format(result)} ${currencyFlags[selectedCurrency]} $selectedCurrency',
                     style: TextStyle(
                       fontSize: 30.sp,
                       fontWeight: FontWeight.bold,

@@ -22,12 +22,11 @@ class _CurrencyConverterViewBodyState extends State<CurrencyConverterViewBody> {
   final TextEditingController _amountController = TextEditingController();
 
   final Map<String, double> exchangeRates = const {
-    'USD': 13700,
-    'EUR': 16200,
-    'SAR': 4000,
-    'AED': 4080,
-    'TRY': 415,
-    'LBP': 0.17,
+    'USD': 133,
+    'EUR': 150,
+    'SAR': 35,
+    'AED': 36,
+    'TRY': 2.80,
   };
 
   final Map<String, String> currencyFlags = const {
@@ -36,7 +35,6 @@ class _CurrencyConverterViewBodyState extends State<CurrencyConverterViewBody> {
     'SAR': '🇸🇦',
     'AED': '🇦🇪',
     'TRY': '🇹🇷',
-    'LBP': '🇱🇧',
   };
 
   void _calculateConversion(String amount) {

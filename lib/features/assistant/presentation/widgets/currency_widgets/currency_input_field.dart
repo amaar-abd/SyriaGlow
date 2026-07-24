@@ -30,6 +30,7 @@ class CurrencyInputField extends StatelessWidget {
       elevation: 4,
       shadowColor: Colors.black.withAlpha(100),
       shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(16.r)),
+
       child: Padding(
         padding: EdgeInsets.symmetric(horizontal: 16.w, vertical: 8.h),
         child: Row(
@@ -62,7 +63,7 @@ class CurrencyInputField extends StatelessWidget {
                       color: AppColors.textDark,
                       fontWeight: FontWeight.bold,
                     ),
-                    hintText: '1,000.00',
+                    hintText: '100',
                     hintStyle: TextStyle(
                       color: AppColors.textGray.withAlpha(128),
                       fontWeight: FontWeight.w500,
