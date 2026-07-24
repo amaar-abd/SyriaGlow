@@ -14,7 +14,7 @@ class CategoriesData {
       ),
       Categories(
         title: localizations.airports,
-        icon: FontAwesomeIcons.planeDeparture,
+        icon: FontAwesomeIcons.planeUp,
         id: 4,
       ),
       Categories(

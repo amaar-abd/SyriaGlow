@@ -20,6 +20,11 @@ class ExploryPyCatecoryRow extends StatelessWidget {
         ),
 
         TextButton(
+          style: ButtonStyle(
+            overlayColor: WidgetStateProperty.all(
+              AppColors.primaryGreen.withAlpha(50),
+            ),
+          ),
           onPressed: () {
             Navigator.of(context).pushNamed(AppRoutes.allCategoriesView);
           },
