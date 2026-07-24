@@ -25,7 +25,8 @@ class SettingsItem extends StatelessWidget {
           padding: EdgeInsets.symmetric(vertical: 12.h, horizontal: 8.w),
           child: Row(
             children: [
-              Icon(icon, color: AppColors.elegantGold),
+              Icon(icon, color: AppColors.elegantGold, size: 25.r),
+
               SizedBox(width: 16.w),
               Text(
                 title,

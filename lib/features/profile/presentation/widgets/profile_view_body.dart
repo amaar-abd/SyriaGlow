@@ -59,18 +59,18 @@ class _ProfileViewBodyState extends State<ProfileViewBody> {
                 isUploading: isUploading,
                 imageUrl: profileData?.imageUrl ?? '',
               ),
-              SizedBox(height: 15.h),
+              SizedBox(height: 10.h),
               ProfileInfoCard(
                 name: profileData?.name,
                 email: profileData?.email,
               ),
-              SizedBox(height: 16.h),
+              SizedBox(height: 10.h),
               ProfileSettingsCard(),
               SizedBox(height: 24.h),
 
               LogoutButton(
                 onTap: () {
-                  showSignOutDialog(context,context.read<LogoutCubit>());
+                  showSignOutDialog(context, context.read<LogoutCubit>());
                 },
               ),
 

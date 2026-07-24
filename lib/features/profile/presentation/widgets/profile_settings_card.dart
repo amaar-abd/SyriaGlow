@@ -39,7 +39,7 @@ class _ProfileSettingsCardState extends State<ProfileSettingsCard> {
         child: Column(
           children: [
             SettingsItem(
-              icon: Icons.favorite_border,
+              icon: Icons.favorite,
               title: context.l10n.favorite,
               onTap: () {
                 Navigator.of(context).pushNamed(AppRoutes.favoriteView);
@@ -48,10 +48,14 @@ class _ProfileSettingsCardState extends State<ProfileSettingsCard> {
             const Divider(color: AppColors.backgroundLight, thickness: 1.2),
             ListTile(
               contentPadding: EdgeInsets.symmetric(horizontal: 8.w),
-              leading: const Icon(
-                Icons.notifications_none,
-                color: AppColors.elegantGold,
-              ),
+              leading:
+                 
+                   Icon(
+                    Icons.notifications,
+                    size: 25.r,
+                    color: AppColors.elegantGold,
+                  ),
+              
               title: Text(
                 context.l10n.notifications,
                 style: TextTheme.of(context).bodyLarge?.copyWith(
@@ -74,7 +78,12 @@ class _ProfileSettingsCardState extends State<ProfileSettingsCard> {
             const Divider(color: AppColors.backgroundLight, thickness: 1.2),
             ListTile(
               contentPadding: EdgeInsets.symmetric(horizontal: 8.w),
-              leading: const Icon(Icons.language, color: AppColors.elegantGold),
+              leading:   Icon(
+                    Icons.language,
+                    color: AppColors.elegantGold,
+                    size: 25.r,
+                  ),
+               
               title: Text(
                 context.l10n.change_language,
                 style: TextTheme.of(context).bodyLarge?.copyWith(
@@ -91,8 +100,8 @@ class _ProfileSettingsCardState extends State<ProfileSettingsCard> {
                     Icons.arrow_drop_down,
                     color: AppColors.elegantGold,
                   ),
-                  onChanged: (String? newValue) async {
-                    if (newValue != null) {
+                  onChanged: (newValue) async {
+                    if (newValue != null && newValue != _selectedLanguage) {
                       context.read<LanguageCubit>().toggleLanguage();
                       await Future.delayed(Duration.zero);
 
@@ -133,13 +142,10 @@ class _ProfileSettingsCardState extends State<ProfileSettingsCard> {
             ),
             const Divider(color: AppColors.backgroundLight, thickness: 1.2),
 
-            // من نحن
             SettingsItem(
               icon: Icons.info_outline,
               title: context.l10n.about_us,
-              onTap: () {
-                // الانتقال لصفحة من نحن
-              },
+              onTap: () {},
             ),
           ],
         ),
