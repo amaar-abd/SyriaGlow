@@ -579,9 +579,9 @@ class S {
     return Intl.message('My Trips', name: 'nav_my_trips', desc: '', args: []);
   }
 
-  /// `Favorites`
-  String get nav_favorites {
-    return Intl.message('Favorites', name: 'nav_favorites', desc: '', args: []);
+  /// `Services`
+  String get nav_services {
+    return Intl.message('Services', name: 'nav_services', desc: '', args: []);
   }
 
   /// `Profile`

@@ -193,10 +193,10 @@ class MessageLookup extends MessageLookupByLibrary {
     ),
     "nature": MessageLookupByLibrary.simpleMessage("Nature"),
     "nav_explore": MessageLookupByLibrary.simpleMessage("Explore"),
-    "nav_favorites": MessageLookupByLibrary.simpleMessage("Favorites"),
     "nav_home": MessageLookupByLibrary.simpleMessage("Home"),
     "nav_my_trips": MessageLookupByLibrary.simpleMessage("My Trips"),
     "nav_profile": MessageLookupByLibrary.simpleMessage("Profile"),
+    "nav_services": MessageLookupByLibrary.simpleMessage("Services"),
     "newPasswordLabel": MessageLookupByLibrary.simpleMessage("New Password"),
     "nextButton": MessageLookupByLibrary.simpleMessage("Next"),
     "noLandmarksInCategory": MessageLookupByLibrary.simpleMessage(

@@ -60,8 +60,8 @@ class _CustomBottomNavBarState extends State<CustomBottomNavBar> {
                     duration: const Duration(milliseconds: 300),
                     curve: Curves.easeInOut,
                     padding: EdgeInsets.symmetric(
-                      vertical: 8.h,
-                      horizontal: 2.w,
+                      vertical: 6.h,
+                      horizontal: 0,
                     ),
                     decoration: BoxDecoration(
                       color: isSelected

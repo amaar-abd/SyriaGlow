@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:syria_glow/core/extensions/context_extensions.dart';
+import 'package:syria_glow/features/assistant/presentation/views/assistant_view.dart';
 import 'package:syria_glow/features/explore/presentation/views/explore_view.dart';
 import 'package:syria_glow/features/home/presentation/views/home_view.dart';
 import 'package:syria_glow/features/main_layout/presentation/models/nav_bar_item_model.dart';
@@ -20,8 +21,7 @@ class _MainLayoutViewBodyState extends State<MainLayoutViewBody> {
   final List<Widget> _screens = [
     const HomeView(),
     const ExploreView(),
-    const Center(child: Text('شاشة العروض / سيريا غلو')),
-    const Center(child: Text('شاشة الحساب (saved)')),
+    const AssistantView()   ,
     const ProfileView(),
   ];
   @override
@@ -38,14 +38,9 @@ class _MainLayoutViewBodyState extends State<MainLayoutViewBody> {
         activeIcon: FontAwesomeIcons.solidCompass,
       ),
       NavBarItemModel(
-        label: context.l10n.nav_my_trips,
-        icon: FontAwesomeIcons.map,
-        activeIcon: FontAwesomeIcons.solidMap,
-      ),
-      NavBarItemModel(
-        label: context.l10n.nav_favorites,
-        icon: FontAwesomeIcons.floppyDisk,
-        activeIcon: FontAwesomeIcons.solidFloppyDisk,
+        label: context.l10n.nav_services,
+        icon: FontAwesomeIcons.rectangleList,
+        activeIcon: FontAwesomeIcons.solidRectangleList,
       ),
       NavBarItemModel(
         label: context.l10n.nav_profile,
