@@ -1,6 +1,7 @@
 import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:skeletonizer/skeletonizer.dart';
 import 'package:syria_glow/core/extensions/context_extensions.dart';
 import 'package:syria_glow/core/extensions/landmark_localization_extensions.dart';
 import 'package:syria_glow/core/theme/app_colors.dart';
@@ -22,12 +23,8 @@ class PopularItem extends StatelessWidget {
       height: context.height * 0.23,
       decoration: BoxDecoration(
         borderRadius: BorderRadius.circular(16.r),
-        boxShadow: [
-          BoxShadow(
-            color: Colors.black.withAlpha(30),
-            blurRadius: 10,
-            offset: const Offset(0, 4),
-          ),
+        boxShadow: const [
+          BoxShadow(color: Colors.black12, blurRadius: 6, offset: Offset(0, 4)),
         ],
       ),
       child: ClipRRect(
@@ -37,42 +34,68 @@ class PopularItem extends StatelessWidget {
             Positioned.fill(
               child: Container(
                 color: AppColors.primaryGreen,
-                child: CachedNetworkImage(
-                  imageUrl: imageUrl,
-                  fit: BoxFit.cover,
-                  placeholder: (context, url) => Center(
-                    child: CircularProgressIndicator(
-                      color: Color(0xFFD4AF37),
-                      strokeWidth: 3,
+                child: Hero(
+                  tag: landmark.id,
+                  createRectTween: (begin, end) {
+                    return MaterialRectArcTween(begin: begin, end: end);
+                  },
+                  child: CachedNetworkImage(
+                    imageUrl: imageUrl,
+                    fit: BoxFit.cover,
+                    memCacheWidth: 800,
+                    placeholder: (context, url) => Center(
+                      child: CircularProgressIndicator(
+                        color: Color(0xFFD4AF37),
+                        strokeWidth: 3,
+                      ),
                     ),
-                  ),
-                  errorWidget: (context, url, error) => Container(
-                    color: AppColors.primaryGreen.withAlpha(26),
-                    child: Icon(
-                      Icons.image_not_supported_rounded,
-                      color: AppColors.error.withAlpha(179),
-                      size: 32.sp,
+                    errorWidget: (context, url, error) => Container(
+                      color: AppColors.primaryGreen.withAlpha(26),
+                      child: Icon(
+                        Icons.image_not_supported_rounded,
+                        color: AppColors.error.withAlpha(179),
+                        size: 32.sp,
+                      ),
                     ),
                   ),
                 ),
               ),
             ),
-            Positioned.fill(
-              child: Container(
-                decoration: BoxDecoration(
-                  gradient: LinearGradient(
-                    begin: Alignment.topCenter,
-                    end: Alignment.bottomCenter,
-                    colors: [
-                      Colors.transparent,
-                      AppColors.primaryGreen.withAlpha(102),
-                      AppColors.primaryGreen.withAlpha(242),
-                    ],
-                    stops: const [0.4, 0.7, 1.0],
+                 if (imageUrl.isEmpty)
+              Positioned.fill(
+                child: Container(
+                  decoration: BoxDecoration(
+                    gradient: LinearGradient(
+                      begin: Alignment.topCenter,
+                      end: Alignment.bottomCenter,
+                      colors: [
+                        Colors.transparent,
+                        AppColors.textGray.withAlpha(50),
+                        AppColors.textGray.withAlpha(40),
+                      ],
+                      stops: const [0.4, 0.7, 1.0],
+                    ),
                   ),
                 ),
               ),
-            ),
+            if (imageUrl.isNotEmpty)
+              Positioned.fill(
+                child: Container(
+                  decoration: BoxDecoration(
+                    gradient: LinearGradient(
+                      begin: Alignment.topCenter,
+                      end: Alignment.bottomCenter,
+                      colors: [
+                        Colors.transparent,
+                        AppColors.primaryGreen.withAlpha(102),
+                        AppColors.primaryGreen.withAlpha(242),
+                      ],
+                      stops: const [0.4, 0.7, 1.0],
+                    ),
+                  ),
+                ),
+              ),
+             
             Positioned(
               bottom: 0,
               left: 0,
@@ -140,7 +163,7 @@ class PopularItem extends StatelessWidget {
                 color: Colors.transparent,
                 child: InkWell(
                   borderRadius: BorderRadius.circular(16.r),
-                  splashColor: Colors.white.withAlpha(30),
+
                   onTap: onTap,
                 ),
               ),

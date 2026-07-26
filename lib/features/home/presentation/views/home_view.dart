@@ -29,7 +29,7 @@ class HomeView extends StatelessWidget {
           children: [
             BlocBuilder<ProfileCubit, ProfileState>(
               builder: (context, state) {
-                bool isUploading = state is ProfileImageUploading;
+                bool isloading = state is ProfileLoading;
                 if (state is ProfileSuccess) {
                   return Container(
                     padding: EdgeInsets.all(2.w),
@@ -40,7 +40,7 @@ class HomeView extends StatelessWidget {
                     child: CircleAvatar(
                       radius: 20.r,
                       backgroundColor: AppColors.surfaceWhite,
-                      child: isUploading
+                      child: isloading
                           ? Padding(
                               padding: EdgeInsets.all(8.r),
                               child: CircularProgressIndicator(

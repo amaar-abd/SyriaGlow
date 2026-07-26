@@ -55,16 +55,22 @@ class _DetailsImageSliderState extends State<DetailsImageSlider> {
                   });
                 },
                 itemBuilder: (context, index) {
-                  return CachedNetworkImage(
-                    imageUrl: images[index].image,
-                    fit: BoxFit.cover,
-                    placeholder: (context, url) => const Center(
-                      child: CircularProgressIndicator(
-                        color:  Color(0xFFD4AF37),strokeWidth: 3, 
+                  return Hero(
+                    tag:widget.landmark.id ,
+                     createRectTween: (begin, end) {
+                    return MaterialRectArcTween(begin: begin, end: end);
+                  },
+                    child: CachedNetworkImage(
+                      imageUrl: images[index].image,
+                      fit: BoxFit.cover,
+                      placeholder: (context, url) => const Center(
+                        child: CircularProgressIndicator(
+                          color:  Color(0xFFD4AF37),strokeWidth: 3, 
+                        ),
                       ),
+                      errorWidget: (context, url, error) =>
+                          const Icon(Icons.broken_image, size: 50),
                     ),
-                    errorWidget: (context, url, error) =>
-                        const Icon(Icons.broken_image, size: 50),
                   );
                 },
               )

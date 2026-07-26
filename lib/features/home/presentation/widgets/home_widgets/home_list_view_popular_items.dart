@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-// import 'package:flutter_animate/flutter_animate.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:syria_glow/core/routes/app_routes.dart';
 import 'package:syria_glow/features/home/data/models/landmark_model.dart';
@@ -10,40 +9,29 @@ class HomeListViewPopularItems extends StatelessWidget {
   final List<Landmark> landmarks;
   @override
   Widget build(BuildContext context) {
-    return SliverLayoutBuilder(
-      builder: (context, orientation) {
-        final isLandscape =
-            MediaQuery.of(context).orientation == Orientation.landscape;
+    final isLandscape = MediaQuery.of(context).orientation == Orientation.landscape;
 
-        if (isLandscape) {
-          return SliverGrid.builder(
-            itemCount: landmarks.length,
-            gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
-              crossAxisCount: 2,
-              mainAxisSpacing: 10.h,
-              crossAxisSpacing: 15.w,
-              childAspectRatio: 2,
-            ),
-            itemBuilder: (context, index) {
-              return _buildAnimatedPopularItem(
-                context,
-                landmark: landmarks[index],
-              );
-            },
-          );
-        }
+    if (isLandscape) {
+      return SliverGrid.builder(
+        itemCount: landmarks.length,
+        gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
+          crossAxisCount: 2,
+          mainAxisSpacing: 10.h,
+          crossAxisSpacing: 15.w,
+          childAspectRatio: 2,
+        ),
+        itemBuilder: (context, index) {
+          return _buildAnimatedPopularItem(context, landmark: landmarks[index]);
+        },
+      );
+    }
 
-        return SliverList.builder(
-          itemCount: landmarks.length,
-          itemBuilder: (context, index) {
-            return Padding(
-              padding: EdgeInsets.only(bottom: 10.h),
-              child: _buildAnimatedPopularItem(
-                context,
-                landmark: landmarks[index],
-              ),
-            );
-          },
+    return SliverList.builder(
+      itemCount: landmarks.length,
+      itemBuilder: (context, index) {
+        return Padding(
+          padding: EdgeInsets.only(bottom: 10.h),
+          child: _buildAnimatedPopularItem(context, landmark: landmarks[index]),
         );
       },
     );
@@ -54,7 +42,6 @@ class HomeListViewPopularItems extends StatelessWidget {
     required Landmark landmark,
   }) {
     return PopularItem(
-      // key: ValueKey('popular_${landmark.id}'),
       landmark: landmark,
       onTap: () {
         Navigator.pushNamed(
@@ -64,17 +51,5 @@ class HomeListViewPopularItems extends StatelessWidget {
         );
       },
     );
-    // .animate()
-    // .fade(
-    //   delay: const Duration(milliseconds: 100),
-    //   duration: const Duration(milliseconds: 350),
-    //   curve: Curves.easeOut,
-    // )
-    // .slideX(
-    //   begin: 0.15,
-    //   end: 0.0,
-    //   duration: const Duration(milliseconds: 300),
-    //   curve: Curves.easeOutQuad,
-    // );
   }
 }

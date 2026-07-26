@@ -21,11 +21,13 @@ class UserInformationColumn extends StatelessWidget {
               TextSpan(
                 children: [
                   TextSpan(
-                    text: context.l10n.welcome ,
+                    text: context.l10n.welcome,
                     style: context.textTheme.bodyMedium,
                   ),
                   TextSpan(
-                    text:sl<SharedPreferencesService>().getString(AppConstants.username),
+                    text: sl<SharedPreferencesService>().getString(
+                      AppConstants.username,
+                    ),
                     style: context.textTheme.bodyMedium?.copyWith(
                       color: AppColors.elegantGold,
                       fontWeight: FontWeight.bold,
@@ -35,20 +37,19 @@ class UserInformationColumn extends StatelessWidget {
               ),
             ),
             Text('  👋', style: TextStyle(fontSize: 16.r))
-                .animate(
-                  onPlay: (controller) => controller.repeat(reverse: true),
-                )
+                .animate()
                 .rotate(
                   begin: -0.04,
                   end: 0.02,
                   duration: 600.ms,
                   curve: Curves.easeInOut,
-                ).slideX(
-      begin: -0.05,
-      end: 0.05,
-      duration: 600.ms,
-      curve: Curves.easeInOut,
-    ),
+                )
+                .slideX(
+                  begin: -0.05,
+                  end: 0.05,
+                  duration: 600.ms,
+                  curve: Curves.easeInOut,
+                ),
           ],
         ),
         SizedBox(height: 2.h),
