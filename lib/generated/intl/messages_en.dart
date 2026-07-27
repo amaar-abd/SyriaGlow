@@ -179,7 +179,7 @@ class MessageLookup extends MessageLookupByLibrary {
     ),
     "loginOr": MessageLookupByLibrary.simpleMessage("Or"),
     "loginSubtitle": MessageLookupByLibrary.simpleMessage(
-      "Explore the fragrance of history with a modern touch",
+      "Explore the fragrance of history",
     ),
     "loginText": MessageLookupByLibrary.simpleMessage("Login"),
     "logout": MessageLookupByLibrary.simpleMessage("Logout"),

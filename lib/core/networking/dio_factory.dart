@@ -1,5 +1,4 @@
 import 'package:dio/dio.dart';
-import 'package:flutter/foundation.dart';
 import 'package:syria_glow/core/networking/api_constants.dart';
 
 class DioFactory {
@@ -19,16 +18,16 @@ class DioFactory {
 
       _dio = Dio(baseOptions);
 
-      if (_dio != null && kDebugMode) {
-        _dio!.interceptors.add(
-          LogInterceptor(
-            requestHeader: true,
-            requestBody: true,
-            responseBody: true,
-            error: true,
-          ),
-        );
-      }
+      // if (_dio != null && kDebugMode) {
+      //   _dio!.interceptors.add(
+      //     LogInterceptor(
+      //       requestHeader: true,
+      //       requestBody: true,
+      //       responseBody: true,
+      //       error: true,
+      //     ),
+      //   );
+      // }
     }
       return _dio!;
   }

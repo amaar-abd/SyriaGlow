@@ -54,10 +54,10 @@ class S {
     return Localizations.of<S>(context, S);
   }
 
-  /// `Explore the fragrance of history with a modern touch`
+  /// `Explore the fragrance of history`
   String get loginSubtitle {
     return Intl.message(
-      'Explore the fragrance of history with a modern touch',
+      'Explore the fragrance of history',
       name: 'loginSubtitle',
       desc: '',
       args: [],
