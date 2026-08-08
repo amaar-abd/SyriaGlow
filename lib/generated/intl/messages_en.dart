@@ -159,6 +159,10 @@ class MessageLookup extends MessageLookupByLibrary {
       "Enter your triple name",
     ),
     "fullNameTitle": MessageLookupByLibrary.simpleMessage("Full Name"),
+    "guest_email": MessageLookupByLibrary.simpleMessage(
+      "Log in to access all features",
+    ),
+    "guest_name": MessageLookupByLibrary.simpleMessage("Guest"),
     "hama": MessageLookupByLibrary.simpleMessage("Hama"),
     "hasakah": MessageLookupByLibrary.simpleMessage("Hasakah"),
     "historicalPlaces": MessageLookupByLibrary.simpleMessage("Historical "),
@@ -171,8 +175,6 @@ class MessageLookup extends MessageLookupByLibrary {
     ),
     "kmh": MessageLookupByLibrary.simpleMessage("km/h"),
     "latakia": MessageLookupByLibrary.simpleMessage("Latakia"),
-    "loading_email": MessageLookupByLibrary.simpleMessage("user@email.com"),
-    "loading_name": MessageLookupByLibrary.simpleMessage("Loading name..."),
     "loginButton": MessageLookupByLibrary.simpleMessage("Login"),
     "loginNowDesc": MessageLookupByLibrary.simpleMessage(
       "You can now log in with your new password",

@@ -151,6 +151,10 @@ class MessageLookup extends MessageLookupByLibrary {
     ),
     "fullNameHint": MessageLookupByLibrary.simpleMessage("أدخل اسمك الثلاثي"),
     "fullNameTitle": MessageLookupByLibrary.simpleMessage("الاسم الكامل"),
+    "guest_email": MessageLookupByLibrary.simpleMessage(
+      "سجل الدخول للاستمتاع بكافة الميزات",
+    ),
+    "guest_name": MessageLookupByLibrary.simpleMessage("زائر"),
     "hama": MessageLookupByLibrary.simpleMessage("حماة"),
     "hasakah": MessageLookupByLibrary.simpleMessage("الحسكة"),
     "historicalPlaces": MessageLookupByLibrary.simpleMessage("أماكن أثرية"),
@@ -163,8 +167,6 @@ class MessageLookup extends MessageLookupByLibrary {
     ),
     "kmh": MessageLookupByLibrary.simpleMessage("كم/سا"),
     "latakia": MessageLookupByLibrary.simpleMessage("اللاذقية"),
-    "loading_email": MessageLookupByLibrary.simpleMessage("user@email.com"),
-    "loading_name": MessageLookupByLibrary.simpleMessage("تحميل الاسم..."),
     "loginButton": MessageLookupByLibrary.simpleMessage("تسجيل الدخول"),
     "loginNowDesc": MessageLookupByLibrary.simpleMessage(
       "يمكنك الآن تسجيل الدخول بكلمة المرور الجديدة.",

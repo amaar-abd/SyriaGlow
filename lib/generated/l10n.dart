@@ -694,21 +694,16 @@ class S {
     return Intl.message('Details', name: 'details', desc: '', args: []);
   }
 
-  /// `Loading name...`
-  String get loading_name {
-    return Intl.message(
-      'Loading name...',
-      name: 'loading_name',
-      desc: '',
-      args: [],
-    );
+  /// `Guest`
+  String get guest_name {
+    return Intl.message('Guest', name: 'guest_name', desc: '', args: []);
   }
 
-  /// `user@email.com`
-  String get loading_email {
+  /// `Log in to access all features`
+  String get guest_email {
     return Intl.message(
-      'user@email.com',
-      name: 'loading_email',
+      'Log in to access all features',
+      name: 'guest_email',
       desc: '',
       args: [],
     );

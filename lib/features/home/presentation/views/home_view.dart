@@ -9,6 +9,7 @@ import 'package:syria_glow/core/theme/app_colors.dart';
 import 'package:syria_glow/features/home/presentation/manager/home_cubit/home_cubit.dart';
 import 'package:syria_glow/features/home/presentation/widgets/home_widgets/home_view_body.dart';
 import 'package:syria_glow/features/home/presentation/widgets/home_widgets/initial_user_icon.dart';
+import 'package:syria_glow/features/home/presentation/widgets/home_widgets/loading_widget_user_avatar.dart';
 import 'package:syria_glow/features/home/presentation/widgets/home_widgets/location_info_widget.dart';
 import 'package:syria_glow/features/notifications/presentation/manager/notification_cubit/notifications_cubit.dart';
 import 'package:syria_glow/features/profile/presentation/manager/profile_cubit/profile_cubit.dart';
@@ -29,49 +30,44 @@ class HomeView extends StatelessWidget {
           children: [
             BlocBuilder<ProfileCubit, ProfileState>(
               builder: (context, state) {
-                bool isloading = state is ProfileLoading;
+                if (state is ProfileLoading) {
+                  return LoadingWidgetUserAvatar();
+                }
                 if (state is ProfileSuccess) {
-                  return Container(
-                    padding: EdgeInsets.all(2.w),
-                    decoration: BoxDecoration(
-                      color: AppColors.elegantGold,
-                      borderRadius: BorderRadius.circular(35.r),
-                    ),
-                    child: CircleAvatar(
-                      radius: 20.r,
-                      backgroundColor: AppColors.surfaceWhite,
-                      child: isloading
-                          ? Padding(
-                              padding: EdgeInsets.all(8.r),
+                  final hasImage =
+                      state.profile.imageUrl != null &&
+                      state.profile.imageUrl!.trim().isNotEmpty;
+                  if (hasImage) {
+                    return Container(
+                      padding: EdgeInsets.all(2.w),
+                      decoration: BoxDecoration(
+                        color: AppColors.elegantGold,
+                        borderRadius: BorderRadius.circular(35.r),
+                      ),
+                      child: ClipOval(
+                        child: CachedNetworkImage(
+                          imageUrl: state.profile.imageUrl!,
+                          width: 40.w,
+                          height: 40.h,
+                          fit: BoxFit.cover,
+                          placeholder: (context, url) => CircleAvatar(
+                            radius: 20.r,
+                            backgroundColor: AppColors.surfaceWhite,
+                            child: ClipOval(
                               child: CircularProgressIndicator(
                                 color: AppColors.primaryGreen,
                                 strokeWidth: 2,
                               ),
-                            )
-                          : state.profile.imageUrl != null
-                          ? ClipOval(
-                              child: CachedNetworkImage(
-                                imageUrl: state.profile.imageUrl!,
-                                width: 40.w,
-                                height: 40.h,
-                                fit: BoxFit.cover,
-                                placeholder: (context, url) => CircleAvatar(
-                                  radius: 20.r,
-                                  backgroundColor: AppColors.surfaceWhite,
-                                  child: ClipOval(
-                                    child: CircularProgressIndicator(
-                                      color: AppColors.primaryGreen,
-                                      strokeWidth: 2,
-                                    ),
-                                  ),
-                                ),
-                              ),
-                            )
-                          : const InitialUserIcon()
-                    ),
-                  );
+                            ),
+                          ),
+                          errorWidget: (context, url, error) =>
+                              const InitialUserIcon(),
+                        ),
+                      ),
+                    );
+                  }
                 }
-                return  const InitialUserIcon();
+                return const InitialUserIcon();
               },
             ),
             SizedBox(width: 10.w),

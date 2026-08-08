@@ -15,6 +15,7 @@ class ProfileView extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
+         iconTheme: IconThemeData(color: AppColors.backgroundLight),
         title:  Text(
           context.l10n.profile,
           style: TextTheme.of(context).bodyLarge?.copyWith(

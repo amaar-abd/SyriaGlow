@@ -28,7 +28,7 @@ class ProfileInfoCard extends StatelessWidget {
         child: Column(
           children: [
             Text(
-              name ?? context.l10n.loading_name,
+              name ?? context.l10n.guest_name,
               textAlign: TextAlign.center,
               style: TextStyle(
                 fontSize: 20.sp,
@@ -38,7 +38,7 @@ class ProfileInfoCard extends StatelessWidget {
             ),
             SizedBox(height: 6.h),
             Text(
-             email ?? context.l10n.loading_email,
+             email ?? context.l10n.guest_email,
               textAlign: TextAlign.center,
               style: TextStyle(
                 fontSize: 14.sp,
