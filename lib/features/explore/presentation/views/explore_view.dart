@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:syria_glow/core/depandency_injection/service_locator.dart';
 import 'package:syria_glow/features/explore/presentation/manager/explore_cubit/explore_cubit.dart';
@@ -9,10 +10,19 @@ class ExploreView extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return SafeArea(
-      child: BlocProvider(
-        create: (context) => sl.get<ExploreCubit>()..events(),
-        child: const ExploreViewBody(),
+    return AnnotatedRegion<SystemUiOverlayStyle>(
+      value: const SystemUiOverlayStyle(
+        statusBarColor: Colors.transparent,
+        statusBarIconBrightness: Brightness.dark,
+        statusBarBrightness: Brightness.light,
+      ),
+      child: Scaffold(
+        body: SafeArea(
+          child: BlocProvider(
+            create: (context) => sl.get<ExploreCubit>()..events(),
+            child: const ExploreViewBody(),
+          ),
+        ),
       ),
     );
   }
