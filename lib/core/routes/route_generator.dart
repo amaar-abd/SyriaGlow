@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:syria_glow/core/depandency_injection/service_locator.dart';
 import 'package:syria_glow/core/routes/app_routes.dart';
+import 'package:syria_glow/features/ai_chat/presentation/views/ai_chat_view.dart';
 import 'package:syria_glow/features/assistant/presentation/views/currency_converter_view.dart';
 import 'package:syria_glow/features/assistant/presentation/views/emergency_view.dart';
 import 'package:syria_glow/features/assistant/presentation/views/weather_view.dart';
@@ -113,6 +114,10 @@ class RouteGenerator {
       case AppRoutes.weatherView:
         return MaterialPageRoute(
           builder: (context) => const WeatherView(),
+        );
+      case AppRoutes.aiChatView:
+        return MaterialPageRoute(
+          builder: (context) => const AiChatView(),
         );
 
       default:
