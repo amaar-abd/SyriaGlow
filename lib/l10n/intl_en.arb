@@ -144,6 +144,12 @@
   "emergency_tourism_complaints_desc": "To receive feedback and visitor inquiries",
 
   "emergency_public_police_title": "Criminal Security & Police",
-  "emergency_public_police_desc": "For general reports and security issues"
-
+  "emergency_public_police_desc": "For general reports and security issues",
+  "hurAiAssistant": "Hur AI",
+  "hurSubtitle": "Syria Tourism AI Guide",
+  "hurWelcomeMessage": "Welcome! I am \"Hur\", your AI guide to exploring tourism in Syria. How can I help you today?",
+  "typeMessageHint": "Ask 'Hur' anything about Syria...",
+  "hurTyping": "'Hur' is typing...",
+  "ai_chat_title": "Hur - AI Assistant",
+  "ai_chat_subtitle": "Your personal travel companion to answer your questions and explore Syria"
 }
