@@ -66,21 +66,23 @@ Syria Glow is a modern, bilingual (Arabic & English) tourism app built with Flut
 
 
 
-### 🛠 Services Feature (Emergency, Weather & Currency)
+### 🛠 Services Feature (AI Chat, Emergency, Weather & Currency)
 <p align="center">
   <img src="screenshots/services_ar.jpg" width="24%">
   <img src="screenshots/services_en.jpg" width="24%">
 </p>
 <p align="center">
+  <img src="screenshots/chat_ai_ar.jpg" width="24%">
+  <img src="screenshots/chat_ai_en.jpg" width="24%">
+  
   <img src="screenshots/emergency_numbers_ar.jpg" width="24%">
   <img src="screenshots/emergency_numbers_en.jpg" width="24%">
   <img src="screenshots/weather_ar.jpg" width="24%">
   <img src="screenshots/weather_en.jpg" width="24%">
-</p>
-<p align="center">
   <img src="screenshots/currency_converter_ar.jpg" width="24%">
   <img src="screenshots/currency_converter_en.jpg" width="24%">
 </p>
+
 
 ### 👤 Profile & User Settings
 <p align="center">
@@ -116,6 +118,7 @@ This app demonstrates enterprise-level Flutter architecture, secure authenticati
   * **Geolocation & Geocoding:** Powered by `geolocator` and `geocoding` for exact GPS coordinate detection and address decoding.
 * **Push Notifications (FCM):** Real-time engagement managed via **Firebase Cloud Messaging (FCM)** integrated with `flutter_local_notifications` for foreground push notifications.
 * **Secure Token Storage:** Encrypted sensitive authentication tokens stored locally using `flutter_secure_storage`.
+* **AI Chat Integration:** Powered intelligent conversational capabilities locally using `google_generative_ai`.
 
 ---
 
