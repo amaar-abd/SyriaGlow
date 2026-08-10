@@ -29,6 +29,10 @@ class MessageLookup extends MessageLookupByLibrary {
     "acceptTermsAndConditionsError": MessageLookupByLibrary.simpleMessage(
       "Please accept the terms and conditions ",
     ),
+    "ai_chat_subtitle": MessageLookupByLibrary.simpleMessage(
+      "Your personal travel companion to answer your questions and explore Syria",
+    ),
+    "ai_chat_title": MessageLookupByLibrary.simpleMessage("Hur - AI Assistant"),
     "airports": MessageLookupByLibrary.simpleMessage("Airports"),
     "aleppo": MessageLookupByLibrary.simpleMessage("Aleppo"),
     "alreadyHaveAccount": MessageLookupByLibrary.simpleMessage(
@@ -169,6 +173,14 @@ class MessageLookup extends MessageLookupByLibrary {
     "homs": MessageLookupByLibrary.simpleMessage("Homs"),
     "hotels": MessageLookupByLibrary.simpleMessage("Hotels"),
     "humidity": MessageLookupByLibrary.simpleMessage("Humidity"),
+    "hurAiAssistant": MessageLookupByLibrary.simpleMessage("Hur AI"),
+    "hurSubtitle": MessageLookupByLibrary.simpleMessage(
+      "Syria Tourism AI Guide",
+    ),
+    "hurTyping": MessageLookupByLibrary.simpleMessage("\'Hur\' is typing..."),
+    "hurWelcomeMessage": MessageLookupByLibrary.simpleMessage(
+      "Welcome! I am \"Hur\", your AI guide to exploring tourism in Syria. How can I help you today?",
+    ),
     "idlib": MessageLookupByLibrary.simpleMessage("Idlib"),
     "invalidEmail": MessageLookupByLibrary.simpleMessage(
       "Please enter a valid email address",
@@ -285,6 +297,9 @@ class MessageLookup extends MessageLookupByLibrary {
     "termsOfService": MessageLookupByLibrary.simpleMessage("Terms of Service"),
     "trendingEventsAndExhibitions": MessageLookupByLibrary.simpleMessage(
       "Trending exhibitions and events",
+    ),
+    "typeMessageHint": MessageLookupByLibrary.simpleMessage(
+      "Ask \'Hur\' anything about Syria...",
     ),
     "updatePasswordBtn": MessageLookupByLibrary.simpleMessage(
       "Update Password",

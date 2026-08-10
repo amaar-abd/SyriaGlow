@@ -29,6 +29,10 @@ class MessageLookup extends MessageLookupByLibrary {
     "acceptTermsAndConditionsError": MessageLookupByLibrary.simpleMessage(
       "الرجاء الموافقة على الشروط والأحكام للمتابعة",
     ),
+    "ai_chat_subtitle": MessageLookupByLibrary.simpleMessage(
+      "مساعدك السياحي للإجابة عن أسئلتك واستكشاف سوريا",
+    ),
+    "ai_chat_title": MessageLookupByLibrary.simpleMessage("حر - المساعد الذكي"),
     "airports": MessageLookupByLibrary.simpleMessage("مطارات"),
     "aleppo": MessageLookupByLibrary.simpleMessage("حلب"),
     "alreadyHaveAccount": MessageLookupByLibrary.simpleMessage(
@@ -161,6 +165,14 @@ class MessageLookup extends MessageLookupByLibrary {
     "homs": MessageLookupByLibrary.simpleMessage("حمص"),
     "hotels": MessageLookupByLibrary.simpleMessage("فنادق"),
     "humidity": MessageLookupByLibrary.simpleMessage("الرطوبة"),
+    "hurAiAssistant": MessageLookupByLibrary.simpleMessage("حر"),
+    "hurSubtitle": MessageLookupByLibrary.simpleMessage(
+      "مُساعد السياحة الذكي في سوريا",
+    ),
+    "hurTyping": MessageLookupByLibrary.simpleMessage("«حر» يكتب الآن..."),
+    "hurWelcomeMessage": MessageLookupByLibrary.simpleMessage(
+      "أهلاً بك! أنا «حر»، مساعدك الذكي لاستكشاف المعالم والسياحة في سوريا. كيف يمكنني مساعدتك اليوم؟",
+    ),
     "idlib": MessageLookupByLibrary.simpleMessage("إدلب"),
     "invalidEmail": MessageLookupByLibrary.simpleMessage(
       "الرجاء إدخال بريد إلكتروني صحيح",
@@ -279,6 +291,9 @@ class MessageLookup extends MessageLookupByLibrary {
     "termsOfService": MessageLookupByLibrary.simpleMessage("شروط الخدمة"),
     "trendingEventsAndExhibitions": MessageLookupByLibrary.simpleMessage(
       "المعارض والفعاليات الرائجة",
+    ),
+    "typeMessageHint": MessageLookupByLibrary.simpleMessage(
+      "اسأل «حر» أي شيء عن سوريا...",
     ),
     "updatePasswordBtn": MessageLookupByLibrary.simpleMessage(
       "تحديث كلمة المرور",

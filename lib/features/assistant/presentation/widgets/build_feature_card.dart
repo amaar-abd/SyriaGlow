@@ -6,24 +6,22 @@ class BuildFeatureCard extends StatelessWidget {
     super.key,
     required this.title,
     required this.subtitle,
-    required this.icon,
     required this.color,
-    required this.iconColor,
     required this.onTap,
+    required this.widget,
   });
   final String title;
   final String subtitle;
-  final IconData icon;
-  final Color iconColor;
+  final Widget widget;
   final Color color;
   final VoidCallback onTap;
   @override
   Widget build(BuildContext context) {
     final isArabic = Localizations.localeOf(context).languageCode == 'ar';
     return InkWell(
-       borderRadius: BorderRadius.circular(20.r),
+      borderRadius: BorderRadius.circular(20.r),
       onTap: onTap,
-      child: Ink( 
+      child: Ink(
         padding: EdgeInsets.all(20.r),
         decoration: BoxDecoration(
           color: Colors.white,
@@ -39,12 +37,12 @@ class BuildFeatureCard extends StatelessWidget {
         child: Row(
           children: [
             Container(
-              padding: EdgeInsets.all(14.r),
+              padding: EdgeInsets.all(10.r),
               decoration: BoxDecoration(
                 color: color.withAlpha(20),
                 shape: BoxShape.circle,
               ),
-              child: Icon(icon, color: iconColor, size: 30.r),
+              child: widget,
             ),
             SizedBox(width: 20.h),
             Expanded(
@@ -62,6 +60,8 @@ class BuildFeatureCard extends StatelessWidget {
                   const SizedBox(height: 6),
                   Text(
                     subtitle,
+                    maxLines: 2,
+                    overflow: TextOverflow.ellipsis,
                     style: TextStyle(
                       fontSize: 13,
                       color: Colors.grey.shade600,

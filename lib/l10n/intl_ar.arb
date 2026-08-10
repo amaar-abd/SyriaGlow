@@ -144,6 +144,12 @@
   "emergency_tourism_complaints_desc": "لتلقي ملاحظات الزوار والخدمات",
 
   "emergency_public_police_title": "الأمن الجنائي والشرطة",
-  "emergency_public_police_desc": "للبلاغات العامة والمشاكل الأمنية"
-
+  "emergency_public_police_desc": "للبلاغات العامة والمشاكل الأمنية",
+  "hurAiAssistant": "حر",
+  "hurSubtitle": "مُساعد السياحة الذكي في سوريا",
+  "hurWelcomeMessage": "أهلاً بك! أنا «حر»، مساعدك الذكي لاستكشاف المعالم والسياحة في سوريا. كيف يمكنني مساعدتك اليوم؟",
+  "typeMessageHint": "اسأل «حر» أي شيء عن سوريا...",
+  "hurTyping": "«حر» يكتب الآن...",
+  "ai_chat_title": "حر - المساعد الذكي",
+  "ai_chat_subtitle": "مساعدك السياحي للإجابة عن أسئلتك واستكشاف سوريا"
 }

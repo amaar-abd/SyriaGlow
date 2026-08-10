@@ -17,4 +17,5 @@ class AppRoutes {
   static const String currencyConverterView = 'CurrencyConverterView';
   static const String emergencyView = 'EmergencyView';
   static const String weatherView = 'WeatherView';
+  static const String aiChatView = 'AiChatView';
 }

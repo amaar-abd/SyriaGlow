@@ -1198,6 +1198,71 @@ class S {
       args: [],
     );
   }
+
+  /// `Hur AI`
+  String get hurAiAssistant {
+    return Intl.message('Hur AI', name: 'hurAiAssistant', desc: '', args: []);
+  }
+
+  /// `Syria Tourism AI Guide`
+  String get hurSubtitle {
+    return Intl.message(
+      'Syria Tourism AI Guide',
+      name: 'hurSubtitle',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Welcome! I am "Hur", your AI guide to exploring tourism in Syria. How can I help you today?`
+  String get hurWelcomeMessage {
+    return Intl.message(
+      'Welcome! I am "Hur", your AI guide to exploring tourism in Syria. How can I help you today?',
+      name: 'hurWelcomeMessage',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Ask 'Hur' anything about Syria...`
+  String get typeMessageHint {
+    return Intl.message(
+      'Ask \'Hur\' anything about Syria...',
+      name: 'typeMessageHint',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `'Hur' is typing...`
+  String get hurTyping {
+    return Intl.message(
+      '\'Hur\' is typing...',
+      name: 'hurTyping',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Hur - AI Assistant`
+  String get ai_chat_title {
+    return Intl.message(
+      'Hur - AI Assistant',
+      name: 'ai_chat_title',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Your personal travel companion to answer your questions and explore Syria`
+  String get ai_chat_subtitle {
+    return Intl.message(
+      'Your personal travel companion to answer your questions and explore Syria',
+      name: 'ai_chat_subtitle',
+      desc: '',
+      args: [],
+    );
+  }
 }
 
 class AppLocalizationDelegate extends LocalizationsDelegate<S> {

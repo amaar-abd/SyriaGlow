@@ -9,6 +9,10 @@ import 'package:syria_glow/core/networking/dio_factory.dart';
 import 'package:syria_glow/core/services/notification_service.dart';
 import 'package:syria_glow/core/services/secure_storage_service.dart';
 import 'package:syria_glow/core/services/shared_preferences_service.dart';
+import 'package:syria_glow/features/ai_chat/data/datasource/ai_remote_data_source.dart';
+import 'package:syria_glow/features/ai_chat/data/repositories/chat_repository_impl.dart';
+import 'package:syria_glow/features/ai_chat/domain/repositories/chat_repository.dart';
+import 'package:syria_glow/features/ai_chat/presentation/manager/ai_chat/ai_chat_cubit.dart';
 import 'package:syria_glow/features/assistant/data/datasources/weather_remote_data_source.dart';
 import 'package:syria_glow/features/assistant/data/repositories/weather_repository_impl.dart';
 import 'package:syria_glow/features/assistant/domain/repositories/weather_repository.dart';
@@ -56,7 +60,7 @@ import 'package:syria_glow/features/profile/presentation/manager/profile_cubit/p
 
 final GetIt sl = GetIt.instance;
 
-Future <void> setupServiceLocator() async {
+Future<void> setupServiceLocator() async {
   final sharedPrefs = await SharedPreferences.getInstance();
   sl.registerLazySingleton<SharedPreferencesService>(
     () => SharedPreferencesService(sharedPrefs),
@@ -141,7 +145,6 @@ Future <void> setupServiceLocator() async {
   );
   sl.registerFactory<NotificationsCubit>(() => NotificationsCubit(sl()));
 
-
   sl.registerLazySingleton<ExploreRemoteDataSource>(
     () => ExploreRemoteDataSourceImpl(apiService: sl()),
   );
@@ -157,9 +160,8 @@ Future <void> setupServiceLocator() async {
     () => FavoriteRepositoryImpl(favoriteRemoteDataSource: sl()),
   );
   sl.registerLazySingleton<FavoriteCubit>(() => FavoriteCubit(sl()));
-  
 
-   sl.registerLazySingleton<ProfileRemoteDataSource>(
+  sl.registerLazySingleton<ProfileRemoteDataSource>(
     () => ProfileRemoteDataSourceImpl(apiService: sl()),
   );
   sl.registerLazySingleton<ProfileRepository>(
@@ -167,9 +169,17 @@ Future <void> setupServiceLocator() async {
   );
   sl.registerLazySingleton<ProfileCubit>(() => ProfileCubit(sl()));
 
-  sl.registerLazySingleton<WeatherRemoteDataSource>(() => WeatherRemoteDataSourceImpl(dio: Dio()));
-  sl.registerLazySingleton<WeatherRepository>(() => WeatherRepositoryImpl(weatherRemoteDataSource: sl()));
+  sl.registerLazySingleton<WeatherRemoteDataSource>(
+    () => WeatherRemoteDataSourceImpl(dio: Dio()),
+  );
+  sl.registerLazySingleton<WeatherRepository>(
+    () => WeatherRepositoryImpl(weatherRemoteDataSource: sl()),
+  );
   sl.registerFactory<WeatherCubit>(() => WeatherCubit(sl()));
 
-
+  sl.registerLazySingleton<AiRemoteDataSource>(() => AiRemoteDataSource());
+  sl.registerLazySingleton<ChatRepository>(
+    () => ChatRepositoryImpl(remoteDataSource: sl()),
+  );
+  sl.registerFactory<AiChatCubit>(() => AiChatCubit(sl()));
 }
