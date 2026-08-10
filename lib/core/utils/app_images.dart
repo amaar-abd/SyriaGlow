@@ -14,6 +14,10 @@ class Assets {
   /// assets/images/aleppo_at_night_2.jpg
   static const String assetsImagesAleppoAtNight2 = "assets/images/aleppo_at_night_2.jpg";
 
+  /// Assets for assetsImagesChatAI
+  /// assets/images/chatAI.svg
+  static const String assetsImagesChatAI = "assets/images/chatAI.svg";
+
   /// Assets for assetsImagesContainer
   /// assets/images/Container.png
   static const String assetsImagesContainer = "assets/images/Container.png";
